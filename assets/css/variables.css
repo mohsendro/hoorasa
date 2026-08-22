@@ -1,0 +1,115 @@
+/* ═══════════════════════════════════════════════════════
+   Design Tokens – Dark First
+   Compatible with Bootstrap 5 (no --bs-* overrides)
+═══════════════════════════════════════════════════════ */
+
+:root {
+    /* ── Brand ─────────────────────────────────────────── */
+    --color-primary: #DA2A2A;
+    --color-primary-dark: #BF1E1E;
+    --color-primary-darker: #9F1717;
+    --color-primary-deep: #7E1111;
+
+    /* ── Background & Surface (Dark - Default) ─────────── */
+    --color-background: #3B0606;
+    --color-surface: #5D0B0B;
+    --color-surface-elevated: #7E1111;
+
+    /* ── Text ──────────────────────────────────────────── */
+    --color-text: #EDC1C1;
+    --color-text-muted: #E79F9F;
+    --color-text-inverse: #3B0606;
+
+    /* ── Border ────────────────────────────────────────── */
+    --color-border: rgba(218, 42, 42, 0.18);
+
+    /* ── Accents ───────────────────────────────────────── */
+    --color-magenta: #DA2AAB;
+    --color-orange: #DA6B2A;
+    --color-gold: #DAAB2A;
+    --color-cyan: #2ADADA;
+    --color-green: #2ADA82;
+    --color-blue: #2A82DA;
+
+    /* ── Semantic ──────────────────────────────────────── */
+    --color-success: #2ADA82;
+    --color-warning: #DAAB2A;
+    --color-error: #DA2A2A;
+    --color-info: #2A82DA;
+
+    /* ── Typography ────────────────────────────────────── */
+    --font-persian: "Peyda", system-ui, sans-serif;
+    --font-english: "Manrope", system-ui, sans-serif;
+    --font-base: "Peyda", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --fs-display: clamp(3.5rem, 6vw, 4.5rem);
+    --fs-h1: clamp(2.5rem, 5vw, 3rem);
+    --fs-h2: clamp(2rem, 4vw, 2.25rem);
+    --fs-h3: clamp(1.5rem, 3vw, 1.75rem);
+    --fs-h4: 1.25rem;
+    --fs-body-lg: 1.125rem;
+    --fs-body: 1rem;
+    --fs-caption: 0.875rem;
+    --fs-overline: 0.75rem;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --lh-heading: 1.25;
+    --lh-body: 1.65;
+
+    /* ── Spacing ───────────────────────────────────────── */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --space-32: 128px;
+
+    /* ── Radius ────────────────────────────────────────── */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* ── Shadow ────────────────────────────────────────── */
+    --shadow-sm: 0 2px 8px rgba(59, 6, 6, 0.25);
+    --shadow-md: 0 8px 24px rgba(59, 6, 6, 0.35);
+    --shadow-lg: 0 16px 48px rgba(59, 6, 6, 0.45);
+    --glow-primary: 0 0 24px rgba(218, 42, 42, 0.35);
+
+    /* ── Transition ────────────────────────────────────── */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 400ms ease;
+}
+
+/* ── Light Theme ─────────────────────────────────────── */
+[data-bs-theme="light"],
+[data-theme="light"] {
+    --color-background: #FDF6F6;
+    --color-surface: #FFFFFF;
+    --color-surface-elevated: #F8F1F1;
+
+    --color-text: #3B0606;
+    --color-text-muted: #7E1111;
+    --color-text-inverse: #FDF6F6;
+
+    --color-border: rgba(59, 6, 6, 0.12);
+
+    --shadow-sm: 0 2px 8px rgba(59, 6, 6, 0.06);
+    --shadow-md: 0 8px 24px rgba(59, 6, 6, 0.09);
+    --shadow-lg: 0 16px 48px rgba(59, 6, 6, 0.12);
+    --glow-primary: 0 0 24px rgba(218, 42, 42, 0.25);
+}

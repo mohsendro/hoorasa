@@ -1,0 +1,145 @@
+/* ═══════════════════════════════════════════════════════
+   CSS Design System — Palette Thief Ultimate
+   Generated: 2026-08-22
+   Colors: 18
+═══════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Semantic Roles ────────────────────────────────── */
+  --color-background: #3B0606;
+  --color-surface: #5D0B0B;
+  --color-primary: #7E1111;
+  --color-accent: #9F1717;
+  --color-secondary: #BF1E1E;
+  --color-text: #EDC1C1;
+  --color-text-muted: #E79F9F;
+  --color-neutral-1: #DC4B4B;
+  --color-neutral-2: #DF6666;
+  --color-neutral-3: #E28181;
+  --color-neutral-4: #DA2A2A;
+  --color-neutral-5: #DA2AAB;
+  --color-neutral-6: #DA2A6B;
+  --color-neutral-7: #DA6B2A;
+  --color-neutral-8: #DAAB2A;
+  --color-neutral-9: #2ADADA;
+  --color-neutral-10: #2ADA82;
+  --color-neutral-11: #2A82DA;
+
+  /* ── RGB channels (for opacity usage) ─────────────── */
+  --color-background-rgb: 59, 6, 6;
+  --color-surface-rgb: 93, 11, 11;
+  --color-primary-rgb: 126, 17, 17;
+  --color-accent-rgb: 159, 23, 23;
+  --color-secondary-rgb: 191, 30, 30;
+  --color-text-rgb: 237, 193, 193;
+  --color-text-muted-rgb: 231, 159, 159;
+  --color-neutral-1-rgb: 220, 75, 75;
+  --color-neutral-2-rgb: 223, 102, 102;
+  --color-neutral-3-rgb: 226, 129, 129;
+  --color-neutral-4-rgb: 218, 42, 42;
+  --color-neutral-5-rgb: 218, 42, 171;
+  --color-neutral-6-rgb: 218, 42, 107;
+  --color-neutral-7-rgb: 218, 107, 42;
+  --color-neutral-8-rgb: 218, 171, 42;
+  --color-neutral-9-rgb: 42, 218, 218;
+  --color-neutral-10-rgb: 42, 218, 130;
+  --color-neutral-11-rgb: 42, 130, 218;
+
+  /* ── HSL values ────────────────────────────────────── */
+  --color-background-hsl: 0deg 82% 13%;
+  --color-surface-hsl: 0deg 79% 20%;
+  --color-primary-hsl: 0deg 76% 28%;
+  --color-accent-hsl: 0deg 75% 36%;
+  --color-secondary-hsl: 0deg 73% 43%;
+  --color-text-hsl: 0deg 55% 84%;
+  --color-text-muted-hsl: 0deg 60% 76%;
+  --color-neutral-1-hsl: 0deg 67% 58%;
+  --color-neutral-2-hsl: 0deg 65% 64%;
+  --color-neutral-3-hsl: 0deg 63% 70%;
+  --color-neutral-4-hsl: 0deg 70% 51%;
+  --color-neutral-5-hsl: 316deg 70% 51%;
+  --color-neutral-6-hsl: 338deg 70% 51%;
+  --color-neutral-7-hsl: 22deg 70% 51%;
+  --color-neutral-8-hsl: 44deg 70% 51%;
+  --color-neutral-9-hsl: 180deg 70% 51%;
+  --color-neutral-10-hsl: 150deg 70% 51%;
+  --color-neutral-11-hsl: 210deg 70% 51%;
+
+  /* ── Full palette by index ─────────────────────────── */
+  --palette-1: #DC4B4B; /* Cold Arc */
+  --palette-2: #DF6666; /* Pale Wave */
+  --palette-3: #E28181; /* Mute Dusk */
+  --palette-4: #E79F9F; /* Faded Weld */
+  --palette-5: #EDC1C1; /* Dark Powder */
+  --palette-6: #DA2A2A; /* Dark Spectrum */
+  --palette-7: #BF1E1E; /* Soft Charge */
+  --palette-8: #9F1717; /* Static Signal */
+  --palette-9: #7E1111; /* Dry Neon */
+  --palette-10: #5D0B0B; /* Cold Signal */
+  --palette-11: #3B0606; /* Dark Trench */
+  --palette-12: #DA2AAB; /* Hollow Circuit */
+  --palette-13: #DA2A6B; /* Broken Voltage */
+  --palette-14: #DA6B2A; /* Broken Static */
+  --palette-15: #DAAB2A; /* Hollow Neon */
+  --palette-16: #2ADADA; /* Static Burst */
+  --palette-17: #2ADA82; /* Sharp Flux */
+  --palette-18: #2A82DA; /* Sharp Spark */
+
+}
+
+/* ── Utility classes ────────────────────────────────────── */
+.bg-background  { background-color: var(--color-background); }
+.text-background { color: var(--color-background); }
+.border-background { border-color: var(--color-background); }
+.bg-surface  { background-color: var(--color-surface); }
+.text-surface { color: var(--color-surface); }
+.border-surface { border-color: var(--color-surface); }
+.bg-primary  { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+.border-primary { border-color: var(--color-primary); }
+.bg-accent  { background-color: var(--color-accent); }
+.text-accent { color: var(--color-accent); }
+.border-accent { border-color: var(--color-accent); }
+.bg-secondary  { background-color: var(--color-secondary); }
+.text-secondary { color: var(--color-secondary); }
+.border-secondary { border-color: var(--color-secondary); }
+.bg-text  { background-color: var(--color-text); }
+.text-text { color: var(--color-text); }
+.border-text { border-color: var(--color-text); }
+.bg-text-muted  { background-color: var(--color-text-muted); }
+.text-text-muted { color: var(--color-text-muted); }
+.border-text-muted { border-color: var(--color-text-muted); }
+.bg-neutral-1  { background-color: var(--color-neutral-1); }
+.text-neutral-1 { color: var(--color-neutral-1); }
+.border-neutral-1 { border-color: var(--color-neutral-1); }
+.bg-neutral-2  { background-color: var(--color-neutral-2); }
+.text-neutral-2 { color: var(--color-neutral-2); }
+.border-neutral-2 { border-color: var(--color-neutral-2); }
+.bg-neutral-3  { background-color: var(--color-neutral-3); }
+.text-neutral-3 { color: var(--color-neutral-3); }
+.border-neutral-3 { border-color: var(--color-neutral-3); }
+.bg-neutral-4  { background-color: var(--color-neutral-4); }
+.text-neutral-4 { color: var(--color-neutral-4); }
+.border-neutral-4 { border-color: var(--color-neutral-4); }
+.bg-neutral-5  { background-color: var(--color-neutral-5); }
+.text-neutral-5 { color: var(--color-neutral-5); }
+.border-neutral-5 { border-color: var(--color-neutral-5); }
+.bg-neutral-6  { background-color: var(--color-neutral-6); }
+.text-neutral-6 { color: var(--color-neutral-6); }
+.border-neutral-6 { border-color: var(--color-neutral-6); }
+.bg-neutral-7  { background-color: var(--color-neutral-7); }
+.text-neutral-7 { color: var(--color-neutral-7); }
+.border-neutral-7 { border-color: var(--color-neutral-7); }
+.bg-neutral-8  { background-color: var(--color-neutral-8); }
+.text-neutral-8 { color: var(--color-neutral-8); }
+.border-neutral-8 { border-color: var(--color-neutral-8); }
+.bg-neutral-9  { background-color: var(--color-neutral-9); }
+.text-neutral-9 { color: var(--color-neutral-9); }
+.border-neutral-9 { border-color: var(--color-neutral-9); }
+.bg-neutral-10  { background-color: var(--color-neutral-10); }
+.text-neutral-10 { color: var(--color-neutral-10); }
+.border-neutral-10 { border-color: var(--color-neutral-10); }
+.bg-neutral-11  { background-color: var(--color-neutral-11); }
+.text-neutral-11 { color: var(--color-neutral-11); }
+.border-neutral-11 { border-color: var(--color-neutral-11); }
