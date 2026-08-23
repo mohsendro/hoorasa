@@ -6,219 +6,272 @@
 
 /* ── Fonts ────────────────────────────────────────────── */
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-THIN.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-THIN.woff") format("woff");
-    font-weight: 100;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-THIN.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-THIN.woff") format("woff");
+  font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-UltraLight.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-UltraLight.woff") format("woff");
-    font-weight: 200;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-UltraLight.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-Light.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-Light.woff") format("woff");
-    font-weight: 300;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-Light.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-Regular.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-Regular.woff") format("woff");
-    font-weight: 400;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-Regular.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-Medium.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-Medium.woff") format("woff");
-    font-weight: 500;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-Medium.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-DemiBold.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-DemiBold.woff") format("woff");
-    font-weight: 600;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-DemiBold.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-Bold.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-Bold.woff") format("woff");
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-Bold.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-ExtraBold.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-ExtraBold.woff") format("woff");
-    font-weight: 800;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-ExtraBold.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/peyda/PEYDAFANUM-Black.woff2") format("woff2"),
-        url("../fonts/peyda/PEYDAFANUM-Black.woff") format("woff");
-    font-weight: 900;
-    font-display: swap;
+  font-family: "Peyda";
+  src:
+    url("../fonts/peyda/PEYDAFANUM-Black.woff2") format("woff2"),
+    url("../fonts/peyda/PEYDAFANUM-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
 }
 
 /* ── Base ─────────────────────────────────────────────── */
 html {
-    scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-base);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-background);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
+
+/* ── Headings ─────────────────────────────────────────────── */
+/* ── Paragraph ─────────────────────────────────────────────── */
+/* ── Links ─────────────────────────────────────────────── */
+/* ── Lists ─────────────────────────────────────────────── */
+/* ── Strong / Emphasis ─────────────────────────────────────────────── */
+/* ── Small ─────────────────────────────────────────────── */
+/* ── Code ─────────────────────────────────────────────── */
+/* ── Blockquote ─────────────────────────────────────────────── */
+/* ── Horizontal Rule ─────────────────────────────────────────────── */
+/* ── Images ─────────────────────────────────────────────── */
+/* ── Tables ─────────────────────────────────────────────── */
+/* ── Forms ─────────────────────────────────────────────── */
 
 /* ── Selection ────────────────────────────────────────── */
 ::selection {
-    background-color: var(--color-primary);
-    color: #ffffff;
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
 /* ── Scrollbar ────────────────────────────────────────── */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-background);
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-darker) 100%);
-    border-radius: var(--radius-full);
-    border: 2px solid var(--color-background);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-primary-darker) 100%
+  );
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--color-primary-dark) 0%, var(--color-primary-deep) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary-deep) 100%
+  );
 }
 
 /* Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-primary) var(--color-background);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-background);
 }
 
 /* ── Utility Classes (Additive) ───────────────────────── */
 .bg-background {
-    background-color: var(--color-background) !important;
+  background-color: var(--color-background) !important;
 }
 
 .bg-surface {
-    background-color: var(--color-surface) !important;
+  background-color: var(--color-surface) !important;
 }
 
 .bg-surface-elevated {
-    background-color: var(--color-surface-elevated) !important;
+  background-color: var(--color-surface-elevated) !important;
 }
 
 .text-main {
-    color: var(--color-text) !important;
+  color: var(--color-text) !important;
 }
 
 .text-muted-custom {
-    color: var(--color-text-muted) !important;
+  color: var(--color-text-muted) !important;
 }
 
 .text-inverse {
-    color: var(--color-text-inverse) !important;
+  color: var(--color-text-inverse) !important;
 }
 
 .border-custom {
-    border-color: var(--color-border) !important;
+  border-color: var(--color-border) !important;
 }
 
 .glow-primary {
-    box-shadow: var(--glow-primary);
+  box-shadow: var(--glow-primary);
 }
 
 .radius-sm {
-    border-radius: var(--radius-sm) !important;
+  border-radius: var(--radius-sm) !important;
 }
 
 .radius-md {
-    border-radius: var(--radius-md) !important;
+  border-radius: var(--radius-md) !important;
 }
 
 .radius-lg {
-    border-radius: var(--radius-lg) !important;
+  border-radius: var(--radius-lg) !important;
 }
 
 .radius-xl {
-    border-radius: var(--radius-xl) !important;
+  border-radius: var(--radius-xl) !important;
 }
 
 .radius-full {
-    border-radius: var(--radius-full) !important;
+  border-radius: var(--radius-full) !important;
 }
 
 /* ── Transition Helpers ───────────────────────────────── */
 .transition-fast {
-    transition: all var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .transition-normal {
-    transition: all var(--transition-normal);
+  transition: all var(--transition-normal);
 }
 
 .transition-slow {
-    transition: all var(--transition-slow);
+  transition: all var(--transition-slow);
 }
 
 /* ── Media Query ───────────────────────────────────────── */
 /* Responsive Min-width */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+}
 
 /* Responsive Max-width */
-@media (max-width: 1399.98px) {}
+@media (max-width: 1399.98px) {
+}
 
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+}
 
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+}
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+}
 
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+}
 
 /* Responsive Single breakpoint */
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+}
 
-@media (min-width: 576px) and (max-width: 767.98px) {}
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
 
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
 
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
 
-@media (min-width: 1200px) and (max-width: 1399.98px) {}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
 
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+}
