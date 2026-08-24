@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/vendor/navalone/navalone.css" />
 
   <!-- Components Css -->
-  <link rel="stylesheet" href="assets/css/components/menu-rtl.css" />
+  <!-- <link rel="stylesheet" href="assets/css/components/menu-rtl.css" /> -->
   <link rel="stylesheet" href="assets/css/components/header.css" />
   <link rel="stylesheet" href="assets/css/components/footer.css" />
 </head>
@@ -28,77 +28,78 @@
 <body class="body">
   <!-- Header Start -->
   <header id="header" class="container-fluid header">
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
-        <div class="col-12 column">
-          <menu class="mm" id="mm">
-            <a data-nv-logo href="/" class="logo">
-              <img src="assets/images/logo-white.png" alt="هورآسا" width="100" height="auto" />
-            </a>
-            <div data-nv-actions>
-              <a href="/">درخواست مشاوره</a>
-            </div>
+        <div class="col-12 column"> -->
+    <menu class="mm" id="mm">
+      <a data-nv-logo href="/" class="logo">
+        <img src="assets/images/logo-white.png" alt="هورآسا" width="100" height="auto" />
+      </a>
+      <div data-nv-actions>
+        <a href="/">درخواست مشاوره</a>
+      </div>
 
-            <div class="menu-level level-1" id="main-menu">
-              <ul>
-                <li><a href="/">مهارت‌ها</a></li>
-                <li><a href="/">پروژه‌ها</a></li>
-                <li><button data-target="services">خدمات</button></li>
-                <li><button data-target="company">هورآسا</button></li>
-              </ul>
-            </div>
+      <div class="menu-level level-1" id="main-menu">
+        <ul>
+          <li><a href="/">مهارت‌ها</a></li>
+          <li><a href="/">پروژه‌ها</a></li>
+          <li><button data-target="services">خدمات</button></li>
+          <li><button data-target="company">هورآسا</button></li>
+        </ul>
+      </div>
 
-            <!-- ۲. DROPDOWN-LG (عرض بزرگ + توصیف + تصویر) -->
-            <div class="menu-level" id="services" data-submenu="dropdown-lg">
-              <ul>
-                <!-- <li><a href="/" data-target="gifts" data-description="Design">طراحی</a></li>
+      <!-- ۲. DROPDOWN-LG (عرض بزرگ + توصیف + تصویر) -->
+      <div class="menu-level" id="services" data-submenu="dropdown-lg">
+        <ul>
+          <!-- <li><a href="/" data-target="gifts" data-description="Design">طراحی</a></li>
                 <li><a href="/" data-target="gifts" data-description="Production">تولید</a></li>
                 <li><a href="/" data-target="gifts" data-description="Advertisement">تبلیغات</a></li>
                 <li><a href="/" data-target="gifts" data-description="Events">رویدادها</a></li> -->
-                <li><button data-target="gifts" data-description="Design">طراحی</button></li>
-                <li><button data-target="gifts" data-description="Production">تولید</button></li>
-                <li><button data-target="gifts" data-description="Advertisement">تبلیغات</button></li>
-                <li><button data-target="gifts" data-description="Events">رویدادها</button></li>
-                <li><button data-target="gifts" data-badge="ویژه" data-description="Gifts">هدایای سازمانی</button></li>
-              </ul>
-            </div>
-
-            <!-- ۳. FLYOUT چندسطحی (Nested) -->
-            <div class="menu-level" id="gifts" data-submenu="dropdown">
-              <ul>
-                <li><a href="/">تست</a></li>
-                <li><a href="/">تست</a></li>
-                <li><a href="/">تست</a></li>
-                <li><a href="/">تست</a></li>
-                <li><a href="/">تست</a></li>
-                <li><a href="/">تست</a></li>
-                <li><a href="/">تست</a></li>
-              </ul>
-            </div>
-
-            <!-- ۴. MEGA MENU (چندستونه) -->
-            <div class="menu-level" id="company" data-submenu="mega">
-              <ul>
-                <!-- ستون ۱ -->
-                <li class="nv-group">آشنایی با هورآسا</li>
-                <li><a href="/" data-description="About us">درباره ما</a></li>
-                <li><a href="/" data-description="Contact us">تماس با ما</a></li>
-
-                <!-- ستون ۲ -->
-                <li class="nv-group">آموزش‌های هورآسا</li>
-                <li><a href="/" data-badge="جدید" data-description="Blog">مقالات</a></li>
-                <li><a href="/" data-description="News">اخبار</a></li>
-
-                <!-- ستون ۳ -->
-                <li class="nv-group">جامعه هورآسا</li>
-                <li><a href="/" data-description="Teams">اعضای تیم</a></li>
-                <li><a href="/" data-description="Careers">استخدام</a></li>
-              </ul>
-            </div>
-            <menu>
-        </div>
+          <li><button data-target="gifts" data-description="Design">طراحی</button></li>
+          <li><button data-target="gifts" data-description="Production">تولید</button></li>
+          <li><button data-target="gifts" data-description="Advertisement">تبلیغات</button></li>
+          <li><button data-target="gifts" data-description="Events">رویدادها</button></li>
+          <li><button data-target="gifts" data-badge="ویژه" data-description="Gifts">هدایای سازمانی</button>
+          </li>
+        </ul>
       </div>
-    </div>
+
+      <!-- ۳. FLYOUT چندسطحی (Nested) -->
+      <div class="menu-level" id="gifts" data-submenu="dropdown">
+        <ul>
+          <li><a href="/">تست</a></li>
+          <li><a href="/">تست</a></li>
+          <li><a href="/">تست</a></li>
+          <li><a href="/">تست</a></li>
+          <li><a href="/">تست</a></li>
+          <li><a href="/">تست</a></li>
+          <li><a href="/">تست</a></li>
+        </ul>
+      </div>
+
+      <!-- ۴. MEGA MENU (چندستونه) -->
+      <div class="menu-level" id="company" data-submenu="mega">
+        <ul>
+          <!-- ستون ۱ -->
+          <li class="nv-group">آشنایی با هورآسا</li>
+          <li><a href="/" data-description="About us">درباره ما</a></li>
+          <li><a href="/" data-description="Contact us">تماس با ما</a></li>
+
+          <!-- ستون ۲ -->
+          <li class="nv-group">آموزش‌های هورآسا</li>
+          <li><a href="/" data-badge="جدید" data-description="Blog">مقالات</a></li>
+          <li><a href="/" data-description="News">اخبار</a></li>
+
+          <!-- ستون ۳ -->
+          <li class="nv-group">جامعه هورآسا</li>
+          <li><a href="/" data-description="Teams">اعضای تیم</a></li>
+          <li><a href="/" data-description="Careers">استخدام</a></li>
+        </ul>
+      </div>
+    </menu>
+    <!-- </div>
+      </div>
+    </div> -->
   </header>
   <!-- Header End -->
 
@@ -127,7 +128,8 @@
               <div class="child child-right">
                 <img src="assets/images/logo-white.png" alt="هورآسا" class="logo" width="150px">
                 <p class="desc">
-                  هوراآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای سازمانی با تکیه بر
+                  هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای سازمانی با تکیه
+                  بر
                   خلاقیت، کیفیت و تعهد، از ایده تا اجرا
                 </p>
               </div>

@@ -446,12 +446,13 @@ body.nv-scroll-lock {
 
 .nv-side-right .nv-drawer {
   right: 0;
+  /* transform: translateX(100%); */
   transform: translateX(calc(100% + var(--nv-width)));
 }
 
 .mm.navalone.nv-open .nv-drawer {
-  transform: translateX(calc(0% + 150px));
-  /* transform: translateX(0); */
+  /* transform: translateX(calc(0% + 150px)); */
+  transform: translateX(0);
 }
 
 .nv-drawer-head {
