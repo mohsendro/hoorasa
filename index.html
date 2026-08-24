@@ -17,20 +17,17 @@
   <link rel="stylesheet" href="assets/css/global.css" />
 
   <!-- Navalone Css -->
-  <link rel="stylesheet" href="/assets/vendor/navalone/navalone.css" />
+  <link rel="stylesheet" href="assets/vendor/navalone/navalone.css" />
 
   <!-- Components Css -->
-  <!-- <link rel="stylesheet" href="assets/css/components/menu-rtl.css" /> -->
   <link rel="stylesheet" href="assets/css/components/header.css" />
+  <link rel="stylesheet" href="assets/css/components/hero.css" />
   <link rel="stylesheet" href="assets/css/components/footer.css" />
 </head>
 
 <body class="body">
   <!-- Header Start -->
   <header id="header" class="container-fluid header">
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-12 column"> -->
     <menu class="mm" id="mm">
       <a data-nv-logo href="/" class="logo">
         <img src="assets/images/logo-white.png" alt="هورآسا" width="100" height="auto" />
@@ -51,10 +48,6 @@
       <!-- ۲. DROPDOWN-LG (عرض بزرگ + توصیف + تصویر) -->
       <div class="menu-level" id="services" data-submenu="dropdown-lg">
         <ul>
-          <!-- <li><a href="/" data-target="gifts" data-description="Design">طراحی</a></li>
-                <li><a href="/" data-target="gifts" data-description="Production">تولید</a></li>
-                <li><a href="/" data-target="gifts" data-description="Advertisement">تبلیغات</a></li>
-                <li><a href="/" data-target="gifts" data-description="Events">رویدادها</a></li> -->
           <li><button data-target="gifts" data-description="Design">طراحی</button></li>
           <li><button data-target="gifts" data-description="Production">تولید</button></li>
           <li><button data-target="gifts" data-description="Advertisement">تبلیغات</button></li>
@@ -97,24 +90,69 @@
         </ul>
       </div>
     </menu>
-    <!-- </div>
-      </div>
-    </div> -->
   </header>
   <!-- Header End -->
 
-  <main id="main" class="mian">
-    <!-- Section Start -->
-    <section id="section" class="container-fluid section">
+  <main id="main" class="main">
+    <!-- Hero Start -->
+    <section id="hero" class="container-fluid hero">
+      <!-- Background video – replace src with your own file in assets/videos/ -->
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/logo-white.png"
+      >
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+        <!-- Fallback: optional webm -->
+        <!-- <source src="assets/videos/hero.webm" type="video/webm" /> -->
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
       <div class="container">
         <div class="row">
           <div class="col-12 column">
-            <!-- <h1>هــــــــــــــورآســـــــــــــا</h1> -->
+            <div class="hero__content">
+              <h1 class="hero__title">
+                از ایده تا اجرا<br />
+                با <span>هورآسا</span>
+              </h1>
+              <p class="hero__desc">
+                طراحی، تولید، تبلیغات، برندسازی و رویدادهای سازمانی — با تکیه بر خلاقیت، کیفیت و تعهد.
+              </p>
+              <div class="hero__actions">
+                <a href="/" class="hero__btn hero__btn--primary">درخواست مشاوره</a>
+                <a href="/" class="hero__btn hero__btn--outline">مشاهده پروژه‌ها</a>
+              </div>
+            </div>
+
+            <div class="hero__meta">
+              <p class="hero__meta-text">
+                هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات و اجرای رویدادهای سازمانی است که از ایده تا تحویل نهایی کنار شماست.
+              </p>
+              <div class="hero__meta-info">
+                <div class="hero__meta-item">
+                  <span class="hero__meta-label">آدرس</span>
+                  <span class="hero__meta-value">تهران، خیابان سئول</span>
+                </div>
+                <div class="hero__meta-item">
+                  <span class="hero__meta-label">تماس</span>
+                  <a href="tel:092000000" class="hero__meta-value">۰۹۲۰۰۰۰۰۰۰</a>
+                </div>
+                <div class="hero__meta-item">
+                  <span class="hero__meta-label">ایمیل</span>
+                  <a href="mailto:info@hoorasa.org" class="hero__meta-value">info@hoorasa.org</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Section End -->
+    <!-- Hero End -->
   </main>
 
   <!-- Footer Start -->
