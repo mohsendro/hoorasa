@@ -1,0 +1,318 @@
+/* ═══════════════════════════════════════════════════════
+   Hero Section – Full-viewport video background
+   Inspired by starter-templates k393, adapted for Hoorasa
+═══════════════════════════════════════════════════════ */
+
+#hero {
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.hero.container-fluid {
+  padding: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: calc(var(--nv-bar-height, 60px) + var(--space-8));
+  padding-bottom: var(--space-12);
+}
+
+.hero .row {
+  height: 100%;
+  align-items: flex-end;
+}
+
+.hero .column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* ── Video Background ─────────────────────────────────── */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 29, 27, 0.55) 0%,
+    rgba(27, 29, 27, 0.35) 40%,
+    rgba(27, 29, 27, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Content ──────────────────────────────────────────── */
+.hero__content {
+  width: 100%;
+  max-width: 720px;
+}
+
+.hero__title {
+  font-family: var(--font-base);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  color: var(--color-text);
+  margin: 0 0 var(--space-6);
+  letter-spacing: -0.02em;
+}
+
+.hero__title span {
+  color: var(--color-primary);
+}
+
+.hero__desc {
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 36ch;
+}
+
+/* ── Meta row (desc + contact) ────────────────────────── */
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-6);
+  width: 100%;
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero__meta-text {
+  flex: 1 1 280px;
+  max-width: 420px;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.hero__meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  flex: 0 0 auto;
+}
+
+.hero__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 140px;
+}
+
+.hero__meta-label {
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+.hero__meta-value {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.hero__meta-value:hover {
+  color: var(--color-primary);
+}
+
+/* ── CTA ──────────────────────────────────────────────── */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.hero__btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.hero__btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #fff;
+  box-shadow: var(--glow-primary);
+}
+
+.hero__btn--outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.hero__btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text);
+}
+
+/* ── Media Query ───────────────────────────────────────── */
+/* Responsive Min-width */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+/* Responsive Max-width */
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+  .hero .container {
+    padding-bottom: var(--space-10);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero .container {
+    padding-top: calc(var(--nv-bar-height, 60px) + var(--space-6));
+    padding-bottom: var(--space-8);
+  }
+
+  .hero__title {
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
+  }
+
+  .hero__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+
+  .hero__meta-info {
+    width: 100%;
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero .container {
+    min-height: 100svh;
+    padding-bottom: var(--space-6);
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__desc {
+    font-size: var(--fs-body);
+  }
+
+  .hero__meta-text {
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .hero__btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__meta-info {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .hero__btn {
+    width: 100%;
+  }
+}
+
+/* Responsive Single breakpoint */
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+@media (min-width: 1400px) {
+}
