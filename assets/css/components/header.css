@@ -16,13 +16,44 @@
 
 .header .mm {
   width: 100%;
-  /* background: var(--morphism-background); */
+  background: var(--morphism-background);
   backdrop-filter: blur(var(--morphism-blur));
   -webkit-backdrop-filter: blur(var(--morphism-blur));
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   z-index: var(--z-fixed);
-  padding: 0;
+  padding: var(--space-2) var(--space-3);
 }
 
 .nv-bar {
+}
+
+/* ── Navalone RTL Mobile FULL Drawer Fix ─────────────────────────────── */
+/* فقط موبایل + RTL — این تغییرات دقیق مشکل رو حل می‌کنه */
+
+@media (max-width: 767px) {
+  body[dir="rtl"] .mm.navalone {
+    /* ۱. فاصله از لبه چپ رو صفر کن */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ۲. خود drawer رو کامل به چپ بچسبون */
+  body[dir="rtl"] .mm.navalone .nv-drawer {
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* ۳. منوهای درونی رو هم کامل پر کن (حتی اگر نصفه‌نصفه می‌شد) */
+  body[dir="rtl"] .mm.navalone .menu-level,
+  body[dir="rtl"] .mm.navalone .nv-panel.is-open,
+  body[dir="rtl"] .mm.navalone .nv-flyout.is-open {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
 }

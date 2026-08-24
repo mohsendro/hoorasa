@@ -2,7 +2,7 @@
 new Navalone("#mm", {
   responsive: "static",
   breakpoint: 991.98,
-  position: "static",
+  position: "smart",
   menuAlign: "left",
   drawerSide: "right",
   openOn: "hover",

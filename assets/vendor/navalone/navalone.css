@@ -44,12 +44,12 @@
   --nv-bar-bg: var(--morphism-background);
   --nv-bar-color: var(--color-text);
   --nv-bar-height: 60px;
-  --nv-bar-padding: 0 20px;
+  --nv-bar-padding: 0;
   --nv-bar-gap: 4px;
   --nv-bar-item-padding: 10px 14px;
   --nv-bar-shadow:
     0 1px 0 rgba(0, 0, 0, 0.08), 0 2px 12px -6px rgba(0, 0, 0, 0.25);
-  --nv-logo-size: 75px;
+  --nv-logo-size: 50px;
 
   /* Condensed bar — the tightened layout the responsive strategies step
 	   through before collapsing. Only the menu's own metrics shrink, so the
@@ -441,16 +441,17 @@ body.nv-scroll-lock {
 
 .nv-side-left .nv-drawer {
   left: 0;
-  transform: translateX(-100%);
+  transform: translateX(0);
 }
 
 .nv-side-right .nv-drawer {
   right: 0;
-  transform: translateX(100%);
+  transform: translateX(calc(100% + var(--nv-width)));
 }
 
 .mm.navalone.nv-open .nv-drawer {
-  transform: translateX(0);
+  transform: translateX(calc(0% + 150px));
+  /* transform: translateX(0); */
 }
 
 .nv-drawer-head {

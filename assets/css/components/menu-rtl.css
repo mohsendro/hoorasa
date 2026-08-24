@@ -1,0 +1,26 @@
+/* ── Navalone RTL Mobile Fix ─────────────────────────────────────────── */
+/* فقط برای موبایل و در حالت RTL فعال می‌شه */
+/* این باید آخرین فایل CSS شامل شده باشه (اولویت بالاست) */
+
+@media (max-width: 767px) {
+  body[dir="rtl"] .mm.navalone,
+  body[dir="rtl"] .mm.navalone .menu-level,
+  body[dir="rtl"] .mm.navalone .nv-flyout,
+  body[dir="rtl"] .mm.navalone .nv-panel,
+  body[dir="rtl"] .mm.navalone .nv-drawer .menu-level {
+    /* ۱. فاصله از لبه چپ drawer (مشکل اصلی) */
+    left: 0 !important;
+    margin-right: 0 !important;
+
+    /* ۲. حاشیه‌های اضافی drawer رو صفر کن تا به لبه بچسبه */
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* اگر در بعضی جاها مثل .nv-panel یا .nv-flyout هم فاصله داشت، این خط رو هم اضافه کن */
+  body[dir="rtl"] .mm.navalone .nv-panel.is-open,
+  body[dir="rtl"] .mm.navalone .nv-flyout.is-open {
+    margin: 0 !important;
+  }
+}
