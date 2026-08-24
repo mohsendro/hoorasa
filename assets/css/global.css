@@ -60,6 +60,14 @@
 }
 
 /* ── Base ─────────────────────────────────────────────── */
+* {
+  -webkit-transition: all var(--transition-normal) linear;
+  -moz-transition: all var(--transition-normal) linear;
+  -ms-transition: all var(--transition-normal) linear;
+  -o-transition: all var(--transition-normal) linear;
+  transition: all var(--transition-normal) linear;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -76,6 +84,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+main {
 }
 
 /* ── Headings ─────────────────────────────────────────────── */
@@ -105,7 +116,7 @@ h3,
 .h3 {
   font-family: var(--font-base);
   font-size: var(--fs-h3);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   line-height: var(--lh-heading);
   color: var(--color-text);
   margin-top: 0;
@@ -116,7 +127,7 @@ h4,
 .h4 {
   font-family: var(--font-base);
   font-size: var(--fs-h4);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   line-height: var(--lh-heading);
   color: var(--color-text);
   margin-top: 0;
@@ -149,7 +160,7 @@ h6,
 .display-1,
 .display {
   font-size: var(--fs-display);
-  font-weight: var(--fw-extrabold);
+  font-weight: var(--fw-black);
   line-height: 1.15;
   color: var(--color-text);
 }
@@ -192,13 +203,16 @@ p.overline,
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color var(--transition-fast), opacity var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    opacity var(--transition-fast);
 }
 
 a:hover,
 a:focus {
-  color: var(--color-primary-dark);
-  text-decoration: underline;
+  color: var(--color-text-muted);
+  /* color: var(--color-primary-dark); */
+  /* text-decoration: underline; */
 }
 
 a:focus-visible {
@@ -318,8 +332,9 @@ small,
 
 /* ── Code ─────────────────────────────────────────────── */
 code {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 0.875em;
   color: var(--color-primary);
   background-color: rgba(218, 42, 42, 0.12);
@@ -329,8 +344,9 @@ code {
 }
 
 pre {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: var(--fs-caption);
   line-height: 1.6;
   color: var(--color-text);
@@ -352,8 +368,9 @@ pre code {
 }
 
 kbd {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 0.85em;
   color: var(--color-text);
   background-color: var(--color-surface-elevated);
@@ -364,8 +381,9 @@ kbd {
 }
 
 samp {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 0.875em;
 }
 
@@ -466,7 +484,7 @@ thead {
 }
 
 th {
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   text-align: start;
   padding: var(--space-3) var(--space-4);
   border-bottom: 2px solid var(--color-border);
@@ -533,7 +551,9 @@ select {
   background-color: var(--color-surface);
   border: var(--border-width) var(--border-style) var(--color-border);
   border-radius: var(--radius-md);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
   appearance: none;
 }
 
@@ -601,8 +621,11 @@ button,
   font-family: var(--font-base);
   font-weight: var(--fw-medium);
   cursor: pointer;
-  transition: background-color var(--transition-fast), color var(--transition-fast),
-    border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 /* ── Selection ────────────────────────────────────────── */

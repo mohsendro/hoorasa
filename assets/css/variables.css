@@ -9,6 +9,8 @@
   --color-primary-dark: #bf1e1e;
   --color-primary-darker: #9f1717;
   --color-primary-deep: #7e1111;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   /* ── Background & Surface (Dark - Default) ─────────── */
   --color-background: #1b1d1b;
@@ -19,11 +21,13 @@
   /* ── Text ──────────────────────────────────────────── */
   --color-text: #fdf6f6;
   /* --color-text: #edc1c1; */
+  --color-desc: #777777;
   --color-text-muted: #e79f9f;
   --color-text-inverse: #3b0606;
 
   /* ── Border ────────────────────────────────────────── */
-  --color-border: rgba(218, 42, 42, 0.18);
+  --color-border: #434343;
+  /* --color-border: rgba(218, 42, 42, 0.18); */
   --border-width: 1px;
   --border-style: solid;
 
@@ -60,11 +64,14 @@
   --fs-caption: 0.875rem;
   --fs-overline: 0.75rem;
 
+  --fw-thin: 100;
+  --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
-  --fw-semibold: 600;
+  /* --fw-semibold: 600; */
   --fw-bold: 700;
-  --fw-extrabold: 800;
+  /* --fw-extrabold: 800; */
+  --fw-black: 900;
 
   --lh-heading: 1.25;
   --lh-body: 1.65;
@@ -99,6 +106,11 @@
   --shadow-md: 0 8px 24px rgba(59, 6, 6, 0.35);
   --shadow-lg: 0 16px 48px rgba(59, 6, 6, 0.45);
   --glow-primary: 0 0 24px rgba(218, 42, 42, 0.35);
+
+  /* ── Morphism ─────────────────────────────────────────── */
+  --morphism-background: #43434340;
+  --morphism-background-full: #434343;
+  --morphism-blur: 10px;
 
   /* ── Transition ────────────────────────────────────── */
   --transition-fast: 150ms ease;

@@ -12,12 +12,16 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" />
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.rtl.min.css" />
 
-  <!-- Navalone Css -->
-  <link rel="stylesheet" href="/assets/vendor/navalone/navalone.css" />
-
   <!-- Design System Css -->
   <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/global.css" />
+
+  <!-- Navalone Css -->
+  <link rel="stylesheet" href="/assets/vendor/navalone/navalone.css" />
+
+  <!-- Components Css -->
+  <link rel="stylesheet" href="assets/css/components/header.css" />
+  <link rel="stylesheet" href="assets/css/components/footer.css" />
 </head>
 
 <body class="body">
@@ -25,15 +29,13 @@
   <header id="header" class="container-fluid header">
     <div class="container">
       <div class="row">
-        <div class="col-2 col-lg-2 logo-column column order-2 order-lg-1">
-          <a href="/" class="logo">
-            <img src="assets/images/favicon-white.png" alt="هورآسا" width="100" height="auto" />
-          </a>
-        </div>
-        <div class="col-10 col-lg-10 menu-column column order-1 order-lg-2">
+        <div class="col-12 column">
           <menu class="mm" id="mm">
+            <a data-nv-logo href="/" class="logo">
+              <img src="assets/images/logo-white.png" alt="هورآسا" width="100" height="auto" />
+            </a>
             <div data-nv-actions>
-              <a href="/register" data-variant="primary">شروع پــروژه</a>
+              <a href="/">درخواست مشاوره</a>
             </div>
 
             <div class="menu-level level-1" id="main-menu">
@@ -49,10 +51,9 @@
             <div class="menu-level" id="services" data-submenu="dropdown-lg">
               <ul>
                 <!-- <li><a href="/" data-target="gifts" data-description="Design">طراحی</a></li>
-                                                                          <li><a href="/" data-target="gifts" data-description="Production">تولید</a></li>
-                                                                          <li><a href="/" data-target="gifts" data-description="Advertisement">تبلیغات</a></li>
-                                                                          <li><a href="/" data-target="gifts" data-description="Events">رویدادها</a></li> -->
-
+                <li><a href="/" data-target="gifts" data-description="Production">تولید</a></li>
+                <li><a href="/" data-target="gifts" data-description="Advertisement">تبلیغات</a></li>
+                <li><a href="/" data-target="gifts" data-description="Events">رویدادها</a></li> -->
                 <li><button data-target="gifts" data-description="Design">طراحی</button></li>
                 <li><button data-target="gifts" data-description="Production">تولید</button></li>
                 <li><button data-target="gifts" data-description="Advertisement">تبلیغات</button></li>
@@ -100,13 +101,13 @@
   </header>
   <!-- Header End -->
 
-  <main>
+  <main id="main" class="mian">
     <!-- Section Start -->
-    <section id="section" class="container-fluid section" style="min-height: 100vh">
+    <section id="section" class="container-fluid section">
       <div class="container">
         <div class="row">
           <div class="col-12 column">
-            <h1>هــــــــــــــورآســـــــــــــا</h1>
+            <!-- <h1>هــــــــــــــورآســـــــــــــا</h1> -->
           </div>
         </div>
       </div>
@@ -119,14 +120,40 @@
     <div class="container">
       <div class="row">
         <div class="col-12 column">
-          <h2>HOORASA</h2>
-        </div>
-      </div>
-      <div class="row copyright">
-        <div class="col-12 column">
-          <p id="copyright">
-            کلیه حقوق وب‌سایت محفوظ و متعلق به شرکت هورآسا می‌باشد. (<span id="years"></span>)
-          </p>
+          <div class="slogan">HOORASA</div>
+          <div class="main-container">
+            <div class="parent">
+              <div class="child child-right">
+                <img src="assets/images/logo-white.png" alt="هورآسا" class="logo" width="150px">
+                <p class="desc">
+                  هوراآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای سازمانی با تکیه بر
+                  خلاقیت، کیفیت و تعهد، از ایده تا اجرا
+                </p>
+              </div>
+              <div class="child child-left">
+                <div>
+                  <strong class="head">راه‌های ارتباطی</strong>
+                  <a href="mailto:info@hoorasa.org">info@hoorasa.org</a>
+                  <a href="tel:092000000">092000000</a>
+                </div>
+                <div>
+                  <strong class="head">آدرس</strong>
+                  <p>تهران، خیابان سئول، جنب کافه پانتیل، کوچه فلانی، پلاک 1</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="copyright-container">
+              <ul class="links">
+                <li><a href="#">خدمات</a></li>
+                <li><a href="#">پروژه‌ها</a></li>
+                <li><a href="#">مهارت‌ها</a></li>
+                <li><a href="#">درخواست مشاوره</a></li>
+              </ul>
+              <p class="copyright">کلیه حقوق وب‌سایت محفوظ و متعلق به شرکت هورآسا می‌باشد. (<span id="years"></span>)
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

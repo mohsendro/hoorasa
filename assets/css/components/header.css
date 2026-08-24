@@ -1,0 +1,28 @@
+#header {
+}
+
+.header {
+}
+
+.header .container-fluid {
+}
+
+.header .container {
+}
+
+.header .row {
+  /* padding: var(--space-3) 0; */
+}
+
+.header .mm {
+  width: 100%;
+  /* background: var(--morphism-background); */
+  backdrop-filter: blur(var(--morphism-blur));
+  -webkit-backdrop-filter: blur(var(--morphism-blur));
+  border-radius: var(--radius-lg);
+  z-index: var(--z-fixed);
+  padding: 0;
+}
+
+.nv-bar {
+}
