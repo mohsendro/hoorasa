@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════════════════════
+   Utility Components – reusable section building blocks
+   Use across sections without changing structure/style
+═══════════════════════════════════════════════════════ */
+
+/* ── Section Intro (overline + title + desc) ──────────── */
+.section-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-2);
+}
+
+.section-overline {
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.section-title {
+  font-family: var(--font-base);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.section-title strong {
+  color: var(--color-primary);
+}
+
+.section-desc {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-desc);
+  margin: 0;
+  /* same width as title, at most ~10% narrower */
+  max-width: 90%;
+}
+
+/* ── Sticky column helper (desktop) ───────────────────── */
+.section-sticky {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .section-sticky {
+    position: sticky;
+    top: calc(var(--nv-bar-height, 60px) + var(--space-6));
+    align-self: flex-start;
+  }
+}
+
+/* ── Responsive tweaks for intro ──────────────────────── */
+@media (max-width: 991.98px) {
+  .section-intro {
+    text-align: center;
+    align-items: center;
+  }
+
+  .section-desc {
+    max-width: 100%;
+  }
+}

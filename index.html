@@ -22,6 +22,7 @@
   <!-- Components Css -->
   <link rel="stylesheet" href="assets/css/components/header.css" />
   <link rel="stylesheet" href="assets/css/components/hero.css" />
+  <link rel="stylesheet" href="assets/css/components/utilities.css" />
   <link rel="stylesheet" href="assets/css/components/services.css" />
   <link rel="stylesheet" href="assets/css/components/footer.css" />
   <link rel="stylesheet" href="assets/css/components/cursor-follower.css" />
@@ -145,25 +146,25 @@
     <!-- Services Start -->
     <section id="services" class="container-fluid services">
       <div class="container">
-        <div class="row">
-          <!-- سمت راست (در RTL): عنوان + توضیح -->
+        <div class="row g-4 g-lg-5">
+          <!-- سمت راست (RTL): عنوان + توضیح — utility: section-intro -->
           <div class="col-12 col-lg-5 column">
-            <div class="services__intro">
-              <p class="services__overline">خدمات ما</p>
-              <h2 class="services__title">
+            <div class="section-intro">
+              <p class="section-overline">خدمات ما</p>
+              <h2 class="section-title">
                 از ایده تا اجرا،
                 <strong>همه‌چیز در یک‌جا</strong>
               </h2>
-              <p class="services__desc">
+              <p class="section-desc">
                 هورآسا با تیمی متخصص در طراحی، تولید، تبلیغات، رویداد و هدایای سازمانی،
                 مسیر برند شما را از مفهوم تا تجربه نهایی همراهی می‌کند.
               </p>
             </div>
           </div>
 
-          <!-- سمت چپ (در RTL): آکاردئون خدمات -->
+          <!-- سمت چپ (RTL): آکاردئون — sticky on desktop -->
           <div class="col-12 col-lg-7 column">
-            <div class="services__accordion-wrap">
+            <div class="services__accordion-wrap section-sticky">
               <div class="accordion accordion-flush" id="servicesAccordion">
                 <!-- Item 1: طراحی -->
                 <div class="accordion-item">
