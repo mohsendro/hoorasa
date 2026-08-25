@@ -70,7 +70,7 @@
 
   /* Right buttons */
   --nv-action-padding: 8px 16px;
-  --nv-action-radius: 6px;
+  --nv-action-radius: 24px;
   --nv-action-gap: 8px;
   --nv-action-bg: transparent;
   --nv-action-color: var(--nv-bar-color);
@@ -324,7 +324,8 @@ body.nv-scroll-lock {
   border: var(--nv-border);
   border-radius: var(--nv-radius);
   box-shadow: var(--nv-panel-shadow);
-  padding: var(--nv-panel-pad);
+  padding: 0;
+  /* padding: var(--nv-panel-pad); */
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);
@@ -379,6 +380,7 @@ body.nv-scroll-lock {
 /* Desktop rows */
 .nv-d-li {
   position: relative;
+  margin: 0;
 }
 
 .nv-d-item {
@@ -861,8 +863,9 @@ body.nv-scroll-lock {
 .nv-flyout {
   top: calc(-1 * var(--nv-panel-pad) - 1px);
   right: 100%;
-  margin-right: 4px;
+  margin-right: 0;
   transform: translateX(6px);
+  z-index: 10;
 }
 
 .nv-flyout.is-open {
@@ -908,6 +911,7 @@ body.nv-scroll-lock {
     transform var(--nv-duration) ease,
     opacity var(--nv-duration) ease,
     visibility 0s linear var(--nv-duration);
+  padding: 0 !important;
 }
 
 .nv-panels.no-transition .menu-level {
@@ -921,6 +925,7 @@ body.nv-scroll-lock {
     transform var(--nv-duration) ease,
     opacity var(--nv-duration) ease,
     visibility 0s;
+  padding: 0;
 }
 
 .level-1 {
