@@ -22,6 +22,7 @@
   <!-- Components Css -->
   <link rel="stylesheet" href="assets/css/components/header.css" />
   <link rel="stylesheet" href="assets/css/components/hero.css" />
+  <link rel="stylesheet" href="assets/css/components/services.css" />
   <link rel="stylesheet" href="assets/css/components/footer.css" />
   <link rel="stylesheet" href="assets/css/components/cursor-follower.css" />
 </head>
@@ -106,8 +107,8 @@
     <!-- Hero Start -->
     <section id="hero" class="container-fluid hero">
       <!-- Video background of #hero -->
-      <video class="hero__video" autoplay muted loop playsinline preload="metadata" <source src="assets/videos/hero.mp4"
-        type="video/mp4" />
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
       </video>
       <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -140,6 +141,211 @@
       </div>
     </section>
     <!-- Hero End -->
+
+    <!-- Services Start -->
+    <section id="services" class="container-fluid services">
+      <div class="container">
+        <div class="row">
+          <!-- سمت راست (در RTL): عنوان + توضیح -->
+          <div class="col-12 col-lg-5 column">
+            <div class="services__intro">
+              <p class="services__overline">خدمات ما</p>
+              <h2 class="services__title">
+                از ایده تا اجرا،
+                <strong>همه‌چیز در یک‌جا</strong>
+              </h2>
+              <p class="services__desc">
+                هورآسا با تیمی متخصص در طراحی، تولید، تبلیغات، رویداد و هدایای سازمانی،
+                مسیر برند شما را از مفهوم تا تجربه نهایی همراهی می‌کند.
+              </p>
+            </div>
+          </div>
+
+          <!-- سمت چپ (در RTL): آکاردئون خدمات -->
+          <div class="col-12 col-lg-7 column">
+            <div class="services__accordion-wrap">
+              <div class="accordion accordion-flush" id="servicesAccordion">
+                <!-- Item 1: طراحی -->
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="heading-design">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse-design" aria-expanded="true" aria-controls="collapse-design">
+                      <span class="services__item-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                      </span>
+                      <span class="services__item-title">طراحی</span>
+                      <span class="services__item-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </h3>
+                  <div id="collapse-design" class="accordion-collapse collapse show" aria-labelledby="heading-design"
+                    data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                      <p class="services__item-text">
+                        طراحی هویت بصری، بسته‌بندی، فضای برند و تجربه کاربری با رویکرد خلاقانه و
+                        متناسب با شخصیت برند شما — از ایده اولیه تا خروجی نهایی.
+                      </p>
+                      <a href="#" class="services__item-link">
+                        مشاهده خدمات طراحی
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 2: تولید -->
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="heading-production">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse-production" aria-expanded="false" aria-controls="collapse-production">
+                      <span class="services__item-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                      </span>
+                      <span class="services__item-title">تولید</span>
+                      <span class="services__item-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </h3>
+                  <div id="collapse-production" class="accordion-collapse collapse" aria-labelledby="heading-production"
+                    data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                      <p class="services__item-text">
+                        تولید محتوا، چاپ، ساخت و اجرای پروژه‌های فیزیکی و دیجیتال با استانداردهای
+                        بالا و کنترل کیفیت در تمام مراحل.
+                      </p>
+                      <a href="#" class="services__item-link">
+                        مشاهده خدمات تولید
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 3: تبلیغات -->
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="heading-ads">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse-ads" aria-expanded="false" aria-controls="collapse-ads">
+                      <span class="services__item-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                        </svg>
+                      </span>
+                      <span class="services__item-title">تبلیغات</span>
+                      <span class="services__item-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </h3>
+                  <div id="collapse-ads" class="accordion-collapse collapse" aria-labelledby="heading-ads"
+                    data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                      <p class="services__item-text">
+                        کمپین‌های تبلیغاتی یکپارچه در رسانه‌های آنلاین و آفلاین، با تمرکز بر
+                        پیام برند و اندازه‌گیری نتایج واقعی.
+                      </p>
+                      <a href="#" class="services__item-link">
+                        مشاهده خدمات تبلیغات
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 4: رویدادها -->
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="heading-events">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse-events" aria-expanded="false" aria-controls="collapse-events">
+                      <span class="services__item-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </span>
+                      <span class="services__item-title">رویدادها</span>
+                      <span class="services__item-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </h3>
+                  <div id="collapse-events" class="accordion-collapse collapse" aria-labelledby="heading-events"
+                    data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                      <p class="services__item-text">
+                        طراحی و اجرای رویدادهای سازمانی، لانچ محصول، همایش و تجربه برند — از
+                        برنامه‌ریزی تا اجرا و پوشش رسانه‌ای.
+                      </p>
+                      <a href="#" class="services__item-link">
+                        مشاهده خدمات رویداد
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 5: هدایای سازمانی -->
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="heading-gifts">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse-gifts" aria-expanded="false" aria-controls="collapse-gifts">
+                      <span class="services__item-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                        </svg>
+                      </span>
+                      <span class="services__item-title">هدایای سازمانی</span>
+                      <span class="services__item-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </h3>
+                  <div id="collapse-gifts" class="accordion-collapse collapse" aria-labelledby="heading-gifts"
+                    data-bs-parent="#servicesAccordion">
+                    <div class="accordion-body">
+                      <p class="services__item-text">
+                        طراحی و تأمین هدایای سازمانی اختصاصی با هویت برند شما — برای مشتریان،
+                        همکاران و رویدادهای خاص.
+                      </p>
+                      <a href="#" class="services__item-link">
+                        مشاهده هدایای سازمانی
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services End -->
   </main>
 
   <!-- Footer Start -->
