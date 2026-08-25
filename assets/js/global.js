@@ -2,7 +2,7 @@
 new Navalone("#mm", {
   responsive: "static",
   breakpoint: 991.98,
-  position: "smart",
+  // position: "smart",
   menuAlign: "left",
   drawerSide: "right",
   openOn: "hover",
@@ -251,4 +251,66 @@ new Navalone("#mm", {
 
   document.getElementById("years").textContent =
     `${gregorianYear} - ${persianYear}`;
+})();
+
+// Cursor Scripts
+(function () {
+  "use strict";
+
+  const DOT_ID = "hoorasa-cursor-dot";
+  const BORDER_ID = "hoorasa-cursor-border";
+  const INTERACTIVE_SELECTOR = "a, button, img, input, textarea, select";
+
+  const DOT_SMOOTHNESS = 0.2;
+  const BORDER_SMOOTHNESS = 0.1;
+
+  const mouse = { x: 0, y: 0 };
+  const dot = { x: 0, y: 0 };
+  const border = { x: 0, y: 0 };
+
+  const dotEl = document.getElementById(DOT_ID);
+  const borderEl = document.getElementById(BORDER_ID);
+
+  if (!dotEl || !borderEl) return;
+
+  function lerp(start, end, factor) {
+    return start + (end - start) * factor;
+  }
+
+  function onMouseMove(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  }
+
+  function onEnter() {
+    borderEl.classList.add("is-hovering");
+  }
+
+  function onLeave() {
+    borderEl.classList.remove("is-hovering");
+  }
+
+  window.addEventListener("mousemove", onMouseMove, { passive: true });
+
+  const interactive = document.querySelectorAll(INTERACTIVE_SELECTOR);
+  interactive.forEach(function (el) {
+    el.addEventListener("mouseenter", onEnter);
+    el.addEventListener("mouseleave", onLeave);
+  });
+
+  function animate() {
+    dot.x = lerp(dot.x, mouse.x, DOT_SMOOTHNESS);
+    dot.y = lerp(dot.y, mouse.y, DOT_SMOOTHNESS);
+    border.x = lerp(border.x, mouse.x, BORDER_SMOOTHNESS);
+    border.y = lerp(border.y, mouse.y, BORDER_SMOOTHNESS);
+
+    dotEl.style.left = dot.x + "px";
+    dotEl.style.top = dot.y + "px";
+    borderEl.style.left = border.x + "px";
+    borderEl.style.top = border.y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
 })();

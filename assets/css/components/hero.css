@@ -1,14 +1,8 @@
-/* ═══════════════════════════════════════════════════════
-   Hero Section – k393-inspired full-viewport
-   Video background on #hero + large title + bottom meta
-═══════════════════════════════════════════════════════ */
-
 #hero {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   overflow: hidden;
-  background-color: #0d0d0d;
 }
 
 .hero {
@@ -18,7 +12,6 @@
   display: flex;
   align-items: stretch;
   overflow: hidden;
-  background-color: #0d0d0d;
   padding: 0;
 }
 
@@ -27,7 +20,6 @@
   padding-right: 0;
 }
 
-/* ── Video = background of #hero ──────────────────────── */
 #hero .hero__video,
 .hero .hero__video {
   position: absolute;
@@ -51,107 +43,106 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  background: rgba(13, 13, 13, 0.72);
+  background: var(--color-black);
+  opacity: 0.6;
   pointer-events: none;
 }
 
-/* ── Container / grid ─────────────────────────────────── */
 .hero .container {
-  position: relative;
-  z-index: 2;
   width: 100%;
-  max-width: var(--page-max-width, 1140px);
+  /* max-width: var(--page-max-width, 1140px); */
   min-height: 100vh;
   min-height: 100dvh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 2;
   padding-top: calc(var(--nv-bar-height, 60px) + var(--space-16));
   padding-bottom: var(--space-12);
 }
 
 .hero .row {
-  flex: 1 1 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1 1 auto;
   margin: 0;
-  width: 100%;
 }
 
 .hero .column {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1 1 auto;
   min-height: 0;
   gap: var(--space-12);
-  width: 100%;
 }
 
-/* ── Title block (k393: large, left-weighted in LTR / start in RTL) ── */
 .hero__title-block {
-  flex: 1 1 auto;
+  max-width: var(--container-sm);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 640px;
+  flex: 1 1 auto;
   padding-top: var(--space-8);
   padding-bottom: var(--space-8);
 }
 
 .hero__title {
   font-family: var(--font-base);
-  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
-  font-weight: var(--fw-bold);
-  line-height: 1.12;
-  color: #ffffff;
+  /* font-size: clamp(2.75rem, 5.5vw, 4.5rem); */
+  font-size: var(--fs-display);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+  /* letter-spacing: -0.03em; */
+  color: var(--color-white);
   margin: 0;
-  letter-spacing: -0.03em;
 }
 
-.hero__title span {
+.hero__title strong {
   color: var(--color-primary);
 }
 
-/* ── Bottom meta row (k393: 3 columns) ────────────────── */
 .hero__meta {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-8);
   align-items: end;
-  width: 100%;
   padding-top: var(--space-6);
 }
 
 .hero__meta-text {
-  margin: 0;
+  max-width: 80%;
   font-size: var(--fs-caption);
   font-weight: var(--fw-regular);
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.55);
-  max-width: 36ch;
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  margin: 0;
 }
 
 .hero__meta-item {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: var(--space-1);
 }
 
 .hero__meta-value {
-  margin: 0;
   font-size: var(--fs-caption);
   font-weight: var(--fw-regular);
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.7);
+  line-height: var(--line-caption);
+  color: var(--color-text);
   text-decoration: none;
   transition: color var(--transition-fast);
+  margin: 0;
 }
 
 a.hero__meta-value:hover {
-  color: #ffffff;
+  color: var(--color-text-muted);
 }
 
 .hero__meta-value + .hero__meta-value {
@@ -201,8 +192,8 @@ a.hero__meta-value:hover {
   }
 
   .hero__meta-text {
-    grid-column: 1 / -1;
     max-width: 100%;
+    grid-column: 1 / -1;
   }
 }
 
@@ -225,6 +216,10 @@ a.hero__meta-value:hover {
   }
 
   .hero__title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+
     font-size: clamp(2rem, 8vw, 2.75rem);
   }
 

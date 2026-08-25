@@ -23,11 +23,17 @@
   <link rel="stylesheet" href="assets/css/components/header.css" />
   <link rel="stylesheet" href="assets/css/components/hero.css" />
   <link rel="stylesheet" href="assets/css/components/footer.css" />
+  <link rel="stylesheet" href="assets/css/components/cursor-follower.css" />
 </head>
+
+<!-- cursor Start -->
+<div id="hoorasa-cursor-dot" class="hoorasa-cursor-dot" aria-hidden="true"></div>
+<div id="hoorasa-cursor-border" class="hoorasa-cursor-border" aria-hidden="true"></div>
+<!-- cursor End -->
 
 <body class="body">
   <!-- Header Start -->
-  <header id="header" class="container-fluid header">
+  <header id="header" class="header">
     <menu class="mm" id="mm">
       <a data-nv-logo href="/" class="logo">
         <img src="assets/images/logo-white.png" alt="هورآسا" width="100" height="auto" />
@@ -45,19 +51,26 @@
         </ul>
       </div>
 
-      <!-- ۲. DROPDOWN-LG (عرض بزرگ + توصیف + تصویر) -->
       <div class="menu-level" id="services" data-submenu="dropdown-lg">
         <ul>
-          <li><button data-target="gifts" data-description="Design">طراحی</button></li>
-          <li><button data-target="gifts" data-description="Production">تولید</button></li>
-          <li><button data-target="gifts" data-description="Advertisement">تبلیغات</button></li>
-          <li><button data-target="gifts" data-description="Events">رویدادها</button></li>
-          <li><button data-target="gifts" data-badge="ویژه" data-description="Gifts">هدایای سازمانی</button>
+          <li>
+            <button data-target="gifts" data-description="Design">طراحی</button>
+          </li>
+          <li>
+            <button data-target="gifts" data-description="Production">تولید</button>
+          </li>
+          <li>
+            <button data-target="gifts" data-description="Advertisement">تبلیغات</button>
+          </li>
+          <li>
+            <button data-target="gifts" data-description="Events">رویدادها</button>
+          </li>
+          <li>
+            <button data-target="gifts" data-badge="ویژه" data-description="Gifts">هدایای سازمانی</button>
           </li>
         </ul>
       </div>
 
-      <!-- ۳. FLYOUT چندسطحی (Nested) -->
       <div class="menu-level" id="gifts" data-submenu="dropdown">
         <ul>
           <li><a href="/">تست</a></li>
@@ -70,20 +83,16 @@
         </ul>
       </div>
 
-      <!-- ۴. MEGA MENU (چندستونه) -->
       <div class="menu-level" id="company" data-submenu="mega">
         <ul>
-          <!-- ستون ۱ -->
           <li class="nv-group">آشنایی با هورآسا</li>
           <li><a href="/" data-description="About us">درباره ما</a></li>
           <li><a href="/" data-description="Contact us">تماس با ما</a></li>
 
-          <!-- ستون ۲ -->
           <li class="nv-group">آموزش‌های هورآسا</li>
           <li><a href="/" data-badge="جدید" data-description="Blog">مقالات</a></li>
           <li><a href="/" data-description="News">اخبار</a></li>
 
-          <!-- ستون ۳ -->
           <li class="nv-group">جامعه هورآسا</li>
           <li><a href="/" data-description="Teams">اعضای تیم</a></li>
           <li><a href="/" data-description="Careers">استخدام</a></li>
@@ -97,34 +106,25 @@
     <!-- Hero Start -->
     <section id="hero" class="container-fluid hero">
       <!-- Video background of #hero -->
-      <video
-        class="hero__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="assets/images/logo-white.png"
-      >
-        <source src="assets/videos/hero.mp4" type="video/mp4" />
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" <source src="assets/videos/hero.mp4"
+        type="video/mp4" />
       </video>
       <div class="hero__overlay" aria-hidden="true"></div>
 
       <div class="container">
         <div class="row">
           <div class="col-12 column">
-            <!-- Large title (k393 style) -->
             <div class="hero__title-block">
               <h1 class="hero__title">
-                از ایده تا اجرا<br />
-                با هورآسا
+                از ایده تا اجرا با
+                <strong>هـــــــورآســـــــا</strong>
               </h1>
             </div>
 
-            <!-- Bottom meta: desc | address | contact (k393 3-col) -->
             <div class="hero__meta">
               <p class="hero__meta-text">
-                هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای سازمانی با تکیه بر خلاقیت، کیفیت و تعهد است.
+                هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای سازمانی با تکیه بر
+                خلاقیت، کیفیت و تعهد است.
               </p>
               <div class="hero__meta-item">
                 <p class="hero__meta-value">تهران، خیابان سئول</p>

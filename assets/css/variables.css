@@ -75,6 +75,7 @@
 
   --lh-heading: 1.25;
   --lh-body: 1.65;
+  --line-caption: 1.55;
 
   --input-height: 42px;
   --list-row-height: 48px;
@@ -123,7 +124,7 @@
   --container-lg: 960px;
   --container-xl: 1140px;
   --container-2xl: 1320px;
-  --page-max-width: 1140px;
+  --page-max-width: 1320px;
 
   /* ── Z-Index ─────────────────────────────────────────── */
   --z-dropdown: 1000;
