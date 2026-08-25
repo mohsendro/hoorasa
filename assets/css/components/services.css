@@ -8,7 +8,7 @@
   position: relative;
   padding-block: var(--space-24);
   background-color: var(--color-background);
-  /* no overflow:hidden – breaks position:sticky */
+  /* do not use overflow:hidden – breaks position:sticky */
 }
 
 .services {
@@ -25,13 +25,29 @@
   z-index: 2;
 }
 
-/* Keep Bootstrap columns side-by-side: no gap on .row */
+/* Force side-by-side columns on desktop */
 .services .row {
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
-.services .column {
-  /* gutters via padding instead of row gap */
+@media (min-width: 992px) {
+  .services .row {
+    flex-wrap: nowrap;
+  }
+
+  .services .row > .col-lg-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    width: 41.666667%;
+  }
+
+  .services .row > .col-lg-7 {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    width: 58.333333%;
+  }
 }
 
 /* ── Accordion side (visual left in RTL) ──────────────── */
@@ -39,7 +55,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  width: 100%;
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -51,7 +67,8 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
+  width: 100%;
   --bs-accordion-bg: transparent;
   --bs-accordion-border-color: transparent;
   --bs-accordion-btn-bg: transparent;
@@ -69,11 +86,7 @@
   border: var(--border-width) var(--border-style) var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin: 0; /* gap handled by parent flex gap */
-}
-
-.services .accordion-item:last-child {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .services .accordion-header {
@@ -116,7 +129,7 @@
 }
 
 .services .accordion-button::after {
-  display: none; /* hide default Bootstrap chevron */
+  display: none;
 }
 
 /* Service icon */
@@ -148,7 +161,7 @@
   min-width: 0;
 }
 
-/* Custom arrow (open / close) */
+/* Custom arrow */
 .services__item-arrow {
   flex-shrink: 0;
   width: 28px;
@@ -159,7 +172,9 @@
   border-radius: var(--radius-full);
   border: 1px solid var(--color-border);
   color: var(--color-text);
-  transition: transform var(--transition-normal), border-color var(--transition-fast),
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-fast),
     background var(--transition-fast);
 }
 

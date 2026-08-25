@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: var(--space-5);
   padding-top: var(--space-2);
+  width: 100%;
 }
 
 .section-overline {
@@ -27,6 +28,7 @@
   line-height: var(--lh-heading);
   color: var(--color-text);
   margin: 0;
+  width: 100%;
 }
 
 .section-title strong {
@@ -39,11 +41,12 @@
   line-height: var(--lh-body);
   color: var(--color-desc);
   margin: 0;
-  /* same width as title, at most ~10% narrower */
+  /* same column as title, ~10% narrower */
+  width: 90%;
   max-width: 90%;
 }
 
-/* ── Sticky column helper (desktop) ───────────────────── */
+/* ── Sticky column helper (desktop only) ──────────────── */
 .section-sticky {
   position: relative;
 }
@@ -64,6 +67,7 @@
   }
 
   .section-desc {
+    width: 100%;
     max-width: 100%;
   }
 }
