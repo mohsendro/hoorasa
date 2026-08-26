@@ -1,0 +1,355 @@
+/* ═══════════════════════════════════════════════════════
+   CTA Section – pill bar (inspired by k1053)
+   Structure: #cta.container-fluid.cta > .container > .row > .col-12.column
+═══════════════════════════════════════════════════════ */
+
+#cta {
+  position: relative;
+  padding-block: var(--space-16);
+  background-color: var(--color-background);
+}
+
+.cta {
+  position: relative;
+}
+
+.cta.container-fluid {
+}
+
+.cta .container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta .row {
+  margin: 0;
+}
+
+.cta .column {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Pill bar ─────────────────────────────────────────── */
+.cta__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--page-max-width);
+  padding: var(--space-5) var(--space-5) var(--space-5) var(--space-10);
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    135deg,
+    #141514 0%,
+    #1b1d1b 40%,
+    #221010 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    box-shadow var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+/* Soft primary glow behind the bar */
+.cta__bar::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle at 80% 50%,
+    rgba(218, 42, 42, 0.22) 0%,
+    transparent 55%
+  );
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity var(--transition-slow);
+  opacity: 0.85;
+}
+
+/* Shine sweep on hover */
+.cta__bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 45%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.06) 55%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: none;
+}
+
+.cta__bar:hover {
+  border-color: rgba(218, 42, 42, 0.35);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(218, 42, 42, 0.12),
+    0 0 48px rgba(218, 42, 42, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.cta__bar:hover::before {
+  opacity: 1;
+}
+
+.cta__bar:hover::after {
+  animation: cta-shine 0.9s ease forwards;
+}
+
+@keyframes cta-shine {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+.cta__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.cta__title {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  color: var(--color-white);
+}
+
+.cta__title strong {
+  color: var(--color-primary);
+}
+
+.cta__subtitle {
+  margin: 0;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+  line-height: var(--line-caption);
+  color: var(--color-desc);
+  max-width: 42ch;
+}
+
+/* ── Button ───────────────────────────────────────────── */
+.cta__actions {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.cta__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow:
+    0 4px 16px rgba(218, 42, 42, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.cta__btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+
+.cta__btn:hover,
+.cta__btn:focus {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  gap: var(--space-3);
+  box-shadow:
+    0 6px 24px rgba(218, 42, 42, 0.5),
+    0 0 0 3px rgba(218, 42, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.cta__btn:hover::before,
+.cta__btn:focus::before {
+  transform: translateX(120%);
+}
+
+.cta__btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.cta__btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.cta__btn-label {
+  position: relative;
+  z-index: 1;
+}
+
+.cta__btn-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.cta__btn:hover .cta__btn-icon,
+.cta__btn:focus .cta__btn-icon {
+  transform: translateX(-4px); /* RTL: arrow moves toward start */
+}
+
+.cta__btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Magnetic helper class – JS applies --mx / --my */
+.cta__btn.is-magnetic {
+  transform: translate3d(var(--mx, 0), var(--my, 0), 0);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    gap var(--transition-fast),
+    transform 80ms linear;
+}
+
+.cta__btn.is-magnetic:hover {
+  transform: translate3d(var(--mx, 0), var(--my, 0), 0) scale(1.03);
+}
+
+/* ── Media Query ───────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  #cta {
+    padding-block: var(--space-12);
+  }
+
+  .cta__bar {
+    padding: var(--space-5) var(--space-6);
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cta__bar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    border-radius: var(--radius-xl);
+    padding: var(--space-8) var(--space-6);
+    gap: var(--space-6);
+  }
+
+  .cta__content {
+    align-items: center;
+  }
+
+  .cta__subtitle {
+    max-width: 100%;
+  }
+
+  .cta__actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta__btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #cta {
+    padding-block: var(--space-10);
+  }
+
+  .cta__title {
+    font-size: clamp(1.05rem, 5vw, 1.25rem);
+  }
+
+  .cta__bar {
+    padding: var(--space-6) var(--space-5);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cta__bar:hover::after {
+    animation: none;
+  }
+
+  .cta__btn::before {
+    display: none;
+  }
+
+  .cta__btn,
+  .cta__btn.is-magnetic {
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .cta__btn:hover,
+  .cta__btn:focus {
+    transform: none;
+  }
+}

@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/components/hero.css" />
   <link rel="stylesheet" href="assets/css/components/utilities.css" />
   <link rel="stylesheet" href="assets/css/components/services.css" />
+  <link rel="stylesheet" href="assets/css/components/cta.css" />
   <link rel="stylesheet" href="assets/css/components/footer.css" />
   <link rel="stylesheet" href="assets/css/components/cursor-follower.css" />
 </head>
@@ -361,6 +362,38 @@
       </div>
     </section>
     <!-- Services End -->
+
+    <!-- CTA Start -->
+    <section id="cta" class="container-fluid cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 column">
+            <div class="cta__bar" data-cta-bar>
+              <div class="cta__content">
+                <h2 class="cta__title">
+                  آماده ساختن یک <strong>حضور ماندگار</strong> هستید؟
+                </h2>
+                <p class="cta__subtitle">
+                  از ایده تا اجرا کنار شماییم — همین حالا مشاوره رایگان بگیرید.
+                </p>
+              </div>
+              <div class="cta__actions">
+                <a href="/" class="cta__btn is-magnetic" data-cta-magnetic>
+                  <span class="cta__btn-label">درخواست مشاوره</span>
+                  <span class="cta__btn-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                      stroke-width="2.25">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA End -->
   </main>
 
   <!-- Footer Start -->
@@ -417,6 +450,42 @@
 
   <!-- Design System Js -->
   <script src="assets/js/global.js"></script>
+
+  <!-- CTA magnetic button -->
+  <script>
+    (function () {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      var btn = document.querySelector("[data-cta-magnetic]");
+      if (!btn) return;
+
+      var strength = 12;
+
+      function onMove(e) {
+        var rect = btn.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top - rect.height / 2;
+        var dist = Math.sqrt(x * x + y * y);
+        var max = Math.max(rect.width, rect.height);
+        if (dist > max) {
+          btn.style.setProperty("--mx", "0px");
+          btn.style.setProperty("--my", "0px");
+          return;
+        }
+        var factor = 1 - dist / max;
+        btn.style.setProperty("--mx", (x / rect.width) * strength * factor + "px");
+        btn.style.setProperty("--my", (y / rect.height) * strength * factor + "px");
+      }
+
+      function onLeave() {
+        btn.style.setProperty("--mx", "0px");
+        btn.style.setProperty("--my", "0px");
+      }
+
+      btn.addEventListener("mousemove", onMove, { passive: true });
+      btn.addEventListener("mouseleave", onLeave);
+    })();
+  </script>
 </body>
 
 </html>
