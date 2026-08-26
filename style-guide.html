@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>هورآسا | Style Guide</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components/utilities.css" />
+
+  <style>
+    .sg-page {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: var(--space-12) var(--space-6) var(--space-24);
+    }
+
+    .sg-header {
+      margin-bottom: var(--space-16);
+      padding-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .sg-header h1 {
+      margin: 0 0 var(--space-3);
+      font-size: var(--fs-h1);
+      font-weight: var(--fw-black);
+    }
+
+    .sg-header p {
+      margin: 0;
+      color: var(--color-desc);
+      max-width: 60ch;
+    }
+
+    .sg-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-6);
+    }
+
+    .sg-nav a {
+      font-size: var(--fs-caption);
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: var(--space-2) var(--space-3);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+    }
+
+    .sg-nav a:hover {
+      color: var(--color-white);
+      border-color: var(--color-primary);
+      background: rgba(218, 42, 42, 0.15);
+    }
+
+    .sg-section {
+      margin-bottom: var(--space-16);
+    }
+
+    .sg-section > h2 {
+      font-size: var(--fs-h3);
+      font-weight: var(--fw-bold);
+      margin: 0 0 var(--space-2);
+    }
+
+    .sg-section > .sg-lead {
+      color: var(--color-desc);
+      margin: 0 0 var(--space-8);
+      font-size: var(--fs-body);
+    }
+
+    .sg-block {
+      margin-bottom: var(--space-10);
+      padding: var(--space-6);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .sg-block h3 {
+      font-size: var(--fs-h5);
+      font-weight: var(--fw-medium);
+      margin: 0 0 var(--space-2);
+    }
+
+    .sg-meta {
+      font-size: var(--fs-overline);
+      color: var(--color-text-muted);
+      margin: 0 0 var(--space-5);
+      font-family: ui-monospace, monospace;
+    }
+
+    .sg-preview {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-5);
+      padding: var(--space-6);
+      background: var(--color-background);
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--color-border);
+    }
+
+    .sg-code {
+      margin: 0;
+      padding: var(--space-4);
+      font-size: 0.8rem;
+      line-height: 1.55;
+      color: var(--color-text-muted);
+      background: #0f100f;
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+    }
+
+    .sg-swatch-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .sg-swatch {
+      width: 120px;
+    }
+
+    .sg-swatch-color {
+      height: 56px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      margin-bottom: var(--space-2);
+    }
+
+    .sg-swatch-name {
+      font-size: var(--fs-overline);
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .sg-swatch-val {
+      font-size: 0.7rem;
+      color: var(--color-desc);
+      font-family: ui-monospace, monospace;
+      margin: 0;
+      direction: ltr;
+    }
+
+    .sg-type-sample {
+      margin-bottom: var(--space-4);
+    }
+
+    .sg-type-sample p {
+      margin: 0;
+      color: var(--color-desc);
+      font-size: var(--fs-caption);
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="sg-page">
+    <header class="sg-header">
+      <h1>هورآسا · Style Guide</h1>
+      <p>
+        مرجع Design System پروژه — تگ‌های پایه HTML و Utility Components.
+        با اضافه شدن هر کامپوننت جدید، این صفحه باید به‌روز شود.
+      </p>
+      <nav class="sg-nav" aria-label="Style guide sections">
+        <a href="#colors">رنگ‌ها</a>
+        <a href="#typography">تایپوگرافی</a>
+        <a href="#buttons">دکمه‌ها</a>
+        <a href="#section-intro">Section Intro</a>
+        <a href="#base-html">تگ‌های پایه</a>
+      </nav>
+    </header>
+
+    <!-- Colors -->
+    <section class="sg-section" id="colors">
+      <h2>رنگ‌ها</h2>
+      <p class="sg-lead">توکن‌های اصلی از <code>variables.css</code></p>
+      <div class="sg-swatch-row">
+        <div class="sg-swatch">
+          <div class="sg-swatch-color" style="background:#da2a2a"></div>
+          <p class="sg-swatch-name">Primary</p>
+          <p class="sg-swatch-val">--color-primary</p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-color" style="background:#bf1e1e"></div>
+          <p class="sg-swatch-name">Primary Dark</p>
+          <p class="sg-swatch-val">--color-primary-dark</p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-color" style="background:#1b1d1b"></div>
+          <p class="sg-swatch-name">Background</p>
+          <p class="sg-swatch-val">--color-background</p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-color" style="background:#fdf6f6"></div>
+          <p class="sg-swatch-name">Text</p>
+          <p class="sg-swatch-val">--color-text</p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-color" style="background:#777777"></div>
+          <p class="sg-swatch-name">Desc</p>
+          <p class="sg-swatch-val">--color-desc</p>
+        </div>
+        <div class="sg-swatch">
+          <div class="sg-swatch-color" style="background:#434343"></div>
+          <p class="sg-swatch-name">Border</p>
+          <p class="sg-swatch-val">--color-border</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="sg-section" id="typography">
+      <h2>تایپوگرافی</h2>
+      <p class="sg-lead">فونت پایه: Peyda · وزن‌ها از Thin تا Black</p>
+
+      <div class="sg-block">
+        <div class="sg-type-sample">
+          <h1 style="margin:0">Display / H1 — از ایده تا اجرا</h1>
+          <p>fs-h1 / fw-bold</p>
+        </div>
+        <div class="sg-type-sample">
+          <h2 style="margin:0">Heading 2 — خدمات هورآسا</h2>
+          <p>fs-h2 / fw-black</p>
+        </div>
+        <div class="sg-type-sample">
+          <h3 style="margin:0">Heading 3 — زیرعنوان بخش</h3>
+          <p>fs-h3 / fw-medium</p>
+        </div>
+        <div class="sg-type-sample">
+          <p style="margin:0;color:var(--color-text)">Body — متن پاراگراف معمولی برای توضیحات و محتوای اصلی صفحه.</p>
+          <p>fs-body / fw-regular</p>
+        </div>
+        <div class="sg-type-sample">
+          <p style="margin:0;font-size:var(--fs-caption);color:var(--color-desc)">Caption — متن کمکی و متا</p>
+          <p>fs-caption</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="sg-section" id="buttons">
+      <h2>دکمه‌ها (Utility)</h2>
+      <p class="sg-lead">دکمه‌های سراسری سایت — بدون magnetic motion</p>
+
+      <div class="sg-block" id="btn-primary">
+        <h3>Button Primary</h3>
+        <p class="sg-meta">.btn-primary</p>
+        <div class="sg-preview">
+          <a href="#" class="btn-primary">
+            <span class="btn-label">درخواست مشاوره</span>
+            <span class="btn-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </span>
+          </a>
+          <button type="button" class="btn-primary">شروع کنید</button>
+        </div>
+        <pre class="sg-code">&lt;a href="#" class="btn-primary"&gt;
+  &lt;span class="btn-label"&gt;درخواست مشاوره&lt;/span&gt;
+  &lt;span class="btn-icon" aria-hidden="true"&gt;…&lt;/span&gt;
+&lt;/a&gt;</pre>
+      </div>
+
+      <div class="sg-block" id="btn-secondary">
+        <h3>Button Secondary</h3>
+        <p class="sg-meta">.btn-secondary</p>
+        <div class="sg-preview">
+          <a href="#" class="btn-secondary">
+            <span class="btn-label">مشاهده خدمات</span>
+            <span class="btn-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </span>
+          </a>
+          <button type="button" class="btn-secondary">بیشتر بدانید</button>
+        </div>
+        <pre class="sg-code">&lt;a href="#" class="btn-secondary"&gt;
+  &lt;span class="btn-label"&gt;مشاهده خدمات&lt;/span&gt;
+&lt;/a&gt;</pre>
+      </div>
+    </section>
+
+    <!-- Section Intro -->
+    <section class="sg-section" id="section-intro">
+      <h2>Section Intro</h2>
+      <p class="sg-lead">بلاک معرفی سکشن — قابل استفاده در همه سکشن‌ها</p>
+
+      <div class="sg-block">
+        <h3>Intro + Sticky</h3>
+        <p class="sg-meta">.section-intro · .section-overline · .section-title · .section-desc · .section-sticky</p>
+        <div class="sg-preview" style="flex-direction:column;align-items:flex-start">
+          <div class="section-intro">
+            <p class="section-overline">خدمات ما</p>
+            <h2 class="section-title">از ایده تا اجرا، <strong>همه‌چیز در یک‌جا</strong></h2>
+            <p class="section-desc">
+              هورآسا با تیمی متخصص در طراحی، تولید، تبلیغات، رویداد و هدایای سازمانی،
+              مسیر برند شما را از مفهوم تا تجربه نهایی همراهی می‌کند.
+            </p>
+          </div>
+        </div>
+        <pre class="sg-code">&lt;div class="section-intro section-sticky"&gt;
+  &lt;p class="section-overline"&gt;خدمات ما&lt;/p&gt;
+  &lt;h2 class="section-title"&gt;عنوان &lt;strong&gt;هایلایت&lt;/strong&gt;&lt;/h2&gt;
+  &lt;p class="section-desc"&gt;توضیحات…&lt;/p&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </section>
+
+    <!-- Base HTML -->
+    <section class="sg-section" id="base-html">
+      <h2>تگ‌های پایه HTML</h2>
+      <p class="sg-lead">استایل‌های پیش‌فرض از global.css</p>
+
+      <div class="sg-block">
+        <h3>Headings</h3>
+        <div class="sg-preview" style="flex-direction:column;align-items:flex-start;gap:var(--space-3)">
+          <h1 style="margin:0">Heading 1</h1>
+          <h2 style="margin:0">Heading 2</h2>
+          <h3 style="margin:0">Heading 3</h3>
+          <h4 style="margin:0">Heading 4</h4>
+          <h5 style="margin:0">Heading 5</h5>
+          <h6 style="margin:0">Heading 6</h6>
+        </div>
+      </div>
+
+      <div class="sg-block">
+        <h3>Paragraph &amp; Link</h3>
+        <div class="sg-preview" style="flex-direction:column;align-items:flex-start">
+          <p style="margin:0 0 var(--space-3)">
+            این یک پاراگراف نمونه است با یک
+            <a href="#">لینک داخلی</a>
+            برای نمایش رنگ و hover.
+          </p>
+          <p class="caption" style="margin:0">متن Caption کوچک</p>
+        </div>
+      </div>
+
+      <div class="sg-block">
+        <h3>Lists</h3>
+        <div class="sg-preview">
+          <ul style="margin:0">
+            <li>آیتم اول</li>
+            <li>آیتم دوم</li>
+            <li>آیتم سوم</li>
+          </ul>
+          <ol style="margin:0">
+            <li>گام یک</li>
+            <li>گام دو</li>
+            <li>گام سه</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer style="padding-top:var(--space-8);border-top:1px solid var(--color-border);color:var(--color-desc);font-size:var(--fs-caption)">
+      هورآسا Design System · style-guide.html · به‌روزرسانی با هر utility جدید
+    </footer>
+  </div>
+</body>
+
+</html>

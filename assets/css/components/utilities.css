@@ -82,3 +82,163 @@
     max-width: 100%;
   }
 }
+
+/* ═══════════════════════════════════════════════════════
+   Buttons – site-wide utilities
+   .btn-primary  → like CTA button, NO magnetic mouse motion
+   .btn-secondary → outline companion
+═══════════════════════════════════════════════════════ */
+
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-base);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  padding: 0.85rem 1.5rem;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: 0;
+  box-shadow:
+    0 4px 16px rgba(218, 42, 42, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  gap: var(--space-3);
+  color: var(--color-white);
+  background: var(--color-primary-dark);
+  box-shadow:
+    0 6px 24px rgba(218, 42, 42, 0.5),
+    0 0 0 3px rgba(218, 42, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-primary:hover::before,
+.btn-primary:focus::before {
+  transform: translateX(120%);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Secondary – outline, matches primary radius/size */
+.btn-secondary {
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  gap: var(--space-3);
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow:
+    0 6px 24px rgba(218, 42, 42, 0.35),
+    0 0 0 3px rgba(218, 42, 42, 0.15);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Optional icon inside buttons */
+.btn-primary .btn-icon,
+.btn-secondary .btn-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  position: relative;
+  z-index: 1;
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .btn-icon,
+.btn-primary:focus .btn-icon,
+.btn-secondary:hover .btn-icon,
+.btn-secondary:focus .btn-icon {
+  transform: translateX(-4px);
+}
+
+.btn-primary .btn-icon svg,
+.btn-secondary .btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary .btn-label,
+.btn-secondary .btn-label {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary::before {
+    display: none;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    transition: background var(--transition-fast), color var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    transform: none;
+  }
+}
