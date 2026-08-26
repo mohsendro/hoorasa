@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="هورآسا Design System — Style Guide کامل تگ‌های HTML و Utility Components" />
   <title>هورآسا | Style Guide</title>
-  <base href="./" />
+  <base href="./style-guide.html" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
 
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" />
@@ -70,7 +70,7 @@
       scroll-margin-top: var(--space-8);
     }
 
-    .sg-section > h2 {
+    .sg-section>h2 {
       font-size: var(--fs-h3);
       font-weight: var(--fw-bold);
       margin: 0 0 var(--space-2);
@@ -79,7 +79,7 @@
       gap: var(--space-3);
     }
 
-    .sg-section > .sg-lead {
+    .sg-section>.sg-lead {
       color: var(--color-desc);
       margin: 0 0 var(--space-8);
       font-size: var(--fs-body);
@@ -94,7 +94,7 @@
     }
 
     .sg-block h3 {
-      font-size: var(--fs-h5);
+      /* font-size: var(--fs-h5); */
       font-weight: var(--fw-medium);
       margin: 0 0 var(--space-2);
     }
@@ -338,7 +338,8 @@
           <a href="#" class="btn-primary">
             <span class="btn-label">درخواست مشاوره</span>
             <span class="btn-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2.25">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
             </span>
@@ -396,7 +397,8 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;html&gt;</code>
           <p class="sg-tag-desc">ریشهٔ کل صفحه HTML</p>
-          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.8rem">&lt;html lang="fa" dir="rtl"&gt;</code></div>
+          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.8rem">&lt;html lang="fa" dir="rtl"&gt;</code>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;head&gt;</code>
@@ -410,7 +412,8 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;meta&gt;</code>
           <p class="sg-tag-desc">متادیتای صفحه (charset، description، viewport)</p>
-          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.75rem">&lt;meta charset="UTF-8" /&gt;</code></div>
+          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.75rem">&lt;meta charset="UTF-8" /&gt;</code>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;link&gt;</code>
@@ -440,12 +443,16 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;header&gt;</code>
           <p class="sg-tag-desc">محتوای مقدماتی یا ناوبری</p>
-          <div class="sg-tag-live" style="padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)">&lt;header&gt; نمونه هدر &lt;/header&gt;</div>
+          <div class="sg-tag-live"
+            style="padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)">
+            &lt;header&gt; نمونه هدر &lt;/header&gt;</div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;nav&gt;</code>
           <p class="sg-tag-desc">لینک‌های ناوبری اصلی</p>
-          <div class="sg-tag-live"><nav style="display:flex;gap:1rem"><a href="#">خانه</a><a href="#">خدمات</a></nav></div>
+          <div class="sg-tag-live">
+            <nav style="display:flex;gap:1rem"><a href="#">خانه</a><a href="#">خدمات</a></nav>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;main&gt;</code>
@@ -454,7 +461,11 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;article&gt;</code>
           <p class="sg-tag-desc">ترکیب مستقل و قابل‌استفاده مجدد</p>
-          <div class="sg-tag-live"><article style="padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)"><strong>مقاله نمونه</strong><br/>متن کوتاه</article></div>
+          <div class="sg-tag-live">
+            <article style="padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)">
+              <strong>مقاله نمونه</strong><br />متن کوتاه
+            </article>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;section&gt;</code>
@@ -463,7 +474,9 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;aside&gt;</code>
           <p class="sg-tag-desc">محتوای جانبی مرتبط</p>
-          <div class="sg-tag-live"><aside style="font-size:var(--fs-caption);color:var(--color-desc)">نکته کناری</aside></div>
+          <div class="sg-tag-live">
+            <aside style="font-size:var(--fs-caption);color:var(--color-desc)">نکته کناری</aside>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;footer&gt;</code>
@@ -503,17 +516,21 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;p&gt;</code>
           <p class="sg-tag-desc">پاراگراف بلوکی</p>
-          <div class="sg-tag-live"><p style="margin:0">این یک پاراگراف نمونه است.</p></div>
+          <div class="sg-tag-live">
+            <p style="margin:0">این یک پاراگراف نمونه است.</p>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;br&gt;</code>
           <p class="sg-tag-desc">شکست خط</p>
-          <div class="sg-tag-live">خط اول<br/>خط دوم</div>
+          <div class="sg-tag-live">خط اول<br />خط دوم</div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;hr&gt;</code>
           <p class="sg-tag-desc">جداکننده افقی موضوعی</p>
-          <div class="sg-tag-live"><hr style="width:100%;margin:0"/></div>
+          <div class="sg-tag-live">
+            <hr style="width:100%;margin:0" />
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;strong&gt; / &lt;b&gt;</code>
@@ -533,7 +550,10 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;blockquote&gt;</code>
           <p class="sg-tag-desc">نقل‌قول بلند</p>
-          <div class="sg-tag-live"><blockquote style="margin:0;padding-inline-start:1rem;border-inline-start:3px solid var(--color-primary)">نقل‌قول نمونه از منبع خارجی.</blockquote></div>
+          <div class="sg-tag-live">
+            <blockquote style="margin:0;padding-inline-start:1rem;border-inline-start:3px solid var(--color-primary)">
+              نقل‌قول نمونه از منبع خارجی.</blockquote>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;q&gt;</code>
@@ -568,7 +588,9 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;pre&gt; / &lt;code&gt;</code>
           <p class="sg-tag-desc">متن ازپیش‌قالب‌بندی‌شده / کد</p>
-          <div class="sg-tag-live"><pre style="margin:0;font-size:0.8rem"><code>const x = 1;</code></pre></div>
+          <div class="sg-tag-live">
+            <pre style="margin:0;font-size:0.8rem"><code>const x = 1;</code></pre>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;kbd&gt;</code>
@@ -670,7 +692,8 @@
           <code class="sg-tag-name">&lt;img&gt;</code>
           <p class="sg-tag-desc">تصویر</p>
           <div class="sg-tag-live">
-            <img src="assets/images/favicon.png" alt="هورآسا" width="48" height="48" style="border-radius:var(--radius-sm)" />
+            <img src="assets/images/favicon.png" alt="هورآسا" width="48" height="48"
+              style="border-radius:var(--radius-sm)" />
           </div>
         </div>
         <div class="sg-tag-card">
@@ -685,12 +708,17 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;audio&gt; / &lt;source&gt;</code>
           <p class="sg-tag-desc">پخش صوت</p>
-          <div class="sg-tag-live"><audio controls style="max-width:100%;height:32px"><source src="" type="audio/mpeg" />مرورگر شما audio را پشتیبانی نمی‌کند.</audio></div>
+          <div class="sg-tag-live"><audio controls style="max-width:100%;height:32px">
+              <source src="" type="audio/mpeg" />مرورگر شما audio را پشتیبانی نمی‌کند.
+            </audio></div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;video&gt; / &lt;track&gt;</code>
           <p class="sg-tag-desc">ویدیو و زیرنویس</p>
-          <div class="sg-tag-live"><video controls width="200" style="max-width:100%;border-radius:var(--radius-sm);background:#000"><source src="assets/videos/hero.mp4" type="video/mp4" /></video></div>
+          <div class="sg-tag-live"><video controls width="200"
+              style="max-width:100%;border-radius:var(--radius-sm);background:#000">
+              <source src="assets/videos/hero.mp4" type="video/mp4" />
+            </video></div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;svg&gt;</code>
@@ -705,7 +733,9 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;canvas&gt;</code>
           <p class="sg-tag-desc">بوم رسم ۲بعدی/۳بعدی</p>
-          <div class="sg-tag-live"><canvas width="80" height="40" style="border:1px solid var(--color-border);border-radius:4px;background:rgba(218,42,42,0.1)"></canvas></div>
+          <div class="sg-tag-live"><canvas width="80" height="40"
+              style="border:1px solid var(--color-border);border-radius:4px;background:rgba(218,42,42,0.1)"></canvas>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;iframe&gt;</code>
@@ -725,10 +755,12 @@
       <h2>📊 Data Tables</h2>
       <p class="sg-lead">ساختار جدول</p>
       <div class="sg-block">
-        <p class="sg-meta">&lt;table&gt; · &lt;caption&gt; · &lt;thead&gt; · &lt;tbody&gt; · &lt;tfoot&gt; · &lt;tr&gt; · &lt;th&gt; · &lt;td&gt; · &lt;colgroup&gt; · &lt;col&gt;</p>
+        <p class="sg-meta">&lt;table&gt; · &lt;caption&gt; · &lt;thead&gt; · &lt;tbody&gt; · &lt;tfoot&gt; · &lt;tr&gt;
+          · &lt;th&gt; · &lt;td&gt; · &lt;colgroup&gt; · &lt;col&gt;</p>
         <div class="sg-preview sg-preview--stack" style="overflow-x:auto">
           <table class="sg-demo-table">
-            <caption style="caption-side:top;text-align:start;margin-bottom:var(--space-3);color:var(--color-desc)">نمونه جدول خدمات</caption>
+            <caption style="caption-side:top;text-align:start;margin-bottom:var(--space-3);color:var(--color-desc)">
+              نمونه جدول خدمات</caption>
             <colgroup>
               <col style="width:40%" />
               <col style="width:30%" />
@@ -774,10 +806,12 @@
       <p class="sg-lead">فرم‌ها و کنترل‌های ورودی</p>
 
       <div class="sg-block">
-        <p class="sg-meta">&lt;form&gt; · &lt;label&gt; · &lt;input&gt; · &lt;textarea&gt; · &lt;select&gt; · &lt;button&gt; · &lt;fieldset&gt; · &lt;legend&gt; · …</p>
+        <p class="sg-meta">&lt;form&gt; · &lt;label&gt; · &lt;input&gt; · &lt;textarea&gt; · &lt;select&gt; ·
+          &lt;button&gt; · &lt;fieldset&gt; · &lt;legend&gt; · …</p>
         <div class="sg-preview sg-preview--stack">
           <form class="sg-demo-form" action="#" method="get" onsubmit="return false;">
-            <fieldset style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-5);margin:0 0 var(--space-4)">
+            <fieldset
+              style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-5);margin:0 0 var(--space-4)">
               <legend style="padding:0 var(--space-2);color:var(--color-text-muted)">اطلاعات تماس</legend>
 
               <div class="form-group">
@@ -787,7 +821,8 @@
 
               <div class="form-group">
                 <label for="sg-email">ایمیل</label>
-                <input id="sg-email" type="email" name="email" placeholder="you@example.com" list="sg-email-suggestions" />
+                <input id="sg-email" type="email" name="email" placeholder="you@example.com"
+                  list="sg-email-suggestions" />
                 <datalist id="sg-email-suggestions">
                   <option value="info@hoorasa.org"></option>
                   <option value="hello@example.com"></option>
@@ -864,7 +899,8 @@
           <div class="sg-tag-live">
             <details>
               <summary style="cursor:pointer;color:var(--color-primary)">جزئیات بیشتر</summary>
-              <p style="margin:var(--space-2) 0 0;font-size:var(--fs-caption);color:var(--color-desc)">محتوای پنهان که با باز شدن دیده می‌شود.</p>
+              <p style="margin:var(--space-2) 0 0;font-size:var(--fs-caption);color:var(--color-desc)">محتوای پنهان که
+                با باز شدن دیده می‌شود.</p>
             </details>
           </div>
         </div>
@@ -872,8 +908,10 @@
           <code class="sg-tag-name">&lt;dialog&gt;</code>
           <p class="sg-tag-desc">پنجره گفت‌وگوی پاپ‌آپ</p>
           <div class="sg-tag-live">
-            <button type="button" class="btn-secondary" onclick="document.getElementById('sg-dialog').showModal()">باز کردن Dialog</button>
-            <dialog id="sg-dialog" style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--color-background);color:var(--color-text);max-width:360px">
+            <button type="button" class="btn-secondary" onclick="document.getElementById('sg-dialog').showModal()">باز
+              کردن Dialog</button>
+            <dialog id="sg-dialog"
+              style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--color-background);color:var(--color-text);max-width:360px">
               <p style="margin:0 0 var(--space-4)">این یک &lt;dialog&gt; نمونه است.</p>
               <button type="button" class="btn-primary" onclick="this.closest('dialog').close()">بستن</button>
             </dialog>
@@ -887,12 +925,17 @@
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;noscript&gt;</code>
           <p class="sg-tag-desc">محتوای جایگزین وقتی JS غیرفعال است</p>
-          <div class="sg-tag-live"><noscript>جاوااسکریپت برای تجربه کامل لازم است.</noscript><span style="font-size:var(--fs-caption);color:var(--color-desc)">(فقط اگر JS خاموش باشد دیده می‌شود)</span></div>
+          <div class="sg-tag-live"><noscript>جاوااسکریپت برای تجربه کامل لازم است.</noscript><span
+              style="font-size:var(--fs-caption);color:var(--color-desc)">(فقط اگر JS خاموش باشد دیده می‌شود)</span>
+          </div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;template&gt;</code>
           <p class="sg-tag-desc">نگهدارندهٔ قطعات برای رندر پویا</p>
-          <div class="sg-tag-live"><template id="sg-tpl"><li>آیتم از template</li></template><span style="font-size:var(--fs-caption);color:var(--color-desc)">محتوای template تا clone شدن دیده نمی‌شود.</span></div>
+          <div class="sg-tag-live"><template id="sg-tpl">
+              <li>آیتم از template</li>
+            </template><span style="font-size:var(--fs-caption);color:var(--color-desc)">محتوای template تا clone شدن
+              دیده نمی‌شود.</span></div>
         </div>
         <div class="sg-tag-card">
           <code class="sg-tag-name">&lt;slot&gt;</code>

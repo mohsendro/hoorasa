@@ -55,7 +55,6 @@
   --fs-display: clamp(3.5rem, 6vw, 4.5rem);
   --fs-h1: clamp(2.5rem, 5vw, 3rem);
   --fs-h2: clamp(2rem, 4vw, 2.25rem);
-  /* h3 must always sit above h4 (1.25rem) */
   --fs-h3: clamp(1.75rem, 3.5vw, 2rem);
   --fs-h4: 1.25rem;
   --fs-h5: 1.15rem;
