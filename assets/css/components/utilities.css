@@ -5,30 +5,42 @@
 
 /* ── Section Intro (overline + title + desc) ──────────── */
 .section-intro {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
   padding-top: var(--space-2);
-  width: 100%;
 }
 
 .section-overline {
+  position: relative;
   font-size: var(--fs-overline);
   font-weight: var(--fw-medium);
-  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-text);
+  padding-right: 15px;
   margin: 0;
 }
 
+.section-overline::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 4px;
+  right: 0;
+  background-color: var(--color-primary-deep);
+  border-radius: var(--radius-full);
+}
+
 .section-title {
+  width: 100%;
   font-family: var(--font-base);
   font-size: var(--fs-h2);
   font-weight: var(--fw-black);
   line-height: var(--lh-heading);
   color: var(--color-text);
   margin: 0;
-  width: 100%;
 }
 
 .section-title strong {
@@ -36,14 +48,13 @@
 }
 
 .section-desc {
+  width: 90%;
+  max-width: 90%;
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   line-height: var(--lh-body);
   color: var(--color-desc);
   margin: 0;
-  /* same column as title, ~10% narrower */
-  width: 90%;
-  max-width: 90%;
 }
 
 /* ── Sticky column helper (desktop only) ──────────────── */
@@ -54,7 +65,7 @@
 @media (min-width: 992px) {
   .section-sticky {
     position: sticky;
-    top: calc(var(--nv-bar-height, 60px) + var(--space-6));
+    top: calc(var(--nv-bar-height, 60px) + var(--space-10));
     align-self: flex-start;
   }
 }
