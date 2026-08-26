@@ -548,7 +548,7 @@ select {
   font-weight: var(--fw-regular);
   line-height: 1.5;
   color: var(--color-text);
-  background-color: var(--color-surface);
+  background-color: transparent;
   border: var(--border-width) var(--border-style) var(--color-border);
   border-radius: var(--radius-md);
   transition:
