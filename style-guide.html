@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="هورآسا Design System — Style Guide کامل تگ‌های HTML و Utility Components" />
   <title>هورآسا | Style Guide</title>
+  <base href="./" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
 
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" />
@@ -22,7 +24,7 @@
     }
 
     .sg-header {
-      margin-bottom: var(--space-16);
+      margin-bottom: var(--space-12);
       padding-bottom: var(--space-8);
       border-bottom: 1px solid var(--color-border);
     }
@@ -36,23 +38,25 @@
     .sg-header p {
       margin: 0;
       color: var(--color-desc);
-      max-width: 60ch;
+      max-width: 64ch;
     }
 
     .sg-nav {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-3);
+      gap: var(--space-2);
       margin-top: var(--space-6);
     }
 
     .sg-nav a {
-      font-size: var(--fs-caption);
+      font-size: var(--fs-overline);
       color: var(--color-text-muted);
       text-decoration: none;
       padding: var(--space-2) var(--space-3);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-full);
+      transition: color var(--transition-fast), border-color var(--transition-fast),
+        background var(--transition-fast);
     }
 
     .sg-nav a:hover {
@@ -63,12 +67,16 @@
 
     .sg-section {
       margin-bottom: var(--space-16);
+      scroll-margin-top: var(--space-8);
     }
 
     .sg-section > h2 {
       font-size: var(--fs-h3);
       font-weight: var(--fw-bold);
       margin: 0 0 var(--space-2);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
     }
 
     .sg-section > .sg-lead {
@@ -78,7 +86,7 @@
     }
 
     .sg-block {
-      margin-bottom: var(--space-10);
+      margin-bottom: var(--space-8);
       padding: var(--space-6);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
@@ -94,8 +102,53 @@
     .sg-meta {
       font-size: var(--fs-overline);
       color: var(--color-text-muted);
-      margin: 0 0 var(--space-5);
-      font-family: ui-monospace, monospace;
+      margin: 0 0 var(--space-4);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .sg-tag-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .sg-tag-card {
+      padding: var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-background);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .sg-tag-card code.sg-tag-name {
+      font-size: 0.85rem;
+      font-weight: var(--fw-medium);
+      color: var(--color-primary);
+      background: rgba(218, 42, 42, 0.12);
+      padding: 0.15em 0.45em;
+      border-radius: var(--radius-sm);
+      direction: ltr;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .sg-tag-card .sg-tag-desc {
+      margin: 0;
+      font-size: var(--fs-caption);
+      color: var(--color-desc);
+      line-height: 1.5;
+    }
+
+    .sg-tag-card .sg-tag-live {
+      margin-top: var(--space-2);
+      padding-top: var(--space-3);
+      border-top: 1px dashed var(--color-border);
+      font-size: var(--fs-body);
+      color: var(--color-text);
     }
 
     .sg-preview {
@@ -110,10 +163,15 @@
       border: 1px dashed var(--color-border);
     }
 
+    .sg-preview--stack {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .sg-code {
       margin: 0;
       padding: var(--space-4);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       line-height: 1.55;
       color: var(--color-text-muted);
       background: #0f100f;
@@ -155,13 +213,33 @@
       direction: ltr;
     }
 
-    .sg-type-sample {
-      margin-bottom: var(--space-4);
+    .sg-note {
+      font-size: var(--fs-caption);
+      color: var(--color-text-muted);
+      margin: var(--space-2) 0 0;
     }
 
-    .sg-type-sample p {
-      margin: 0;
+    .sg-footer {
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border);
       color: var(--color-desc);
+      font-size: var(--fs-caption);
+    }
+
+    /* Demo form spacing inside style guide */
+    .sg-demo-form label {
+      display: block;
+      margin-bottom: var(--space-1);
+    }
+
+    .sg-demo-form .form-group {
+      margin-bottom: var(--space-4);
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .sg-demo-table {
+      width: 100%;
       font-size: var(--fs-caption);
     }
   </style>
@@ -172,19 +250,27 @@
     <header class="sg-header">
       <h1>هورآسا · Style Guide</h1>
       <p>
-        مرجع Design System پروژه — تگ‌های پایه HTML و Utility Components.
-        با اضافه شدن هر کامپوننت جدید، این صفحه باید به‌روز شود.
+        مرجع کامل Design System — توکن‌های رنگ و تایپوگرافی، Utility Components،
+        و کاتالوگ تگ‌های پیش‌فرض HTML با پیش‌نمایش زنده.
+        با هر کامپوننت جدید این صفحه باید به‌روز شود.
       </p>
-      <nav class="sg-nav" aria-label="Style guide sections">
+      <nav class="sg-nav" aria-label="بخش‌های Style Guide">
         <a href="#colors">رنگ‌ها</a>
         <a href="#typography">تایپوگرافی</a>
         <a href="#buttons">دکمه‌ها</a>
         <a href="#section-intro">Section Intro</a>
-        <a href="#base-html">تگ‌های پایه</a>
+        <a href="#doc-root">Document Root</a>
+        <a href="#layout">Layout &amp; Semantics</a>
+        <a href="#text">Text &amp; Headings</a>
+        <a href="#links-lists">Links &amp; Lists</a>
+        <a href="#media">Multimedia</a>
+        <a href="#tables">Tables</a>
+        <a href="#forms">Forms</a>
+        <a href="#widgets">Widgets &amp; Scripts</a>
       </nav>
     </header>
 
-    <!-- Colors -->
+    <!-- ═══ Colors ═══ -->
     <section class="sg-section" id="colors">
       <h2>رنگ‌ها</h2>
       <p class="sg-lead">توکن‌های اصلی از <code>variables.css</code></p>
@@ -222,39 +308,28 @@
       </div>
     </section>
 
-    <!-- Typography -->
+    <!-- ═══ Typography ═══ -->
     <section class="sg-section" id="typography">
       <h2>تایپوگرافی</h2>
       <p class="sg-lead">فونت پایه: Peyda · وزن‌ها از Thin تا Black</p>
-
       <div class="sg-block">
-        <div class="sg-type-sample">
+        <div class="sg-preview sg-preview--stack">
           <h1 style="margin:0">Display / H1 — از ایده تا اجرا</h1>
-          <p>fs-h1 / fw-bold</p>
-        </div>
-        <div class="sg-type-sample">
           <h2 style="margin:0">Heading 2 — خدمات هورآسا</h2>
-          <p>fs-h2 / fw-black</p>
-        </div>
-        <div class="sg-type-sample">
           <h3 style="margin:0">Heading 3 — زیرعنوان بخش</h3>
-          <p>fs-h3 / fw-medium</p>
-        </div>
-        <div class="sg-type-sample">
-          <p style="margin:0;color:var(--color-text)">Body — متن پاراگراف معمولی برای توضیحات و محتوای اصلی صفحه.</p>
-          <p>fs-body / fw-regular</p>
-        </div>
-        <div class="sg-type-sample">
-          <p style="margin:0;font-size:var(--fs-caption);color:var(--color-desc)">Caption — متن کمکی و متا</p>
-          <p>fs-caption</p>
+          <h4 style="margin:0">Heading 4</h4>
+          <h5 style="margin:0">Heading 5</h5>
+          <h6 style="margin:0">Heading 6</h6>
+          <p style="margin:0;color:var(--color-text)">Body — متن پاراگراف معمولی برای توضیحات و محتوای اصلی.</p>
+          <p class="caption" style="margin:0">Caption — متن کمکی و متا</p>
         </div>
       </div>
     </section>
 
-    <!-- Buttons -->
+    <!-- ═══ Buttons ═══ -->
     <section class="sg-section" id="buttons">
       <h2>دکمه‌ها (Utility)</h2>
-      <p class="sg-lead">دکمه‌های سراسری سایت — بدون magnetic motion</p>
+      <p class="sg-lead">دکمه‌های سراسری — شبیه CTA، بدون magnetic motion</p>
 
       <div class="sg-block" id="btn-primary">
         <h3>Button Primary</h3>
@@ -272,7 +347,7 @@
         </div>
         <pre class="sg-code">&lt;a href="#" class="btn-primary"&gt;
   &lt;span class="btn-label"&gt;درخواست مشاوره&lt;/span&gt;
-  &lt;span class="btn-icon" aria-hidden="true"&gt;…&lt;/span&gt;
+  &lt;span class="btn-icon"&gt;…&lt;/span&gt;
 &lt;/a&gt;</pre>
       </div>
 
@@ -282,29 +357,20 @@
         <div class="sg-preview">
           <a href="#" class="btn-secondary">
             <span class="btn-label">مشاهده خدمات</span>
-            <span class="btn-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </span>
           </a>
           <button type="button" class="btn-secondary">بیشتر بدانید</button>
         </div>
-        <pre class="sg-code">&lt;a href="#" class="btn-secondary"&gt;
-  &lt;span class="btn-label"&gt;مشاهده خدمات&lt;/span&gt;
-&lt;/a&gt;</pre>
+        <pre class="sg-code">&lt;a href="#" class="btn-secondary"&gt;مشاهده خدمات&lt;/a&gt;</pre>
       </div>
     </section>
 
-    <!-- Section Intro -->
+    <!-- ═══ Section Intro ═══ -->
     <section class="sg-section" id="section-intro">
       <h2>Section Intro</h2>
       <p class="sg-lead">بلاک معرفی سکشن — قابل استفاده در همه سکشن‌ها</p>
-
       <div class="sg-block">
-        <h3>Intro + Sticky</h3>
         <p class="sg-meta">.section-intro · .section-overline · .section-title · .section-desc · .section-sticky</p>
-        <div class="sg-preview" style="flex-direction:column;align-items:flex-start">
+        <div class="sg-preview sg-preview--stack">
           <div class="section-intro">
             <p class="section-overline">خدمات ما</p>
             <h2 class="section-title">از ایده تا اجرا، <strong>همه‌چیز در یک‌جا</strong></h2>
@@ -314,22 +380,116 @@
             </p>
           </div>
         </div>
-        <pre class="sg-code">&lt;div class="section-intro section-sticky"&gt;
-  &lt;p class="section-overline"&gt;خدمات ما&lt;/p&gt;
-  &lt;h2 class="section-title"&gt;عنوان &lt;strong&gt;هایلایت&lt;/strong&gt;&lt;/h2&gt;
-  &lt;p class="section-desc"&gt;توضیحات…&lt;/p&gt;
-&lt;/div&gt;</pre>
       </div>
     </section>
 
-    <!-- Base HTML -->
-    <section class="sg-section" id="base-html">
-      <h2>تگ‌های پایه HTML</h2>
-      <p class="sg-lead">استایل‌های پیش‌فرض از global.css</p>
+    <!-- ═══ Document Root & Metadata ═══ -->
+    <section class="sg-section" id="doc-root">
+      <h2>🌐 Document Root &amp; Metadata</h2>
+      <p class="sg-lead">تگ‌های ریشه سند و متادیتا — معمولاً فقط در &lt;head&gt; و ابتدای سند</p>
+      <div class="sg-tag-grid">
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;!DOCTYPE&gt;</code>
+          <p class="sg-tag-desc">اعلام نوع سند (HTML5)</p>
+          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.8rem">&lt;!DOCTYPE html&gt;</code></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;html&gt;</code>
+          <p class="sg-tag-desc">ریشهٔ کل صفحه HTML</p>
+          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.8rem">&lt;html lang="fa" dir="rtl"&gt;</code></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;head&gt;</code>
+          <p class="sg-tag-desc">نگهدارندهٔ متادیتا، لینک‌ها و اسکریپت‌های head</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;title&gt;</code>
+          <p class="sg-tag-desc">عنوان تب مرورگر</p>
+          <div class="sg-tag-live">هورآسا | Style Guide</div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;meta&gt;</code>
+          <p class="sg-tag-desc">متادیتای صفحه (charset، description، viewport)</p>
+          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.75rem">&lt;meta charset="UTF-8" /&gt;</code></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;link&gt;</code>
+          <p class="sg-tag-desc">اتصال منابع خارجی (CSS، favicon)</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;style&gt;</code>
+          <p class="sg-tag-desc">استایل‌های داخلی CSS</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;base&gt;</code>
+          <p class="sg-tag-desc">URL پایه برای لینک‌های نسبی</p>
+          <div class="sg-tag-live"><code style="direction:ltr;font-size:0.75rem">&lt;base href="./" /&gt;</code></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Content Layout & Semantics ═══ -->
+    <section class="sg-section" id="layout">
+      <h2>🏗️ Content Layout &amp; Semantics</h2>
+      <p class="sg-lead">ساختار معنایی صفحه</p>
+      <div class="sg-tag-grid">
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;body&gt;</code>
+          <p class="sg-tag-desc">تمام محتوای قابل‌مشاهده صفحه</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;header&gt;</code>
+          <p class="sg-tag-desc">محتوای مقدماتی یا ناوبری</p>
+          <div class="sg-tag-live" style="padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)">&lt;header&gt; نمونه هدر &lt;/header&gt;</div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;nav&gt;</code>
+          <p class="sg-tag-desc">لینک‌های ناوبری اصلی</p>
+          <div class="sg-tag-live"><nav style="display:flex;gap:1rem"><a href="#">خانه</a><a href="#">خدمات</a></nav></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;main&gt;</code>
+          <p class="sg-tag-desc">محتوای غالب بدنه</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;article&gt;</code>
+          <p class="sg-tag-desc">ترکیب مستقل و قابل‌استفاده مجدد</p>
+          <div class="sg-tag-live"><article style="padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)"><strong>مقاله نمونه</strong><br/>متن کوتاه</article></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;section&gt;</code>
+          <p class="sg-tag-desc">بخش عمومی مستقل</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;aside&gt;</code>
+          <p class="sg-tag-desc">محتوای جانبی مرتبط</p>
+          <div class="sg-tag-live"><aside style="font-size:var(--fs-caption);color:var(--color-desc)">نکته کناری</aside></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;footer&gt;</code>
+          <p class="sg-tag-desc">پاورقی بخش یا صفحه</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;div&gt;</code>
+          <p class="sg-tag-desc">کانتینر عمومی block-level</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;span&gt;</code>
+          <p class="sg-tag-desc">کانتینر عمومی inline</p>
+          <div class="sg-tag-live">متن با <span style="color:var(--color-primary)">span رنگی</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Text Formatting & Headings ═══ -->
+    <section class="sg-section" id="text">
+      <h2>📝 Text Formatting &amp; Headings</h2>
+      <p class="sg-lead">قالب‌بندی متن و تیترها</p>
 
       <div class="sg-block">
-        <h3>Headings</h3>
-        <div class="sg-preview" style="flex-direction:column;align-items:flex-start;gap:var(--space-3)">
+        <h3>Headings h1–h6</h3>
+        <p class="sg-meta">&lt;h1&gt; … &lt;h6&gt;</p>
+        <div class="sg-preview sg-preview--stack" style="gap:var(--space-2)">
           <h1 style="margin:0">Heading 1</h1>
           <h2 style="margin:0">Heading 2</h2>
           <h3 style="margin:0">Heading 3</h3>
@@ -339,37 +499,411 @@
         </div>
       </div>
 
-      <div class="sg-block">
-        <h3>Paragraph &amp; Link</h3>
-        <div class="sg-preview" style="flex-direction:column;align-items:flex-start">
-          <p style="margin:0 0 var(--space-3)">
-            این یک پاراگراف نمونه است با یک
-            <a href="#">لینک داخلی</a>
-            برای نمایش رنگ و hover.
-          </p>
-          <p class="caption" style="margin:0">متن Caption کوچک</p>
+      <div class="sg-tag-grid">
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;p&gt;</code>
+          <p class="sg-tag-desc">پاراگراف بلوکی</p>
+          <div class="sg-tag-live"><p style="margin:0">این یک پاراگراف نمونه است.</p></div>
         </div>
-      </div>
-
-      <div class="sg-block">
-        <h3>Lists</h3>
-        <div class="sg-preview">
-          <ul style="margin:0">
-            <li>آیتم اول</li>
-            <li>آیتم دوم</li>
-            <li>آیتم سوم</li>
-          </ul>
-          <ol style="margin:0">
-            <li>گام یک</li>
-            <li>گام دو</li>
-            <li>گام سه</li>
-          </ol>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;br&gt;</code>
+          <p class="sg-tag-desc">شکست خط</p>
+          <div class="sg-tag-live">خط اول<br/>خط دوم</div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;hr&gt;</code>
+          <p class="sg-tag-desc">جداکننده افقی موضوعی</p>
+          <div class="sg-tag-live"><hr style="width:100%;margin:0"/></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;strong&gt; / &lt;b&gt;</code>
+          <p class="sg-tag-desc">اهمیت قوی / توجه بصری</p>
+          <div class="sg-tag-live"><strong>strong</strong> و <b>bold</b></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;em&gt; / &lt;i&gt;</code>
+          <p class="sg-tag-desc">تأکید ساختاری / صدای جایگزین</p>
+          <div class="sg-tag-live"><em>em</em> و <i>italic</i></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;small&gt;</code>
+          <p class="sg-tag-desc">متن ریز (fine print)</p>
+          <div class="sg-tag-live"><small>متن کوچک‌تر</small></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;blockquote&gt;</code>
+          <p class="sg-tag-desc">نقل‌قول بلند</p>
+          <div class="sg-tag-live"><blockquote style="margin:0;padding-inline-start:1rem;border-inline-start:3px solid var(--color-primary)">نقل‌قول نمونه از منبع خارجی.</blockquote></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;q&gt;</code>
+          <p class="sg-tag-desc">نقل‌قول کوتاه درون‌خطی</p>
+          <div class="sg-tag-live">او گفت: <q>سلام دنیا</q></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;cite&gt;</code>
+          <p class="sg-tag-desc">ارجاع به عنوان اثر</p>
+          <div class="sg-tag-live"><cite>شاهنامه</cite></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;abbr&gt;</code>
+          <p class="sg-tag-desc">مخفف یا سرواژه</p>
+          <div class="sg-tag-live"><abbr title="HyperText Markup Language">HTML</abbr></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;dfn&gt;</code>
+          <p class="sg-tag-desc">تعریف اصطلاح</p>
+          <div class="sg-tag-live"><dfn>Design System</dfn> مجموعه قوانین بصری است.</div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;del&gt; / &lt;ins&gt;</code>
+          <p class="sg-tag-desc">حذف‌شده / اضافه‌شده</p>
+          <div class="sg-tag-live"><del>قدیمی</del> <ins>جدید</ins></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;sub&gt; / &lt;sup&gt;</code>
+          <p class="sg-tag-desc">زیرنویس / بالانویس</p>
+          <div class="sg-tag-live">H<sub>2</sub>O و x<sup>2</sup></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;pre&gt; / &lt;code&gt;</code>
+          <p class="sg-tag-desc">متن ازپیش‌قالب‌بندی‌شده / کد</p>
+          <div class="sg-tag-live"><pre style="margin:0;font-size:0.8rem"><code>const x = 1;</code></pre></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;kbd&gt;</code>
+          <p class="sg-tag-desc">ورودی صفحه‌کلید</p>
+          <div class="sg-tag-live"><kbd>Ctrl</kbd> + <kbd>S</kbd></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;samp&gt;</code>
+          <p class="sg-tag-desc">خروجی نمونه برنامه</p>
+          <div class="sg-tag-live"><samp>Hello, World!</samp></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;var&gt;</code>
+          <p class="sg-tag-desc">متغیر ریاضی / برنامه‌نویسی</p>
+          <div class="sg-tag-live"><var>n</var> = 10</div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;mark&gt;</code>
+          <p class="sg-tag-desc">هایلایت برای ارجاع</p>
+          <div class="sg-tag-live">متن <mark>هایلایت‌شده</mark></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;bdi&gt; / &lt;bdo&gt;</code>
+          <p class="sg-tag-desc">جداسازی / اجبار جهت متن</p>
+          <div class="sg-tag-live"><bdi>user123</bdi> · <bdo dir="ltr">LTR</bdo></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;time&gt;</code>
+          <p class="sg-tag-desc">تاریخ/زمان ماشین‌خوان</p>
+          <div class="sg-tag-live"><time datetime="2026-08-26">۲۶ اوت ۲۰۲۶</time></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;data&gt;</code>
+          <p class="sg-tag-desc">محتوا با مقدار ماشین‌خوان</p>
+          <div class="sg-tag-live"><data value="42">چهل‌ودو</data></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;wbr&gt;</code>
+          <p class="sg-tag-desc">فرصت شکستن خط بهینه</p>
+          <div class="sg-tag-live" style="max-width:8rem;word-break:normal">super<wbr/>califragilistic</div>
         </div>
       </div>
     </section>
 
-    <footer style="padding-top:var(--space-8);border-top:1px solid var(--color-border);color:var(--color-desc);font-size:var(--fs-caption)">
-      هورآسا Design System · style-guide.html · به‌روزرسانی با هر utility جدید
+    <!-- ═══ Hyperlinks & Lists ═══ -->
+    <section class="sg-section" id="links-lists">
+      <h2>🔗 Hyperlinks &amp; Lists</h2>
+      <p class="sg-lead">لینک‌ها و انواع لیست</p>
+
+      <div class="sg-block">
+        <h3>Anchor</h3>
+        <p class="sg-meta">&lt;a&gt;</p>
+        <div class="sg-preview">
+          <a href="#">لینک نمونه</a>
+          <a href="https://hoorasa.org" rel="noopener">لینک خارجی</a>
+        </div>
+      </div>
+
+      <div class="sg-tag-grid">
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;ul&gt; / &lt;li&gt;</code>
+          <p class="sg-tag-desc">لیست نامرتب</p>
+          <div class="sg-tag-live">
+            <ul style="margin:0;padding-inline-start:1.25rem">
+              <li>آیتم یک</li>
+              <li>آیتم دو</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;ol&gt; / &lt;li&gt;</code>
+          <p class="sg-tag-desc">لیست مرتب</p>
+          <div class="sg-tag-live">
+            <ol style="margin:0;padding-inline-start:1.25rem">
+              <li>گام یک</li>
+              <li>گام دو</li>
+            </ol>
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;dl&gt; / &lt;dt&gt; / &lt;dd&gt;</code>
+          <p class="sg-tag-desc">لیست توصیف</p>
+          <div class="sg-tag-live">
+            <dl style="margin:0">
+              <dt style="font-weight:600">هورآسا</dt>
+              <dd style="margin:0;color:var(--color-desc)">از ایده تا اجرا</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Embedded Multimedia ═══ -->
+    <section class="sg-section" id="media">
+      <h2>🖼️ Embedded Multimedia</h2>
+      <p class="sg-lead">رسانه و محتوای تعبیه‌شده</p>
+      <div class="sg-tag-grid">
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;img&gt;</code>
+          <p class="sg-tag-desc">تصویر</p>
+          <div class="sg-tag-live">
+            <img src="assets/images/favicon.png" alt="هورآسا" width="48" height="48" style="border-radius:var(--radius-sm)" />
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;picture&gt;</code>
+          <p class="sg-tag-desc">جایگزین‌های تصویر responsive</p>
+          <div class="sg-tag-live">
+            <picture>
+              <img src="assets/images/favicon.png" alt="نمونه picture" width="40" height="40" />
+            </picture>
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;audio&gt; / &lt;source&gt;</code>
+          <p class="sg-tag-desc">پخش صوت</p>
+          <div class="sg-tag-live"><audio controls style="max-width:100%;height:32px"><source src="" type="audio/mpeg" />مرورگر شما audio را پشتیبانی نمی‌کند.</audio></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;video&gt; / &lt;track&gt;</code>
+          <p class="sg-tag-desc">ویدیو و زیرنویس</p>
+          <div class="sg-tag-live"><video controls width="200" style="max-width:100%;border-radius:var(--radius-sm);background:#000"><source src="assets/videos/hero.mp4" type="video/mp4" /></video></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;svg&gt;</code>
+          <p class="sg-tag-desc">گرافیک برداری</p>
+          <div class="sg-tag-live">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M8 12l3 3 5-6" />
+            </svg>
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;canvas&gt;</code>
+          <p class="sg-tag-desc">بوم رسم ۲بعدی/۳بعدی</p>
+          <div class="sg-tag-live"><canvas width="80" height="40" style="border:1px solid var(--color-border);border-radius:4px;background:rgba(218,42,42,0.1)"></canvas></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;iframe&gt;</code>
+          <p class="sg-tag-desc">صفحه HTML تو در تو</p>
+          <p class="sg-note">در پروداکشن با احتیاط و sandbox استفاده شود.</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;embed&gt; / &lt;object&gt;</code>
+          <p class="sg-tag-desc">منابع خارجی / پلاگین</p>
+          <p class="sg-note">کم‌کاربرد در وب مدرن؛ ترجیحاً از روش‌های استاندارد استفاده کنید.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Data Tables ═══ -->
+    <section class="sg-section" id="tables">
+      <h2>📊 Data Tables</h2>
+      <p class="sg-lead">ساختار جدول</p>
+      <div class="sg-block">
+        <p class="sg-meta">&lt;table&gt; · &lt;caption&gt; · &lt;thead&gt; · &lt;tbody&gt; · &lt;tfoot&gt; · &lt;tr&gt; · &lt;th&gt; · &lt;td&gt; · &lt;colgroup&gt; · &lt;col&gt;</p>
+        <div class="sg-preview sg-preview--stack" style="overflow-x:auto">
+          <table class="sg-demo-table">
+            <caption style="caption-side:top;text-align:start;margin-bottom:var(--space-3);color:var(--color-desc)">نمونه جدول خدمات</caption>
+            <colgroup>
+              <col style="width:40%" />
+              <col style="width:30%" />
+              <col style="width:30%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>خدمت</th>
+                <th>وضعیت</th>
+                <th>اولویت</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>طراحی</td>
+                <td>فعال</td>
+                <td>بالا</td>
+              </tr>
+              <tr>
+                <td>تولید</td>
+                <td>فعال</td>
+                <td>متوسط</td>
+              </tr>
+              <tr>
+                <td>رویدادها</td>
+                <td>به‌زودی</td>
+                <td>بالا</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3" style="color:var(--color-desc)">جمع: ۳ ردیف</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Forms ═══ -->
+    <section class="sg-section" id="forms">
+      <h2>📥 Interactive Forms &amp; Inputs</h2>
+      <p class="sg-lead">فرم‌ها و کنترل‌های ورودی</p>
+
+      <div class="sg-block">
+        <p class="sg-meta">&lt;form&gt; · &lt;label&gt; · &lt;input&gt; · &lt;textarea&gt; · &lt;select&gt; · &lt;button&gt; · &lt;fieldset&gt; · &lt;legend&gt; · …</p>
+        <div class="sg-preview sg-preview--stack">
+          <form class="sg-demo-form" action="#" method="get" onsubmit="return false;">
+            <fieldset style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-5);margin:0 0 var(--space-4)">
+              <legend style="padding:0 var(--space-2);color:var(--color-text-muted)">اطلاعات تماس</legend>
+
+              <div class="form-group">
+                <label for="sg-name">نام</label>
+                <input id="sg-name" type="text" name="name" placeholder="نام شما" autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="sg-email">ایمیل</label>
+                <input id="sg-email" type="email" name="email" placeholder="you@example.com" list="sg-email-suggestions" />
+                <datalist id="sg-email-suggestions">
+                  <option value="info@hoorasa.org"></option>
+                  <option value="hello@example.com"></option>
+                </datalist>
+              </div>
+
+              <div class="form-group">
+                <label for="sg-service">خدمت</label>
+                <select id="sg-service" name="service">
+                  <optgroup label="اصلی">
+                    <option>طراحی</option>
+                    <option>تولید</option>
+                  </optgroup>
+                  <optgroup label="سایر">
+                    <option>تبلیغات</option>
+                    <option>رویدادها</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sg-msg">پیام</label>
+                <textarea id="sg-msg" name="message" rows="3" placeholder="پیام شما…"></textarea>
+              </div>
+
+              <div class="form-group" style="display:flex;align-items:center;gap:var(--space-2)">
+                <input id="sg-check" type="checkbox" name="agree" />
+                <label for="sg-check" style="margin:0">قوانین را می‌پذیرم</label>
+              </div>
+
+              <div class="form-group" style="display:flex;gap:var(--space-4)">
+                <label style="display:flex;align-items:center;gap:var(--space-2);margin:0">
+                  <input type="radio" name="type" value="personal" checked /> شخصی
+                </label>
+                <label style="display:flex;align-items:center;gap:var(--space-2);margin:0">
+                  <input type="radio" name="type" value="company" /> سازمانی
+                </label>
+              </div>
+
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-4)">
+                <button type="submit" class="btn-primary">ارسال</button>
+                <button type="reset" class="btn-secondary">پاک کردن</button>
+              </div>
+            </fieldset>
+
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-6);align-items:center">
+              <div>
+                <label for="sg-progress" style="display:block;margin-bottom:var(--space-1)">Progress</label>
+                <progress id="sg-progress" max="100" value="65">65%</progress>
+              </div>
+              <div>
+                <label for="sg-meter" style="display:block;margin-bottom:var(--space-1)">Meter</label>
+                <meter id="sg-meter" min="0" max="100" low="30" high="70" optimum="80" value="75">75</meter>
+              </div>
+              <div>
+                <label style="display:block;margin-bottom:var(--space-1)">Output</label>
+                <output name="result">42</output>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Widgets & Scripts ═══ -->
+    <section class="sg-section" id="widgets">
+      <h2>🛠️ Interactive Widgets &amp; Scripts</h2>
+      <p class="sg-lead">ویجت‌های تعاملی و اسکریپت</p>
+
+      <div class="sg-tag-grid">
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;details&gt; / &lt;summary&gt;</code>
+          <p class="sg-tag-desc">افشای محتوا با کلیک</p>
+          <div class="sg-tag-live">
+            <details>
+              <summary style="cursor:pointer;color:var(--color-primary)">جزئیات بیشتر</summary>
+              <p style="margin:var(--space-2) 0 0;font-size:var(--fs-caption);color:var(--color-desc)">محتوای پنهان که با باز شدن دیده می‌شود.</p>
+            </details>
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;dialog&gt;</code>
+          <p class="sg-tag-desc">پنجره گفت‌وگوی پاپ‌آپ</p>
+          <div class="sg-tag-live">
+            <button type="button" class="btn-secondary" onclick="document.getElementById('sg-dialog').showModal()">باز کردن Dialog</button>
+            <dialog id="sg-dialog" style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--color-background);color:var(--color-text);max-width:360px">
+              <p style="margin:0 0 var(--space-4)">این یک &lt;dialog&gt; نمونه است.</p>
+              <button type="button" class="btn-primary" onclick="this.closest('dialog').close()">بستن</button>
+            </dialog>
+          </div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;script&gt;</code>
+          <p class="sg-tag-desc">اسکریپت سمت کلاینت (JavaScript)</p>
+          <p class="sg-note">در انتهای body یا با type="module" بارگذاری شود.</p>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;noscript&gt;</code>
+          <p class="sg-tag-desc">محتوای جایگزین وقتی JS غیرفعال است</p>
+          <div class="sg-tag-live"><noscript>جاوااسکریپت برای تجربه کامل لازم است.</noscript><span style="font-size:var(--fs-caption);color:var(--color-desc)">(فقط اگر JS خاموش باشد دیده می‌شود)</span></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;template&gt;</code>
+          <p class="sg-tag-desc">نگهدارندهٔ قطعات برای رندر پویا</p>
+          <div class="sg-tag-live"><template id="sg-tpl"><li>آیتم از template</li></template><span style="font-size:var(--fs-caption);color:var(--color-desc)">محتوای template تا clone شدن دیده نمی‌شود.</span></div>
+        </div>
+        <div class="sg-tag-card">
+          <code class="sg-tag-name">&lt;slot&gt;</code>
+          <p class="sg-tag-desc">جایگاه در Web Components</p>
+          <p class="sg-note">داخل Shadow DOM کامپوننت‌های سفارشی استفاده می‌شود.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="sg-footer">
+      هورآسا Design System · <code>style-guide.html</code> · به‌روزرسانی با هر utility / component جدید
     </footer>
   </div>
 </body>
