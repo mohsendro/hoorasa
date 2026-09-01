@@ -45,6 +45,10 @@
   width: 100vw;
   margin-inline: calc(50% - 50vw);
   overflow: hidden;
+  /* Force LTR so flex + transform percentages are physical
+     (page is dir=rtl; without this content starts from the right
+     and initial fill / loop seam break) */
+  direction: ltr;
   /* Soft fade on left & right edges */
   -webkit-mask-image: linear-gradient(
     to right,
@@ -92,13 +96,17 @@
   );
 }
 
-/* Track: two identical sequences for seamless loop */
+/* Track: two identical sequences for seamless loop.
+   Initial transform matches the keyframe "from" so the
+   viewport is already filled on first paint (no empty right side).
+   Animation moves content to the right; jump 0 → -50% is seamless. */
 .clients__track {
   display: flex;
   width: max-content;
   align-items: center;
   gap: 0;
   will-change: transform;
+  transform: translate3d(-50%, 0, 0);
   animation: clients-marquee-right 40s linear infinite;
 }
 
