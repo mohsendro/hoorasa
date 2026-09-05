@@ -22,29 +22,6 @@
   gap: var(--space-16);
 }
 
-.stats__intro {
-  max-width: 46rem;
-  margin-inline: 0;
-}
-
-.stats__intro .section-overline {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.stats__intro .section-title {
-  color: var(--color-white);
-  margin-bottom: var(--space-4);
-}
-
-.stats__intro .section-title strong {
-  color: var(--color-white);
-}
-
-.stats__intro .section-desc {
-  max-width: 34rem;
-  color: rgba(255, 255, 255, 0.58);
-}
-
 .stats__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
