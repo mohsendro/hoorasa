@@ -1,6 +1,6 @@
 #clients {
   position: relative;
-  padding-block: var(--space-12);
+  padding-block: var(--space-24);
   background-color: var(--color-background);
   overflow: hidden;
 }
@@ -17,7 +17,7 @@
 .clients .column {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-16);
 }
 
 /* Optional intro (compact) */
