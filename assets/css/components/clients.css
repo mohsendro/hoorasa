@@ -1,9 +1,3 @@
-/* ═══════════════════════════════════════════════════════
-   Clients – logo marquee
-   Single-row infinite loop · grayscale → color on hover
-   Soft edge fade left/right · motion to the right
-═══════════════════════════════════════════════════════ */
-
 #clients {
   position: relative;
   padding-block: var(--space-12);
