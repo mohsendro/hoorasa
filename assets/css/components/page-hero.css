@@ -54,7 +54,7 @@
 
 .page-hero__title strong {
   display: block;
-  color: var(--color-primary);
+  color: inherit;
 }
 
 .page-hero__meta {
