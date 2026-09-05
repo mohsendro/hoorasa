@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════
-   FAQ – Frequently asked questions
-   Two-col (k1713): dark intro card + accordion list
-═══════════════════════════════════════════════════════ */
-
 #faq {
   position: relative;
   padding-block: var(--space-24);

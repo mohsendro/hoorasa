@@ -314,3 +314,37 @@ new Navalone("#mm", {
 
   requestAnimationFrame(animate);
 })();
+
+// CTA magnetic button
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  var btn = document.querySelector("[data-cta-magnetic]");
+  if (!btn) return;
+
+  var strength = 12;
+
+  function onMove(e) {
+    var rect = btn.getBoundingClientRect();
+    var x = e.clientX - rect.left - rect.width / 2;
+    var y = e.clientY - rect.top - rect.height / 2;
+    var dist = Math.sqrt(x * x + y * y);
+    var max = Math.max(rect.width, rect.height);
+    if (dist > max) {
+      btn.style.setProperty("--mx", "0px");
+      btn.style.setProperty("--my", "0px");
+      return;
+    }
+    var factor = 1 - dist / max;
+    btn.style.setProperty("--mx", (x / rect.width) * strength * factor + "px");
+    btn.style.setProperty("--my", (y / rect.height) * strength * factor + "px");
+  }
+
+  function onLeave() {
+    btn.style.setProperty("--mx", "0px");
+    btn.style.setProperty("--my", "0px");
+  }
+
+  btn.addEventListener("mousemove", onMove, { passive: true });
+  btn.addEventListener("mouseleave", onLeave);
+})();

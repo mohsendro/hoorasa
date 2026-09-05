@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════
-   Contact Map – Map + working hours
-   k99-inspired: map left · hours list right
-═══════════════════════════════════════════════════════ */
-
 #contact-map {
   position: relative;
   padding-block: 0 var(--space-24);

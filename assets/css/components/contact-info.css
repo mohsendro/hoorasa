@@ -1,11 +1,7 @@
-/* ═══════════════════════════════════════════════════════
-   Contact Info – Get in touch cards
-   k3406-inspired: overline + title + desc + info cards
-═══════════════════════════════════════════════════════ */
-
 #contact-info {
   position: relative;
-  padding-block: var(--space-24);
+  padding-block-start: var(--space-32);
+  padding-block-end: var(--space-24);
   background-color: var(--color-background);
 }
 
