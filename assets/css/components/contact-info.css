@@ -1,0 +1,175 @@
+/* ═══════════════════════════════════════════════════════
+   Contact Info – Get in touch cards
+   k3406-inspired: overline + title + desc + info cards
+═══════════════════════════════════════════════════════ */
+
+#contact-info {
+  position: relative;
+  padding-block: var(--space-24);
+  background-color: var(--color-background);
+}
+
+.contact-info {
+  position: relative;
+}
+
+.contact-info .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info .column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.contact-info .section-intro {
+  max-width: 36rem;
+}
+
+.contact-info .section-desc {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Cards grid */
+.contact-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  width: 100%;
+}
+
+.contact-info__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: var(--morphism-background);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.contact-info__card:hover,
+.contact-info__card:focus-visible {
+  background: rgba(218, 42, 42, 0.08);
+  border-color: rgba(218, 42, 42, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.contact-info__card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.contact-info__card--wide {
+  grid-column: 1 / -1;
+}
+
+.contact-info__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: rgba(218, 42, 42, 0.12);
+  color: var(--color-primary);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.contact-info__card:hover .contact-info__icon,
+.contact-info__card:focus-visible .contact-info__icon {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.contact-info__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-info__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-info__title {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.contact-info__hint {
+  font-size: var(--fs-caption);
+  color: var(--color-desc);
+  margin: 0;
+}
+
+.contact-info__value {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+  margin: 0;
+  word-break: break-word;
+}
+
+.contact-info__card a.contact-info__value,
+.contact-info__value a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-info__card:hover .contact-info__value,
+.contact-info__card:hover .contact-info__value a {
+  color: var(--color-primary);
+}
+
+@media (max-width: 767.98px) {
+  #contact-info {
+    padding-block: var(--space-16);
+  }
+
+  .contact-info__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info__card--wide {
+    grid-column: auto;
+  }
+
+  .contact-info__card {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 575.98px) {
+  #contact-info {
+    padding-block: var(--space-12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-info__card {
+    transition: none;
+  }
+
+  .contact-info__card:hover,
+  .contact-info__card:focus-visible {
+    transform: none;
+  }
+}
