@@ -1,13 +1,10 @@
-/* ═══════════════════════════════════════════════════════
-   Error 404 – centered not-found layout (k3916-inspired)
-═══════════════════════════════════════════════════════ */
-
 #error-404 {
   position: relative;
   min-height: calc(100vh - var(--nv-bar-height, 72px));
   display: flex;
   align-items: center;
-  padding-block: var(--space-24);
+  padding-block-start: var(--space-40);
+  padding-block-end: var(--space-24);
   background-color: var(--color-background);
 }
 
@@ -97,7 +94,7 @@
 
 @media (max-width: 767.98px) {
   #error-404 {
-    padding-block: var(--space-20);
+    padding-block: var(--space-32);
     min-height: auto;
   }
 
@@ -107,10 +104,6 @@
 }
 
 @media (max-width: 575.98px) {
-  #error-404 {
-    padding-block: var(--space-16);
-  }
-
   .error-404__actions {
     flex-direction: column;
     width: 100%;
