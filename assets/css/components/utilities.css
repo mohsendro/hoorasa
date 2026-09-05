@@ -242,3 +242,69 @@
     transform: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════
+   Search Form – site-wide utility
+   Inline search: input + submit button
+═══════════════════════════════════════════════════════ */
+
+.search-form {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.search-form__field {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.search-form__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  background: var(--morphism-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 0.85rem 1.25rem;
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.search-form__input::placeholder {
+  color: var(--color-desc);
+  opacity: 1;
+}
+
+.search-form__input:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.search-form__input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(218, 42, 42, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Submit uses theme button styles when combined with .btn-primary */
+.search-form__submit {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .search-form__field {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .search-form__submit {
+    width: 100%;
+  }
+}
