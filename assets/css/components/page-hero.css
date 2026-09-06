@@ -1,7 +1,7 @@
 /* Page Hero – k1836 inspired editorial hero */
 #page-hero {
   position: relative;
-  min-height: min(720px, 78vh);
+  min-height: max(100vh, 100svh, 720px);
   display: flex;
   align-items: center;
   padding-block: var(--space-24) var(--space-16);
@@ -54,7 +54,7 @@
 
 .page-hero__title strong {
   display: block;
-  color: inherit;
+  color: var(--color-primary);
 }
 
 .page-hero__meta {
