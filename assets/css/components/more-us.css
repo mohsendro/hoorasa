@@ -1,0 +1,225 @@
+/* ═══════════════════════════════════════════════════════
+   More Us – About introduction section
+   Inspired by KitKit K37 + K831
+═══════════════════════════════════════════════════════ */
+
+#more-us {
+  position: relative;
+  padding-block: var(--space-32);
+  overflow: hidden;
+}
+
+.more-us {
+  position: relative;
+}
+
+.more-us .container {
+  position: relative;
+  z-index: 1;
+}
+
+.more-us .row {
+  align-items: center;
+}
+
+.more-us__content {
+  width: 100%;
+}
+
+.more-us .section-intro {
+  max-width: 42rem;
+  padding-inline-end: var(--space-6);
+}
+
+.more-us .section-title {
+  font-size: clamp(2.25rem, 4vw, 4.25rem);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.more-us .section-title strong {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+.more-us .section-title strong::after {
+  content: "";
+  position: absolute;
+  right: -0.08em;
+  left: -0.04em;
+  bottom: -0.06em;
+  height: 0.28em;
+  background: var(--color-primary);
+  clip-path: polygon(0 55%, 100% 0, 96% 42%, 2% 100%);
+  opacity: 0.9;
+  z-index: -1;
+  transform: rotate(-1.5deg);
+  transform-origin: center;
+}
+
+.more-us .section-desc {
+  max-width: 36rem;
+}
+
+.more-us__visual {
+  position: relative;
+  min-height: 31rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.more-us__visual::before {
+  content: "";
+  position: absolute;
+  width: min(27rem, 85%);
+  aspect-ratio: 1;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.more-us__visual::after {
+  content: "";
+  position: absolute;
+  width: min(19rem, 62%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(218, 42, 42, 0.16), transparent 68%);
+  filter: blur(8px);
+}
+
+.more-us__media {
+  position: relative;
+  z-index: 1;
+  width: min(20rem, 72%);
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--morphism-background);
+  transform: rotate(-3deg);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.more-us__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.more-us__badge {
+  position: absolute;
+  left: 8%;
+  bottom: 8%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 9rem;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(12, 12, 12, 0.86);
+  backdrop-filter: blur(12px);
+  transform: rotate(3deg);
+}
+
+.more-us__badge-value {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-black);
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.more-us__badge-label {
+  font-size: var(--fs-caption);
+  color: var(--color-desc);
+}
+
+.more-us__line {
+  position: absolute;
+  top: 12%;
+  right: 3%;
+  width: 4rem;
+  height: 4rem;
+  border-top: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+@media (min-width: 992px) {
+  .more-us .row {
+    flex-wrap: nowrap;
+  }
+
+  .more-us__content {
+    padding-inline-start: var(--space-6);
+  }
+
+  .more-us__visual {
+    min-height: 35rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #more-us {
+    padding-block: var(--space-16);
+  }
+
+  .more-us .section-intro {
+    max-width: 100%;
+    padding-inline: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .more-us .section-desc {
+    max-width: 42rem;
+  }
+
+  .more-us__visual {
+    min-height: 26rem;
+    margin-top: var(--space-6);
+  }
+}
+
+@media (max-width: 575.98px) {
+  #more-us {
+    padding-block: var(--space-12);
+  }
+
+  .more-us .section-title {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .more-us__visual {
+    min-height: 22rem;
+    padding: 0;
+  }
+
+  .more-us__media {
+    width: 68%;
+  }
+
+  .more-us__badge {
+    left: 4%;
+    bottom: 6%;
+  }
+
+  .more-us__line {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .more-us__media,
+  .more-us__badge {
+    transform: none;
+  }
+}
