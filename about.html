@@ -1,1 +1,524 @@
-PLACEHOLDER
+<!doctype html>
+<html lang="fa" dir="rtl" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>درباره ما | هورآسا</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+    <!-- Vendors Css -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="assets/vendor/navalone/navalone.css" />
+
+    <!-- Design System Css -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+
+    <!-- Globals Css -->
+    <link rel="stylesheet" href="assets/css/components/header.css" />
+    <link rel="stylesheet" href="assets/css/components/footer.css" />
+    <link rel="stylesheet" href="assets/css/components/utilities.css" />
+    <link rel="stylesheet" href="assets/css/components/cursor-follower.css" />
+
+    <!-- Components Css -->
+    <link rel="stylesheet" href="assets/css/components/about-intro.css" />
+    <link rel="stylesheet" href="assets/css/components/about.css" />
+    <link rel="stylesheet" href="assets/css/components/stats.css" />
+    <link rel="stylesheet" href="assets/css/components/history.css" />
+    <link rel="stylesheet" href="assets/css/components/clients.css" />
+</head>
+
+<!-- cursor Start -->
+<div id="hoorasa-cursor-dot" class="hoorasa-cursor-dot" aria-hidden="true"></div>
+<div id="hoorasa-cursor-border" class="hoorasa-cursor-border" aria-hidden="true"></div>
+<!-- cursor End -->
+
+<body class="body">
+    <!-- Header Start -->
+    <header id="header" class="header">
+        <menu class="mm" id="mm">
+            <a data-nv-logo href="/" class="logo">
+                <img src="assets/images/logo-white.png" alt="هورآسا" width="100" height="auto" />
+            </a>
+            <div data-nv-actions>
+                <a href="/">درخواست مشاوره</a>
+            </div>
+
+            <div class="menu-level level-1" id="main-menu">
+                <ul>
+                    <li><a href="/">مهارت‌ها</a></li>
+                    <li><a href="/">پروژه‌ها</a></li>
+                    <li><button data-target="services">خدمات</button></li>
+                    <li><button data-target="company">هورآسا</button></li>
+                </ul>
+            </div>
+
+            <div class="menu-level" id="services" data-submenu="dropdown-lg">
+                <ul>
+                    <li>
+                        <button data-target="gifts" data-description="Design">طراحی</button>
+                    </li>
+                    <li>
+                        <button data-target="gifts" data-description="Production">تولید</button>
+                    </li>
+                    <li>
+                        <button data-target="gifts" data-description="Advertisement">تبلیغات</button>
+                    </li>
+                    <li>
+                        <button data-target="gifts" data-description="Events">رویدادها</button>
+                    </li>
+                    <li>
+                        <button data-target="gifts" data-badge="ویژه" data-description="Gifts">هدایای سازمانی</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-level" id="gifts" data-submenu="dropdown">
+                <ul>
+                    <li><a href="/">تست</a></li>
+                    <li><a href="/">تست</a></li>
+                    <li><a href="/">تست</a></li>
+                    <li><a href="/">تست</a></li>
+                    <li><a href="/">تست</a></li>
+                    <li><a href="/">تست</a></li>
+                    <li><a href="/">تست</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-level" id="company" data-submenu="mega">
+                <ul>
+                    <li class="nv-group">آشنایی با هورآسا</li>
+                    <li><a href="about.html" data-description="About us">درباره ما</a></li>
+                    <li><a href="contact.html" data-description="Contact us">تماس با ما</a></li>
+
+                    <li class="nv-group">آموزش‌های هورآسا</li>
+                    <li><a href="/" data-badge="جدید" data-description="Blog">مقالات</a></li>
+                    <li><a href="/" data-description="News">اخبار</a></li>
+
+                    <li class="nv-group">جامعه هورآسا</li>
+                    <li><a href="/" data-description="Teams">اعضای تیم</a></li>
+                    <li><a href="/" data-description="Careers">استخدام</a></li>
+                </ul>
+            </div>
+        </menu>
+    </header>
+    <!-- Header End -->
+
+    <main id="main" class="main">
+        <!-- About Intro Start (k533) -->
+        <section id="about-intro" class="container-fluid about-intro" aria-label="معرفی هورآسا">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 column">
+                        <figure class="about-intro__media">
+                            <img src="assets/images/logo-white.png" alt="هورآسا" width="560" height="700"
+                                loading="eager" />
+                            <span class="about-intro__badge" aria-hidden="true">
+                                <span class="about-intro__badge-text">از ایده تا اجرا</span>
+                            </span>
+                        </figure>
+                    </div>
+
+                    <div class="col-12 col-lg-6 column">
+                        <div class="about-intro__content">
+                            <div class="section-intro">
+                                <p class="section-overline">درباره برند</p>
+                                <h1 class="section-title">
+                                    از ایده تا اجرا با <strong>هورآسا</strong>
+                                </h1>
+                                <p class="section-desc">
+                                    هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای
+                                    سازمانی است. ما با تکیه بر خلاقیت، کیفیت و تعهد، مسیر برند شما را از مفهوم تا تجربه
+                                    نهایی همراهی می‌کنیم.
+                                </p>
+                            </div>
+
+                            <figure class="about-intro__media-secondary">
+                                <img src="assets/images/logo-white.png" alt="" width="400" height="275" loading="lazy" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Intro End -->
+
+        <!-- About Start -->
+        <section id="about" class="container-fluid about" aria-label="ما که هستیم">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 column">
+                        <div class="section-intro">
+                            <p class="section-overline">ما که هستیم</p>
+                            <h2 class="section-title">
+                                تیمی که <strong>تفاوت می‌آفریند</strong>
+                            </h2>
+                            <p class="section-desc">
+                                هورآسا فقط یک آژانس نیست — شریک استراتژیک برند شماست. ما با ترکیب خلاقیت،
+                                دقت اجرایی و تعهد به نتیجه، تجربه‌ای متفاوت از همکاری می‌سازیم.
+                            </p>
+                            <div class="about__cta">
+                                <a href="contact.html" class="btn-primary">
+                                    <span class="btn-label">تماس با ما</span>
+                                    <span class="btn-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="2.25">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 column">
+                        <figure class="about__media">
+                            <img src="assets/images/logo-white.png" alt="تیم هورآسا" width="400" height="560"
+                                loading="lazy" />
+                        </figure>
+                    </div>
+
+                    <div class="col-12 col-lg-4 column">
+                        <div class="about__features">
+                            <div class="about__feature">
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </span>
+                                <span class="about__feature-body">
+                                    <span class="about__feature-title">رویکرد یکپارچه</span>
+                                    <span class="about__feature-desc">از ایده تا اجرا در یک تیم منسجم، بدون پراکندگی و
+                                        دوباره‌کاری</span>
+                                </span>
+                            </div>
+
+                            <div class="about__feature">
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </span>
+                                <span class="about__feature-body">
+                                    <span class="about__feature-title">کیفیت تضمین‌شده</span>
+                                    <span class="about__feature-desc">استانداردهای بالا و کنترل کیفیت در تمام مراحل
+                                        پروژه</span>
+                                </span>
+                            </div>
+
+                            <div class="about__feature">
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                                    </svg>
+                                </span>
+                                <span class="about__feature-body">
+                                    <span class="about__feature-title">همکاری شفاف</span>
+                                    <span class="about__feature-desc">ارتباط نزدیک، گزارش‌دهی منظم و تصمیم‌گیری
+                                        مشترک</span>
+                                </span>
+                            </div>
+
+                            <div class="about__feature">
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </span>
+                                <span class="about__feature-body">
+                                    <span class="about__feature-title">نوآوری مستمر</span>
+                                    <span class="about__feature-desc">ایده‌های تازه و راه‌حل‌های خلاقانه برای هر برند و
+                                        پروژه</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About End -->
+
+        <!-- Stats Start -->
+        <section id="stats" class="container-fluid stats" aria-label="آمار و ارقام هورآسا">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 column">
+                        <div class="section-intro stats__intro">
+                            <p class="section-overline">دستاوردها</p>
+                            <h2 class="section-title">
+                                اعدادی که <strong>داستان ما</strong> را می‌گویند
+                            </h2>
+                            <p class="section-desc">
+                                سال‌ها تجربه، پروژه‌های موفق و مشتریان راضی — نتیجه تعهد ما به کیفیت و خلاقیت است.
+                            </p>
+                        </div>
+
+                        <div class="stats__grid">
+                            <div class="stats__item">
+                                <span class="stats__value" data-count="120">۱۲۰+</span>
+                                <span class="stats__label">پروژه موفق</span>
+                            </div>
+                            <div class="stats__item">
+                                <span class="stats__value" data-count="85">۸۵+</span>
+                                <span class="stats__label">مشتری راضی</span>
+                            </div>
+                            <div class="stats__item">
+                                <span class="stats__value" data-count="12">۱۲+</span>
+                                <span class="stats__label">سال تجربه</span>
+                            </div>
+                            <div class="stats__item">
+                                <span class="stats__value" data-count="25">۲۵+</span>
+                                <span class="stats__label">عضو تیم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats End -->
+
+        <!-- History Start (k706) -->
+        <section id="history" class="container-fluid history" aria-label="تاریخچه فعالیت هورآسا">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5 column">
+                        <div class="section-intro section-sticky">
+                            <p class="section-overline">مسیر ما</p>
+                            <h2 class="section-title">
+                                تاریخچه <strong>فعالیت</strong> هورآسا
+                            </h2>
+                            <p class="section-desc">
+                                از آغاز تا امروز، هر گام ما بر پایه خلاقیت، کیفیت و اعتماد مشتریان شکل گرفته است.
+                            </p>
+                            <div class="history__cta">
+                                <a href="contact.html" class="btn-primary">
+                                    <span class="btn-label">همکاری با ما</span>
+                                    <span class="btn-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="2.25">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7 column">
+                        <div class="history__timeline">
+                            <article class="history__item">
+                                <span class="history__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </span>
+                                <div class="history__body">
+                                    <p class="history__year">۱۳۹۲</p>
+                                    <h3 class="history__title">آغاز مسیر</h3>
+                                    <p class="history__desc">
+                                        تأسیس هورآسا با تمرکز بر طراحی هویت بصری و تولید محتوای خلاق برای برندهای نوپا.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="history__item">
+                                <span class="history__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                </span>
+                                <div class="history__body">
+                                    <p class="history__year">۱۳۹۵</p>
+                                    <h3 class="history__title">گسترش خدمات تولید</h3>
+                                    <p class="history__desc">
+                                        راه‌اندازی واحد تولید و چاپ تخصصی برای تحقق ایده‌ها از مفهوم تا محصول نهایی.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="history__item">
+                                <span class="history__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                                    </svg>
+                                </span>
+                                <div class="history__body">
+                                    <p class="history__year">۱۳۹۸</p>
+                                    <h3 class="history__title">ورود به تبلیغات و رویداد</h3>
+                                    <p class="history__desc">
+                                        توسعه تیم تبلیغات و رویدادهای سازمانی برای همراهی کامل برندها در تجربه مخاطب.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="history__item">
+                                <span class="history__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.75">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                    </svg>
+                                </span>
+                                <div class="history__body">
+                                    <p class="history__year">۱۴۰۲ تا امروز</p>
+                                    <h3 class="history__title">آژانس یکپارچه برند</h3>
+                                    <p class="history__desc">
+                                        تبدیل شدن به شریک استراتژیک برندها با خدمات یکپارچه طراحی، تولید، تبلیغات،
+                                        رویداد و هدایای سازمانی.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- History End -->
+
+        <!-- Awards / Clients Start -->
+        <section id="clients" class="container-fluid clients" aria-label="جوایز و افتخارات هورآسا">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 column">
+                        <div class="section-intro align-items-center">
+                            <p class="section-overline">افتخارات</p>
+                            <h2 class="section-title">جوایز و <strong>افتخارات</strong></h2>
+                        </div>
+
+                        <div class="clients__marquee" data-clients-marquee>
+                            <div class="clients__track">
+                                <div class="clients__group" aria-hidden="false">
+                                    <div class="clients__item" title="جایزه ۱">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۱" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۲">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۲" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۳">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۳" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۴">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۴" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۵">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۵" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۶">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۶" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۷">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۷" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="جایزه ۸">
+                                        <img src="assets/images/logo-white.png" alt="جایزه ۸" width="160" height="64" loading="lazy" />
+                                    </div>
+                                </div>
+                                <div class="clients__group" aria-hidden="true">
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                    <div class="clients__item" title="">
+                                        <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Awards / Clients End -->
+    </main>
+
+    <!-- Footer Start -->
+    <footer id="footer" class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 column">
+                    <div class="slogan">HOORASA</div>
+                    <div class="main-container">
+                        <div class="parent">
+                            <div class="child child-right">
+                                <img src="assets/images/logo-white.png" alt="هورآسا" class="logo" width="150px">
+                                <p class="desc">
+                                    هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای
+                                    سازمانی با تکیه
+                                    بر
+                                    خلاقیت، کیفیت و تعهد، از ایده تا اجرا
+                                </p>
+                            </div>
+                            <div class="child child-left">
+                                <div>
+                                    <strong class="head">راه‌های ارتباطی</strong>
+                                    <a href="mailto:info@hoorasa.org">info@hoorasa.org</a>
+                                    <a href="tel:092000000">092000000</a>
+                                </div>
+                                <div>
+                                    <strong class="head">آدرس</strong>
+                                    <p>تهران، خیابان سئول، جنب کافه پانتیل، کوچه فلانی، پلاک 1</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="copyright-container">
+                            <ul class="links">
+                                <li><a href="/">خدمات</a></li>
+                                <li><a href="/">پروژه‌ها</a></li>
+                                <li><a href="/">مهارت‌ها</a></li>
+                                <li><a href="contact.html">تماس با ما</a></li>
+                            </ul>
+                            <p class="copyright">کلیه حقوق وب‌سایت محفوظ و متعلق به شرکت هورآسا می‌باشد. (<span
+                                    id="years"></span>)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Vendors Js -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/navalone/navalone.global.js"></script>
+
+    <!-- Design System Js -->
+    <script src="assets/js/global.js"></script>
+</body>
+
+</html>
