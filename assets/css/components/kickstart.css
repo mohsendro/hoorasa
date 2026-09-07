@@ -1,10 +1,12 @@
+/* ═══════════════════════════════════════════════════════
+   Kickstart – k1786 inspired
+   Two-col: intro + actions (space-between) | stacked media (left in RTL)
+═══════════════════════════════════════════════════════ */
+
 #kickstart {
   position: relative;
-  min-height: max(100vh, 100svh, 720px);
-  display: flex;
-  align-items: center;
-  padding-block: var(--space-24) var(--space-16);
-  background: var(--color-background);
+  padding-block: var(--space-24);
+  background-color: var(--color-background);
   overflow: hidden;
 }
 
@@ -12,19 +14,15 @@
   position: relative;
 }
 
-.kickstart::before {
-  content: "";
-  position: absolute;
-  inset-inline-start: 0;
-  top: 0;
-  width: min(42vw, 560px);
-  height: 1px;
-  background: var(--color-border);
-}
-
 .kickstart .container {
   position: relative;
   z-index: 2;
+}
+
+.kickstart .row {
+  align-items: stretch;
+  row-gap: var(--space-12);
+  min-height: min(70vh, 640px);
 }
 
 .kickstart .column {
@@ -32,126 +30,267 @@
   flex-direction: column;
 }
 
+/* ── Content column ───────────────────────────────────── */
 .kickstart__content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 28%);
-  align-items: end;
-  gap: var(--space-16);
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-12);
+  height: 100%;
+  min-height: 28rem;
+  padding-block: var(--space-4);
+}
+
+/* Top: subtitle + title + desc (utility-like) */
+.kickstart__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 34rem;
+}
+
+/* Badge-style subtitle (overline + border pill) */
+.kickstart__subtitle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin: 0;
+  min-height: 32px;
+  padding-inline: var(--space-4);
+  padding-block: 0.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  background: transparent;
+  white-space: nowrap;
 }
 
 .kickstart__title {
-  max-width: 14ch;
+  width: 100%;
   margin: 0;
   font-family: var(--font-base);
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(2.25rem, 4.2vw, 3rem);
   font-weight: var(--fw-black);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   color: var(--color-text);
 }
 
 .kickstart__title strong {
-  display: block;
   color: var(--color-primary);
 }
 
-.kickstart__meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-6);
-  padding-bottom: var(--space-2);
-}
-
-.kickstart__badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 32px;
-  padding-inline: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  color: var(--color-text);
-  background: transparent;
-  font-size: var(--fs-caption);
-  font-weight: var(--fw-medium);
-  line-height: 1;
-  white-space: nowrap;
-}
-
 .kickstart__desc {
-  max-width: 24rem;
+  width: 100%;
+  max-width: 32rem;
   margin: 0;
-  color: var(--color-desc);
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   line-height: var(--lh-body);
+  color: var(--color-desc);
 }
 
+/* Bottom: buttons + features */
+.kickstart__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.kickstart__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.kickstart__features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kickstart__feature {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  color: var(--color-desc);
+  margin: 0;
+}
+
+.kickstart__check {
+  display: inline-grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.kickstart__check svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Media column (left in RTL = second col) ──────────── */
+.kickstart__media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kickstart__figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+}
+
+.kickstart__figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stacked cards like k1786 */
+.kickstart__figure--main {
+  position: relative;
+  z-index: 3;
+  width: min(88%, 28rem);
+  aspect-ratio: 16 / 11;
+  transform: translate(8%, -6%);
+}
+
+.kickstart__figure--mid {
+  position: absolute;
+  z-index: 2;
+  width: min(72%, 22rem);
+  aspect-ratio: 16 / 11;
+  inset-inline-start: 4%;
+  bottom: 12%;
+  opacity: 0.85;
+}
+
+.kickstart__figure--back {
+  position: absolute;
+  z-index: 1;
+  width: min(64%, 18rem);
+  aspect-ratio: 16 / 11;
+  inset-inline-end: 6%;
+  top: 8%;
+  opacity: 0.55;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
   #kickstart {
-    min-height: auto;
-    padding-block: var(--space-20) var(--space-12);
-    padding-top: calc(var(--nv-bar-height, 60px) + var(--space-16));
+    padding-block: var(--space-16);
+  }
+
+  .kickstart .row {
+    min-height: 0;
   }
 
   .kickstart__content {
-    grid-template-columns: 1fr;
+    min-height: 0;
+    justify-content: flex-start;
     gap: var(--space-10);
+    text-align: center;
+    align-items: center;
   }
 
-  .kickstart__title {
-    max-width: 12ch;
-    font-size: clamp(3.5rem, 10vw, 6rem);
+  .kickstart__intro {
+    align-items: center;
+    max-width: 100%;
   }
 
-  .kickstart__meta {
+  .kickstart__subtitle {
+    align-self: center;
+  }
+
+  .kickstart__desc {
     max-width: 36rem;
+  }
+
+  .kickstart__footer {
+    align-items: center;
+    width: 100%;
+  }
+
+  .kickstart__actions {
+    justify-content: center;
+  }
+
+  .kickstart__features {
+    justify-content: center;
+  }
+
+  .kickstart__media {
+    min-height: 22rem;
+    order: -1;
+  }
+
+  .kickstart__figure--main {
+    width: min(90%, 24rem);
+    transform: none;
+  }
+
+  .kickstart__figure--mid {
+    width: min(70%, 18rem);
+    inset-inline-start: 2%;
+    bottom: 8%;
+  }
+
+  .kickstart__figure--back {
+    width: min(58%, 15rem);
+    inset-inline-end: 4%;
+    top: 6%;
   }
 }
 
 @media (max-width: 575.98px) {
   #kickstart {
-    padding-block: var(--space-16) var(--space-10);
-    padding-top: calc(var(--nv-bar-height, 60px) + var(--space-12));
-  }
-
-  .kickstart__content {
-    gap: var(--space-8);
+    padding-block: var(--space-12);
   }
 
   .kickstart__title {
-    max-width: 100%;
-    font-size: clamp(3rem, 16vw, 4.5rem);
-    line-height: 1;
+    font-size: clamp(1.85rem, 7vw, 2.35rem);
+  }
+
+  .kickstart__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .kickstart__actions .btn-primary,
+  .kickstart__actions .btn-secondary {
+    width: 100%;
+  }
+
+  .kickstart__features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .kickstart__media {
+    min-height: 18rem;
   }
 }
-
-/* 
-<!-- Kickstart Start -->
-<section id="kickstart" class="container-fluid kickstart" aria-label="شعار و معرفی برند">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 column">
-                <div class="kickstart__content">
-                    <h1 class="kickstart__title">
-                        از ایده تا اجرا با
-                        <strong>هورآسا</strong>
-                    </h1>
-
-                    <div class="kickstart__meta">
-                        <span class="kickstart__badge">درباره برند</span>
-                        <p class="kickstart__desc">
-                            هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای
-                            سازمانی است.
-                            ما با تکیه بر خلاقیت، کیفیت و تعهد، مسیر برند شما را از مفهوم تا تجربه نهایی همراهی
-                            می‌کنیم.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Kickstart End -->
-*/
