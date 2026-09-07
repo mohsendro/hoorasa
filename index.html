@@ -25,6 +25,7 @@
 
   <!-- Components Css -->
   <link rel="stylesheet" href="assets/css/components/hero.css" />
+  <link rel="stylesheet" href="assets/css/components/stats.css" />
   <link rel="stylesheet" href="assets/css/components/services.css" />
   <link rel="stylesheet" href="assets/css/components/clients.css" />
   <link rel="stylesheet" href="assets/css/components/about.css" />
@@ -110,7 +111,7 @@
 
   <main id="main" class="main">
     <!-- Hero Start -->
-    <section id="hero" class="container-fluid hero">
+    <section id="hero" class="container-fluid hero" aria-label="هورآسا چیست؟">
       <!-- Video background of #hero -->
       <video class="hero__video" autoplay muted loop playsinline preload="metadata">
         <source src="assets/videos/hero.mp4" type="video/mp4" />
@@ -148,7 +149,7 @@
     <!-- Hero End -->
 
     <!-- Services Start -->
-    <section id="services" class="container-fluid services">
+    <section id="services" class="container-fluid services" aria-label="خدمات هورآسا">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-4 column">
@@ -366,80 +367,6 @@
     </section>
     <!-- Services End -->
 
-    <!-- Clients Start -->
-    <section id="clients" class="container-fluid clients" aria-label="مشتریان هورآسا">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 column">
-            <div class="section-intro align-items-center">
-              <p class="section-overline">مشتریان</p>
-              <h2 class="section-title">برندهایی که <strong>به ما اعتماد کرده‌اند</strong></h2>
-            </div>
-
-            <div class="clients__marquee" data-clients-marquee>
-              <div class="clients__track">
-                <!-- Sequence A -->
-                <div class="clients__group" aria-hidden="false">
-                  <div class="clients__item" title="مشتری ۱">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۱" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۲">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۲" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۳">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۳" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۴">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۴" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۵">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۵" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۶">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۶" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۷">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۷" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="مشتری ۸">
-                    <img src="assets/images/logo-white.png" alt="مشتری ۸" width="160" height="64" loading="lazy" />
-                  </div>
-                </div>
-                <!-- Sequence B (duplicate for seamless loop) -->
-                <div class="clients__group" aria-hidden="true">
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                  <div class="clients__item" title="">
-                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Clients End -->
-
     <!-- About Start -->
     <section id="about" class="container-fluid about" aria-label="ما که هستیم">
       <div class="container">
@@ -540,6 +467,119 @@
       </div>
     </section>
     <!-- About End -->
+
+    <!-- Stats Start -->
+    <section id="stats" class="container-fluid stats" aria-label="آمار و ارقام هورآسا">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 column">
+            <div class="section-intro stats__intro">
+              <p class="section-overline">دستاوردها</p>
+              <h2 class="section-title">
+                اعدادی که <strong>داستان ما</strong> را می‌گویند
+              </h2>
+              <p class="section-desc">
+                سال‌ها تجربه، پروژه‌های موفق و مشتریان راضی — نتیجه تعهد ما به کیفیت و خلاقیت است.
+              </p>
+            </div>
+
+            <div class="stats__grid">
+              <div class="stats__item">
+                <span class="stats__value" data-count="120">۱۲۰+</span>
+                <span class="stats__label">پروژه موفق</span>
+              </div>
+              <div class="stats__item">
+                <span class="stats__value" data-count="85">۸۵+</span>
+                <span class="stats__label">مشتری راضی</span>
+              </div>
+              <div class="stats__item">
+                <span class="stats__value" data-count="12">۱۲+</span>
+                <span class="stats__label">سال تجربه</span>
+              </div>
+              <div class="stats__item">
+                <span class="stats__value" data-count="25">۲۵+</span>
+                <span class="stats__label">عضو تیم</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats End -->
+
+    <!-- Clients Start -->
+    <section id="clients" class="container-fluid clients" aria-label="مشتریان هورآسا">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 column">
+            <div class="section-intro align-items-center">
+              <p class="section-overline">مشتریان</p>
+              <h2 class="section-title">برندهایی که <strong>به ما اعتماد کرده‌اند</strong></h2>
+            </div>
+
+            <div class="clients__marquee" data-clients-marquee>
+              <div class="clients__track">
+                <!-- Sequence A -->
+                <div class="clients__group" aria-hidden="false">
+                  <div class="clients__item" title="مشتری ۱">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۱" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۲">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۲" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۳">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۳" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۴">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۴" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۵">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۵" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۶">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۶" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۷">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۷" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="مشتری ۸">
+                    <img src="assets/images/logo-white.png" alt="مشتری ۸" width="160" height="64" loading="lazy" />
+                  </div>
+                </div>
+                <!-- Sequence B (duplicate for seamless loop) -->
+                <div class="clients__group" aria-hidden="true">
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                  <div class="clients__item" title="">
+                    <img src="assets/images/logo-white.png" alt="" width="160" height="64" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients End -->
 
     <!-- FAQ Start -->
     <section id="faq" class="container-fluid faq" aria-label="سوالات متداول">
@@ -695,7 +735,7 @@
     <!-- FAQ End -->
 
     <!-- CTA Start -->
-    <section id="cta" class="container-fluid cta">
+    <section id="cta" class="container-fluid cta" aria-label="ارتباط با هورآسا">
       <div class="container">
         <div class="row">
           <div class="col-12 column">
