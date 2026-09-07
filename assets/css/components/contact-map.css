@@ -1,6 +1,6 @@
 #contact-map {
   position: relative;
-  padding-block: 0 var(--space-24);
+  padding-block: var(--space-24);
   background-color: var(--color-background);
 }
 
@@ -157,6 +157,14 @@
   .contact-map .row > .col-lg-5 {
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
+  }
+
+  .contact-map .column-right {
+    padding-left: 0;
+  }
+
+  .contact-map .column-left {
+    padding-right: 0;
   }
 
   .contact-map__media {

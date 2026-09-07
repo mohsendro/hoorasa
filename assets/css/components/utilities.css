@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
-   Utility Components – reusable section building blocks
-   Use across sections without changing structure/style
+  Utility Components – reusable section building blocks
+  Use across sections without changing structure/style
 ═══════════════════════════════════════════════════════ */
 
 /* ── Section Intro (overline + title + desc) ──────────── */
@@ -231,7 +231,9 @@
 
   .btn-primary,
   .btn-secondary {
-    transition: background var(--transition-fast), color var(--transition-fast),
+    transition:
+      background var(--transition-fast),
+      color var(--transition-fast),
       border-color var(--transition-fast);
   }
 

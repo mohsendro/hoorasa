@@ -1,10 +1,10 @@
-/* Single Service – editorial service hero */
 #single-service {
   position: relative;
   min-height: max(100vh, 100svh, 720px);
   display: flex;
   align-items: center;
-  padding-block: calc(var(--nv-bar-height, 60px) + var(--space-10)) var(--space-16);
+  padding-block: calc(var(--nv-bar-height, 60px) + var(--space-10))
+    var(--space-16);
   background: var(--color-background);
   overflow: hidden;
 }
@@ -113,7 +113,8 @@
 @media (max-width: 991.98px) {
   #single-service {
     min-height: auto;
-    padding-block: calc(var(--nv-bar-height, 60px) + var(--space-12)) var(--space-12);
+    padding-block: calc(var(--nv-bar-height, 60px) + var(--space-12))
+      var(--space-12);
   }
 
   .single-service .row {
@@ -147,7 +148,8 @@
 
 @media (max-width: 575.98px) {
   #single-service {
-    padding-block: calc(var(--nv-bar-height, 60px) + var(--space-8)) var(--space-10);
+    padding-block: calc(var(--nv-bar-height, 60px) + var(--space-8))
+      var(--space-10);
   }
 
   .single-service__content {

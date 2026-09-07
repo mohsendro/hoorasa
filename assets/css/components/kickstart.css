@@ -1,5 +1,4 @@
-/* Page Hero – k1836 inspired editorial hero */
-#page-hero {
+#kickstart {
   position: relative;
   min-height: max(100vh, 100svh, 720px);
   display: flex;
@@ -9,11 +8,11 @@
   overflow: hidden;
 }
 
-.page-hero {
+.kickstart {
   position: relative;
 }
 
-.page-hero::before {
+.kickstart::before {
   content: "";
   position: absolute;
   inset-inline-start: 0;
@@ -23,17 +22,17 @@
   background: var(--color-border);
 }
 
-.page-hero .container {
+.kickstart .container {
   position: relative;
   z-index: 2;
 }
 
-.page-hero .column {
+.kickstart .column {
   display: flex;
   flex-direction: column;
 }
 
-.page-hero__content {
+.kickstart__content {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 28%);
   align-items: end;
@@ -41,7 +40,7 @@
   width: 100%;
 }
 
-.page-hero__title {
+.kickstart__title {
   max-width: 14ch;
   margin: 0;
   font-family: var(--font-base);
@@ -52,12 +51,12 @@
   color: var(--color-text);
 }
 
-.page-hero__title strong {
+.kickstart__title strong {
   display: block;
   color: var(--color-primary);
 }
 
-.page-hero__meta {
+.kickstart__meta {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -65,7 +64,7 @@
   padding-bottom: var(--space-2);
 }
 
-.page-hero__badge {
+.kickstart__badge {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
@@ -80,7 +79,7 @@
   white-space: nowrap;
 }
 
-.page-hero__desc {
+.kickstart__desc {
   max-width: 24rem;
   margin: 0;
   color: var(--color-desc);
@@ -90,40 +89,69 @@
 }
 
 @media (max-width: 991.98px) {
-  #page-hero {
+  #kickstart {
     min-height: auto;
     padding-block: var(--space-20) var(--space-12);
     padding-top: calc(var(--nv-bar-height, 60px) + var(--space-16));
   }
 
-  .page-hero__content {
+  .kickstart__content {
     grid-template-columns: 1fr;
     gap: var(--space-10);
   }
 
-  .page-hero__title {
+  .kickstart__title {
     max-width: 12ch;
     font-size: clamp(3.5rem, 10vw, 6rem);
   }
 
-  .page-hero__meta {
+  .kickstart__meta {
     max-width: 36rem;
   }
 }
 
 @media (max-width: 575.98px) {
-  #page-hero {
+  #kickstart {
     padding-block: var(--space-16) var(--space-10);
     padding-top: calc(var(--nv-bar-height, 60px) + var(--space-12));
   }
 
-  .page-hero__content {
+  .kickstart__content {
     gap: var(--space-8);
   }
 
-  .page-hero__title {
+  .kickstart__title {
     max-width: 100%;
     font-size: clamp(3rem, 16vw, 4.5rem);
     line-height: 1;
   }
 }
+
+/* 
+<!-- Kickstart Start -->
+<section id="kickstart" class="container-fluid kickstart" aria-label="شعار و معرفی برند">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 column">
+                <div class="kickstart__content">
+                    <h1 class="kickstart__title">
+                        از ایده تا اجرا با
+                        <strong>هورآسا</strong>
+                    </h1>
+
+                    <div class="kickstart__meta">
+                        <span class="kickstart__badge">درباره برند</span>
+                        <p class="kickstart__desc">
+                            هورآسا مجموعه‌ای تخصصی در زمینه طراحی، تولید، تبلیغات، برندسازی و اجرای رویدادهای
+                            سازمانی است.
+                            ما با تکیه بر خلاقیت، کیفیت و تعهد، مسیر برند شما را از مفهوم تا تجربه نهایی همراهی
+                            می‌کنیم.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Kickstart End -->
+*/

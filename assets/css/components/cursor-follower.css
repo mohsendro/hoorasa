@@ -1,56 +1,58 @@
-#hoorasa-cursor-dot,
-#hoorasa-cursor-border {
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  will-change: left, top, width, height;
-}
+@media (min-width: 992px) {
+  #hoorasa-cursor-dot,
+  #hoorasa-cursor-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    will-change: left, top, width, height;
+  }
 
-#hoorasa-cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #000;
-}
+  #hoorasa-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+  }
 
-#hoorasa-cursor-border {
-  width: 28px;
-  height: 28px;
-  border: 1px solid #000;
-  transition:
-    width 0.3s ease,
-    height 0.3s ease;
-}
+  #hoorasa-cursor-border {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #000;
+    transition:
+      width 0.3s ease,
+      height 0.3s ease;
+  }
 
-#hoorasa-cursor-border.is-hovering {
-  width: 44px;
-  height: 44px;
-}
+  #hoorasa-cursor-border.is-hovering {
+    width: 44px;
+    height: 44px;
+  }
 
-/* Dark theme */
-[data-bs-theme="dark"] #hoorasa-cursor-dot,
-.dark #hoorasa-cursor-dot {
-  background-color: #fff;
-}
+  /* Dark theme */
+  [data-bs-theme="dark"] #hoorasa-cursor-dot,
+  .dark #hoorasa-cursor-dot {
+    background-color: #fff;
+  }
 
-[data-bs-theme="dark"] #hoorasa-cursor-border,
-.dark #hoorasa-cursor-border {
-  border-color: #fff;
-}
+  [data-bs-theme="dark"] #hoorasa-cursor-border,
+  .dark #hoorasa-cursor-border {
+    border-color: #fff;
+  }
 
-/* اختیاری: مخفی کردن نشانگر پیش‌فرض */
-/* body {
-  cursor: none;
+  /* اختیاری: مخفی کردن نشانگر پیش‌فرض */
+  /* body {
+    cursor: none;
+  }
+  
+  a,
+  button,
+  img,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  } */
 }
-
-a,
-button,
-img,
-input,
-textarea,
-select {
-  cursor: none;
-} */
