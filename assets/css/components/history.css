@@ -1,0 +1,21 @@
+/* History Timeline k706 */
+#history { position: relative; padding-block: var(--space-24); background-color: var(--color-background); }
+.history { position: relative; }
+.history .container { position: relative; z-index: 2; }
+.history .row { row-gap: var(--space-12); }
+.history .column { display: flex; flex-direction: column; }
+.history .section-intro { max-width: 28rem; }
+.history .section-desc { width: 100%; max-width: 100%; }
+.history__cta { margin-top: var(--space-6); }
+.history__timeline { position: relative; display: flex; flex-direction: column; gap: 0; padding-inline-start: var(--space-2); }
+.history__item { position: relative; display: grid; grid-template-columns: auto 1fr; gap: var(--space-5); padding-bottom: var(--space-10); }
+.history__item:last-child { padding-bottom: 0; }
+.history__item:not(:last-child)::before { content: ""; position: absolute; top: 2.75rem; inset-inline-start: 1.35rem; width: 1px; height: calc(100% - 2.75rem); background: var(--color-border); }
+.history__icon { position: relative; z-index: 1; width: 2.75rem; height: 2.75rem; flex-shrink: 0; display: grid; place-items: center; border-radius: var(--radius-full); background: rgba(218, 42, 42, 0.15); color: var(--color-primary); border: 1px solid rgba(218, 42, 42, 0.25); }
+.history__icon svg { width: 1.25rem; height: 1.25rem; }
+.history__body { display: flex; flex-direction: column; gap: var(--space-2); padding-top: 0.35rem; }
+.history__year { font-size: var(--fs-overline); font-weight: var(--fw-medium); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); margin: 0; }
+.history__title { font-size: var(--fs-h5); font-weight: var(--fw-bold); color: var(--color-text); margin: 0; line-height: var(--lh-heading); }
+.history__desc { font-size: var(--fs-body); font-weight: var(--fw-regular); line-height: var(--lh-body); color: var(--color-desc); margin: 0; max-width: 36rem; }
+@media (max-width: 991.98px) { #history { padding-block: var(--space-16); } .history .section-intro { max-width: 100%; text-align: center; align-items: center; } .history__cta { display: flex; justify-content: center; } }
+@media (max-width: 575.98px) { .history__item { gap: var(--space-4); } .history__item:not(:last-child)::before { inset-inline-start: 1.2rem; } }
