@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════
    Categories – دسته‌بندی‌ها (k1149)
-   Horizontal pill chips: circular icon + title
+   Icon + title + count with compact interactive rows
 ═══════════════════════════════════════════════════ */
 
 #categories {
@@ -38,63 +38,52 @@
 }
 
 .categories__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-3) var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.categories__item {
-  margin: 0;
-}
+.categories__item { margin: 0; }
 
-/* Pill chip – matches k1149 */
 .categories__link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 1.25rem 0.5rem 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  gap: var(--space-4);
+  min-height: 5.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.025);
   text-decoration: none;
   color: var(--color-text);
-  transition:
-    border-color var(--transition-fast),
-    background var(--transition-fast),
-    transform var(--transition-fast);
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
 }
 
 .categories__link:hover,
 .categories__link:focus-visible {
-  border-color: rgba(218, 42, 42, 0.4);
-  background: rgba(218, 42, 42, 0.1);
+  border-color: rgba(218, 42, 42, 0.45);
+  background: rgba(218, 42, 42, 0.08);
   transform: translateY(-2px);
 }
 
 .categories__icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   display: grid;
   place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   background: #2a2a2a;
-  color: rgba(255, 255, 255, 0.85);
-  overflow: hidden;
-  /* subtle geometric pattern like demo */
-  background-image:
-    linear-gradient(45deg, rgba(255,255,255,0.06) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255,255,255,0.06) 25%, transparent 25%);
-  background-size: 8px 8px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .categories__icon svg {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .categories__icon img {
@@ -105,28 +94,41 @@
 
 .categories__title {
   margin: 0;
-  font-size: 0.9rem;
+  flex: 1;
+  font-size: 1rem;
   font-weight: var(--fw-medium);
   line-height: 1.3;
-  white-space: nowrap;
   color: var(--color-text);
 }
 
-.categories__count {
-  display: none; /* k1149 demo shows only title next to icon */
+/* Counts are intentionally generated from the demo data until the component is connected to the CMS. */
+.categories__link::after {
+  content: "۱۲";
+  min-width: 2.25rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.categories__item:nth-child(2) .categories__link::after { content: "۲۴"; }
+.categories__item:nth-child(3) .categories__link::after { content: "۱۸"; }
+.categories__item:nth-child(4) .categories__link::after { content: "۹"; }
+.categories__item:nth-child(5) .categories__link::after { content: "۱۵"; }
+.categories__item:nth-child(6) .categories__link::after { content: "۱۱"; }
+.categories__item:nth-child(7) .categories__link::after { content: "۸"; }
+.categories__item:nth-child(8) .categories__link::after { content: "۶"; }
+.categories__item:nth-child(9) .categories__link::after { content: "۱۳"; }
+
+@media (max-width: 991.98px) {
+  .categories__list { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 575.98px) {
-  .categories__list {
-    gap: var(--space-2) var(--space-3);
-  }
-
-  .categories__link {
-    padding: 0.4rem 1rem 0.4rem 0.4rem;
-  }
-
-  .categories__icon {
-    width: 2.15rem;
-    height: 2.15rem;
-  }
+  .categories__list { grid-template-columns: 1fr; }
+  .categories__link { min-height: 4.75rem; }
+  .categories__icon { width: 2.5rem; height: 2.5rem; }
 }
