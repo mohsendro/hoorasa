@@ -1,0 +1,143 @@
+/* ═══════════════════════════════════════════════════════
+   Categories – دسته‌بندی‌ها (k1149 inspired)
+   Pill / chip with icon + title + count
+═══════════════════════════════════════════════════════ */
+
+#categories {
+  position: relative;
+  padding-block: var(--space-20) var(--space-24);
+  background-color: var(--color-background);
+  overflow: hidden;
+}
+
+.categories {
+  position: relative;
+}
+
+.categories .container {
+  position: relative;
+  z-index: 1;
+}
+
+.categories__header {
+  text-align: center;
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
+}
+
+.categories__header .section-intro {
+  align-items: center;
+  text-align: center;
+}
+
+.categories__header .section-desc {
+  width: 100%;
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3) var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories__item {
+  margin: 0;
+}
+
+.categories__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5) var(--space-3) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  color: var(--color-text);
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.categories__link:hover,
+.categories__link:focus-visible {
+  border-color: rgba(218, 42, 42, 0.4);
+  background: rgba(218, 42, 42, 0.1);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.categories__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-primary);
+  overflow: hidden;
+}
+
+.categories__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.categories__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categories__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.categories__title {
+  margin: 0;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.categories__count {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: var(--fw-regular);
+  color: var(--color-desc);
+  line-height: 1.2;
+}
+
+.categories__link:hover .categories__count,
+.categories__link:focus-visible .categories__count {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 575.98px) {
+  .categories__list {
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .categories__link {
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
+  }
+
+  .categories__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
