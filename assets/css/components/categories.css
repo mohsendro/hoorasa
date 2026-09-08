@@ -1,134 +1,112 @@
 /* ═══════════════════════════════════════════════════
-   Categories – دسته‌بندی‌ها (k1149)
-   Icon + title + count with compact interactive rows
+   Categories – k1149
+   Demo-faithful compact pill collection
 ═══════════════════════════════════════════════════ */
 
 #categories {
   position: relative;
-  padding-block: var(--space-20) var(--space-24);
-  background-color: var(--color-background);
+  padding: 4.5rem 0;
+  background: #fff;
+  color: #111;
   overflow: hidden;
 }
 
-.categories {
-  position: relative;
-}
-
-.categories .container {
-  position: relative;
-  z-index: 1;
+#categories .container {
+  max-width: 1320px;
 }
 
 .categories__header {
-  text-align: center;
-  max-width: 40rem;
-  margin-inline: auto;
-  margin-bottom: var(--space-12);
-}
-
-.categories__header .section-intro {
-  align-items: center;
-  text-align: center;
-}
-
-.categories__header .section-desc {
-  width: 100%;
-  max-width: 32rem;
-  margin-inline: auto;
+  display: none;
 }
 
 .categories__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3);
-  list-style: none;
-  margin: 0;
+  width: min(100%, 1160px);
+  margin: 0 auto;
   padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px 16px;
 }
 
-.categories__item { margin: 0; }
+.categories__item {
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+}
 
 .categories__link {
-  display: flex;
+  min-height: 72px;
+  padding: 8px 22px 8px 10px;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-4);
-  min-height: 5.25rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.9rem;
-  background: rgba(255, 255, 255, 0.025);
+  gap: 14px;
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
   text-decoration: none;
-  color: var(--color-text);
-  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  direction: ltr;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
 .categories__link:hover,
 .categories__link:focus-visible {
-  border-color: rgba(218, 42, 42, 0.45);
-  background: rgba(218, 42, 42, 0.08);
+  color: #111;
+  border-color: #c9c9c9;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.07);
 }
 
 .categories__icon {
-  width: 3rem;
-  height: 3rem;
-  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
-  background: #2a2a2a;
-  color: rgba(255, 255, 255, 0.9);
+  background-color: #242525;
+  background-image:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.09) 0 2px, transparent 2px 7px),
+    repeating-linear-gradient(45deg, rgba(0,0,0,.28) 0 2px, transparent 2px 7px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  color: #fff;
+  overflow: hidden;
 }
 
-.categories__icon svg {
-  width: 1.15rem;
-  height: 1.15rem;
-}
-
+.categories__icon svg,
 .categories__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: none;
 }
 
 .categories__title {
   margin: 0;
-  flex: 1;
-  font-size: 1rem;
-  font-weight: var(--fw-medium);
-  line-height: 1.3;
-  color: var(--color-text);
+  color: #111;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-/* Counts are intentionally generated from the demo data until the component is connected to the CMS. */
+/* The reference component has no numeric counter. */
 .categories__link::after {
-  content: "۱۲";
-  min-width: 2.25rem;
-  padding: 0.3rem 0.45rem;
-  border-radius: 999px;
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: var(--fw-medium);
-  color: var(--color-text-muted);
-  background: rgba(255, 255, 255, 0.06);
+  content: none;
+  display: none;
 }
 
-.categories__item:nth-child(2) .categories__link::after { content: "۲۴"; }
-.categories__item:nth-child(3) .categories__link::after { content: "۱۸"; }
-.categories__item:nth-child(4) .categories__link::after { content: "۹"; }
-.categories__item:nth-child(5) .categories__link::after { content: "۱۵"; }
-.categories__item:nth-child(6) .categories__link::after { content: "۱۱"; }
-.categories__item:nth-child(7) .categories__link::after { content: "۸"; }
-.categories__item:nth-child(8) .categories__link::after { content: "۶"; }
-.categories__item:nth-child(9) .categories__link::after { content: "۱۳"; }
-
-@media (max-width: 991.98px) {
-  .categories__list { grid-template-columns: repeat(2, 1fr); }
+/* Keep the demo's visual rhythm at smaller widths. */
+@media (max-width: 767.98px) {
+  #categories { padding: 3rem 0; }
+  .categories__list { gap: 12px; }
+  .categories__link { min-height: 64px; padding-right: 18px; }
+  .categories__icon { width: 46px; height: 46px; flex-basis: 46px; }
+  .categories__title { font-size: 15px; }
 }
 
 @media (max-width: 575.98px) {
-  .categories__list { grid-template-columns: 1fr; }
-  .categories__link { min-height: 4.75rem; }
-  .categories__icon { width: 2.5rem; height: 2.5rem; }
+  .categories__list { width: 100%; }
+  .categories__link { width: 100%; justify-content: flex-start; }
 }
