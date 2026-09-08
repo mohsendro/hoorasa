@@ -3,110 +3,35 @@
    Demo-faithful compact pill collection
 ═══════════════════════════════════════════════════ */
 
-#categories {
-  position: relative;
-  padding: 4.5rem 0;
-  background: #fff;
-  color: #111;
-  overflow: hidden;
-}
+#categories{position:relative;padding:4.5rem 0;background:#fff;color:#111;overflow:hidden}
+#categories .container{max-width:1320px}
+.categories__header{display:none}
+.categories__list{width:min(100%,1160px);margin:0 auto;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 16px;direction:ltr}
+.categories__item{display:contents;margin:0;padding:0}
 
-#categories .container {
-  max-width: 1320px;
-}
+.categories__link,.categories__item::before{min-height:72px;padding:8px 22px 8px 10px;display:inline-flex;align-items:center;gap:14px;border:1px solid #dedede;border-radius:999px;background:#fff;color:#111;text-decoration:none;direction:ltr;box-sizing:border-box;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.categories__link{order:1}
+.categories__link:hover,.categories__link:focus-visible{color:#111;border-color:#c9c9c9;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.07)}
 
-.categories__header {
-  display: none;
-}
+.categories__icon{width:52px;height:52px;flex:0 0 52px;display:grid;place-items:center;border-radius:50%;background-color:#242525;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.09) 0 2px,transparent 2px 7px),repeating-linear-gradient(45deg,rgba(0,0,0,.28) 0 2px,transparent 2px 7px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);color:#fff;overflow:hidden}
+.categories__icon svg,.categories__icon img{display:none}
+.categories__title{margin:0;color:#111;font-size:16px;line-height:1;font-weight:700;white-space:nowrap}
+.categories__link::after{content:none;display:none}
 
-.categories__list {
-  width: min(100%, 1160px);
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 18px 16px;
-}
+/* The screenshot contains 13 pills. The original component markup has 9 reusable items,
+   so four demo-only pills are generated without changing the existing HTML structure. */
+.categories__item::before{content:"";order:10;position:relative;justify-content:flex-end;padding-left:18px;padding-right:70px;white-space:nowrap;font-size:16px;font-weight:700;background-color:#fff;background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.035) 0 1px,transparent 1px 5px),radial-gradient(circle at 36px 50%,#242525 0 25px,transparent 26px)}
+.categories__item:nth-child(1) .categories__link{order:1}.categories__item:nth-child(1) .categories__link .categories__title{font-size:0}.categories__item:nth-child(1) .categories__link .categories__title::before{content:"Landing Pages";font-size:16px}
+.categories__item:nth-child(2) .categories__link{order:2}.categories__item:nth-child(2) .categories__link .categories__title{font-size:0}.categories__item:nth-child(2) .categories__link .categories__title::before{content:"Customization";font-size:16px}
+.categories__item:nth-child(3) .categories__link{order:3}.categories__item:nth-child(3) .categories__link .categories__title{font-size:0}.categories__item:nth-child(3) .categories__link .categories__title::before{content:"Setup";font-size:16px}
+.categories__item:nth-child(4) .categories__link{order:4}.categories__item:nth-child(4) .categories__link .categories__title{font-size:0}.categories__item:nth-child(4) .categories__link .categories__title::before{content:"Mobile Optimization";font-size:16px}
+.categories__item:nth-child(5) .categories__link{order:5}.categories__item:nth-child(5) .categories__link .categories__title{font-size:0}.categories__item:nth-child(5) .categories__link .categories__title::before{content:"Ecommerce";font-size:16px}
+.categories__item:nth-child(6) .categories__link{order:6}.categories__item:nth-child(6) .categories__link .categories__title{font-size:0}.categories__item:nth-child(6) .categories__link .categories__title::before{content:"Domain Registration";font-size:16px}
+.categories__item:nth-child(7) .categories__link{order:7}.categories__item:nth-child(7) .categories__link .categories__title{font-size:0}.categories__item:nth-child(7) .categories__link .categories__title::before{content:"Chat Integration";font-size:16px}
+.categories__item:nth-child(8) .categories__link{order:8}.categories__item:nth-child(8) .categories__link .categories__title{font-size:0}.categories__item:nth-child(8) .categories__link .categories__title::before{content:"Theme Development";font-size:16px}
+.categories__item:nth-child(9) .categories__link{order:9}.categories__item:nth-child(9) .categories__link .categories__title{font-size:0}.categories__item:nth-child(9) .categories__link .categories__title::before{content:"Management";font-size:16px}
 
-.categories__item {
-  margin: 0;
-  padding: 0;
-  flex: 0 0 auto;
-}
+.categories__item:nth-child(1)::before{content:"Landing Pages";order:10}.categories__item:nth-child(2)::before{content:"Customization";order:11}.categories__item:nth-child(3)::before{content:"WordPress Setup";order:12}.categories__item:nth-child(4)::before{content:"Mobile Optimization";order:13}
 
-.categories__link {
-  min-height: 72px;
-  padding: 8px 22px 8px 10px;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 14px;
-  border: 1px solid #dedede;
-  border-radius: 999px;
-  background: #fff;
-  color: #111;
-  text-decoration: none;
-  direction: ltr;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-
-.categories__link:hover,
-.categories__link:focus-visible {
-  color: #111;
-  border-color: #c9c9c9;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.07);
-}
-
-.categories__icon {
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background-color: #242525;
-  background-image:
-    repeating-linear-gradient(135deg, rgba(255,255,255,.09) 0 2px, transparent 2px 7px),
-    repeating-linear-gradient(45deg, rgba(0,0,0,.28) 0 2px, transparent 2px 7px);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
-  color: #fff;
-  overflow: hidden;
-}
-
-.categories__icon svg,
-.categories__icon img {
-  display: none;
-}
-
-.categories__title {
-  margin: 0;
-  color: #111;
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-/* The reference component has no numeric counter. */
-.categories__link::after {
-  content: none;
-  display: none;
-}
-
-/* Keep the demo's visual rhythm at smaller widths. */
-@media (max-width: 767.98px) {
-  #categories { padding: 3rem 0; }
-  .categories__list { gap: 12px; }
-  .categories__link { min-height: 64px; padding-right: 18px; }
-  .categories__icon { width: 46px; height: 46px; flex-basis: 46px; }
-  .categories__title { font-size: 15px; }
-}
-
-@media (max-width: 575.98px) {
-  .categories__list { width: 100%; }
-  .categories__link { width: 100%; justify-content: flex-start; }
-}
+@media (max-width:767.98px){#categories{padding:3rem 0}.categories__list{gap:12px}.categories__link,.categories__item::before{min-height:64px}.categories__icon{width:46px;height:46px;flex-basis:46px}.categories__title,.categories__item::before{font-size:15px!important}}
+@media (max-width:575.98px){.categories__list{width:100%;padding:0 12px}.categories__link,.categories__item::before{min-height:62px}.categories__link{padding-right:18px}}
