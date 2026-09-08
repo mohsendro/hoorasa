@@ -3,7 +3,7 @@
    Demo-faithful masonry card layout
 ═══════════════════════════════════════════════════ */
 
-#why-us{position:relative;padding:7rem 0 4.5rem;background:#fff;color:#111;overflow:hidden}
+#why-us{position:relative;padding:7rem 0 4.5rem;background:#fafafa;color:#111;overflow:hidden}
 #why-us .container{position:relative;max-width:1320px;z-index:1}
 .why-us__header{display:none}
 .why-us__grid{position:relative;width:min(100%,1216px);height:724px;margin:0 auto;direction:ltr}
