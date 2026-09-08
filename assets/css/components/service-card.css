@@ -1,7 +1,7 @@
-/* ═══════════════════════════════════════════════════════
-   Service Card – کارت خدمات (k2371 inspired)
-   Patterned / dark card with floating icon + title + badge
-═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   Service Card – کارت خدمات (k2371)
+   Patterned dark card with top-right notch + floating icon
+═══════════════════════════════════════════════════ */
 
 #services-cards {
   position: relative;
@@ -43,97 +43,106 @@
   gap: var(--space-6);
 }
 
+/* Card with geometric pattern + top-right cut notch */
 .service-card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 18rem;
+  min-height: 17.5rem;
   padding: var(--space-6);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border);
-  background:
-    linear-gradient(160deg, rgba(218, 42, 42, 0.08) 0%, transparent 50%),
-    rgba(255, 255, 255, 0.03);
-  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #1a1a1a;
   text-decoration: none;
   color: var(--color-text);
-  transition:
-    border-color var(--transition-fast),
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+  overflow: visible;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  /* Geometric pattern (diagonal chevron) */
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255,255,255,0.04) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.04) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.04) 25%, transparent 25%);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 0, 14px -14px, 0 14px;
+  background-color: #1c1c1c;
 }
 
+/* Top-right notch (inner shape of k2371) */
 .service-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.9;
+  top: 0;
+  inset-inline-end: 0;
+  width: 3.25rem;
+  height: 3.25rem;
+  background: var(--color-background);
+  border-radius: 0 1rem 0 1.25rem;
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
 }
 
 .service-card:hover {
-  border-color: rgba(218, 42, 42, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Floating circular icon button sitting in the notch */
 .service-card__icon {
   position: absolute;
-  top: var(--space-4);
-  inset-inline-end: var(--space-4);
+  top: 0.35rem;
+  inset-inline-end: 0.35rem;
   z-index: 2;
   width: 2.5rem;
   height: 2.5rem;
   display: grid;
   place-items: center;
-  border-radius: var(--radius-full);
-  background: var(--color-primary);
-  color: var(--color-white);
-  box-shadow: 0 6px 16px rgba(218, 42, 42, 0.4);
+  border-radius: 50%;
+  background: #f0a060;
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(240, 160, 96, 0.35);
   transition: transform var(--transition-fast);
 }
 
 .service-card:hover .service-card__icon {
-  transform: scale(1.08) rotate(-8deg);
+  transform: scale(1.08);
 }
 
 .service-card__icon svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 18px;
+  height: 14px;
+  display: block;
 }
 
 .service-card__body {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-3);
 }
 
 .service-card__title {
   margin: 0;
-  font-size: var(--fs-h4);
+  font-size: 1.15rem;
   font-weight: var(--fw-bold);
   line-height: 1.3;
-  color: var(--color-text);
+  color: #ffffff;
 }
 
 .service-card__badge {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.9rem;
   font-size: 0.7rem;
   font-weight: var(--fw-medium);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  background: rgba(12, 12, 12, 0.5);
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  background: #ffffff;
+  border-radius: 999px;
+  line-height: 1;
 }
 
 @media (max-width: 1199.98px) {
