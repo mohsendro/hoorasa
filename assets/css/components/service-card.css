@@ -1,10 +1,14 @@
+/* ═══════════════════════════════════════════════════
+   Service Card – کارت خدمات (k2371)
+   Patterned dark + top-end notch + floating circle icon
+   Title + white pill badge at bottom
+═══════════════════════════════════════════════════ */
+
 #services-cards {
   position: relative;
+  padding-block: var(--space-24) var(--space-28);
+  background-color: var(--color-background);
   overflow: hidden;
-}
-
-.services-cards {
-  position: relative;
 }
 
 .services-cards .container {
@@ -36,7 +40,6 @@
   gap: var(--space-6);
 }
 
-/* Card with geometric pattern + top-right cut notch */
 .service-card {
   position: relative;
   display: flex;
@@ -44,30 +47,21 @@
   justify-content: flex-end;
   min-height: 17.5rem;
   padding: var(--space-6);
-  border-radius: 1rem;
-  background-color: #1a1a1a;
+  border-radius: var(--radius-xl);
   text-decoration: none;
   color: var(--color-text);
   overflow: visible;
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast);
-  /* Geometric pattern (diagonal chevron) */
-  background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%),
-    linear-gradient(315deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%);
-  background-size: 28px 28px;
-  background-position:
-    0 0,
-    14px 0,
-    14px -14px,
-    0 14px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   background-color: #1c1c1c;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.045) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.045) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.045) 25%, transparent 25%);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 0, 14px -14px, 0 14px;
 }
 
-/* Top-right notch (inner shape of k2371) */
 .service-card::before {
   content: "";
   position: absolute;
@@ -76,30 +70,29 @@
   width: 3.25rem;
   height: 3.25rem;
   background: var(--color-background);
-  border-radius: 0 1rem 0 1.25rem;
+  border-radius: 0 var(--radius-xl) 0 1.5rem;
   z-index: 1;
   pointer-events: none;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Floating circular icon button sitting in the notch */
 .service-card__icon {
   position: absolute;
-  top: 0.35rem;
-  inset-inline-end: 0.35rem;
+  top: 0.3rem;
+  inset-inline-end: 0.3rem;
   z-index: 2;
   width: 2.5rem;
   height: 2.5rem;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  background: #f0a060;
-  color: #1a1a1a;
-  box-shadow: 0 4px 12px rgba(240, 160, 96, 0.35);
+  border-radius: var(--radius-full);
+  background: var(--color-orange);
+  color: var(--color-black);
+  box-shadow: 0 4px 12px rgba(218, 107, 42, 0.4);
   transition: transform var(--transition-fast);
 }
 
@@ -124,10 +117,10 @@
 
 .service-card__title {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: var(--fs-h5);
   font-weight: var(--fw-bold);
   line-height: 1.3;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .service-card__badge {
@@ -139,8 +132,8 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #1a1a1a;
-  background: #ffffff;
-  border-radius: 999px;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
   line-height: 1;
 }
 
@@ -151,6 +144,10 @@
 }
 
 @media (max-width: 575.98px) {
+  #services-cards {
+    padding-block: var(--space-16) var(--space-20);
+  }
+
   .services-cards__grid {
     grid-template-columns: 1fr;
   }
