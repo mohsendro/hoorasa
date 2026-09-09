@@ -1,6 +1,5 @@
 #about {
   position: relative;
-  padding-block: var(--space-24);
   background-color: var(--color-black);
 }
 
@@ -23,20 +22,6 @@
 .about .column {
   display: flex;
   flex-direction: column;
-}
-
-/* ── Intro (about text) ──────────────────────────────── */
-.about .section-intro {
-  max-width: 26rem;
-}
-
-.about .section-desc {
-  width: 100%;
-  max-width: 100%;
-}
-
-.about__cta {
-  margin-top: var(--space-6);
 }
 
 /* ── Center media ────────────────────────────────────── */
@@ -206,8 +191,8 @@
 
 /* ── Tablet & mobile ─────────────────────────────────── */
 @media (max-width: 991.98px) {
-  #about {
-    padding-block: var(--space-16);
+  .about .row {
+    gap: var(--space-16);
   }
 
   .about .section-intro {
@@ -215,11 +200,6 @@
     text-align: center;
     align-items: center;
     margin-inline: auto;
-  }
-
-  .about__cta {
-    display: flex;
-    justify-content: center;
   }
 
   .about__media {
@@ -233,10 +213,6 @@
 }
 
 @media (max-width: 575.98px) {
-  #about {
-    padding-block: var(--space-12);
-  }
-
   .about__media {
     max-width: 240px;
     aspect-ratio: 3 / 4;

@@ -1,36 +1,29 @@
 #social {
   position: relative;
-  padding-block: var(--space-24);
-  background-color: var(--color-background);
 }
+
 .social {
   position: relative;
 }
+
 .social .container {
   position: relative;
   z-index: 2;
 }
+
 .social .column {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
+  gap: var(--space-16);
 }
-.social .section-intro {
-  max-width: 36rem;
-  margin-inline: auto;
-  text-align: center;
-  align-items: center;
-}
-.social .section-desc {
-  width: 100%;
-  max-width: 100%;
-}
+
 .social__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
   width: 100%;
 }
+
 .social__link {
   position: relative;
   display: flex;
@@ -44,11 +37,13 @@
     border-color var(--transition-fast),
     transform var(--transition-fast);
 }
+
 .social__link:hover,
 .social__link:focus {
   border-inline-start-color: var(--color-primary);
   transform: translateY(-2px);
 }
+
 .social__label {
   font-size: var(--fs-overline);
   font-weight: var(--fw-medium);
@@ -57,6 +52,7 @@
   color: var(--color-desc);
   margin: 0;
 }
+
 .social__name {
   display: inline-flex;
   align-items: center;
@@ -67,6 +63,7 @@
   margin: 0;
   line-height: 1.2;
 }
+
 .social__name svg {
   width: 1.5rem;
   height: 1.5rem;
@@ -77,17 +74,20 @@
     transform var(--transition-fast);
   transform: rotate(-45deg);
 }
+
 .social__link:hover .social__name svg,
 .social__link:focus .social__name svg {
   opacity: 1;
   transform: translate(-2px, -2px);
 }
+
 @media (max-width: 991.98px) {
   .social__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-8) var(--space-6);
   }
 }
+
 @media (max-width: 575.98px) {
   .social__grid {
     grid-template-columns: 1fr;

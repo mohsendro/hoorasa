@@ -3,9 +3,7 @@
   min-height: calc(100vh - var(--nv-bar-height, 72px));
   display: flex;
   align-items: center;
-  padding-block-start: var(--space-40);
-  padding-block-end: var(--space-24);
-  background-color: var(--color-background);
+  padding-block: var(--space-40) var(--space-24);
 }
 
 .error-404 {
@@ -94,7 +92,6 @@
 
 @media (max-width: 767.98px) {
   #error-404 {
-    padding-block: var(--space-32);
     min-height: auto;
   }
 

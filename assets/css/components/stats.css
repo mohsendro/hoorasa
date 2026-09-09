@@ -1,7 +1,5 @@
 #stats {
   position: relative;
-  padding-block: var(--space-24);
-  /* background: var(--color-black); */
   color: var(--color-white);
   overflow: hidden;
 }
@@ -13,6 +11,9 @@
 .stats .container {
   position: relative;
   z-index: 2;
+}
+
+.stats .row {
 }
 
 .stats .column {
@@ -74,14 +75,6 @@
 }
 
 @media (max-width: 991.98px) {
-  #stats {
-    padding-block: var(--space-16);
-  }
-
-  .stats .column {
-    gap: var(--space-12);
-  }
-
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -97,10 +90,6 @@
 }
 
 @media (max-width: 575.98px) {
-  #stats {
-    padding-block: var(--space-12);
-  }
-
   .stats__grid {
     grid-template-columns: 1fr;
   }

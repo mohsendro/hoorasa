@@ -1,8 +1,5 @@
 #services {
   position: relative;
-  padding-block: var(--space-24);
-  background-color: var(--color-background);
-  /* do not use overflow:hidden – breaks position:sticky */
 }
 
 .services {
@@ -232,8 +229,8 @@
 }
 
 @media (max-width: 991.98px) {
-  #services {
-    padding-block: var(--space-16);
+  .services .row {
+    gap: var(--space-16);
   }
 
   .services .accordion-button {
@@ -257,10 +254,6 @@
 }
 
 @media (max-width: 575.98px) {
-  #services {
-    padding-block: var(--space-12);
-  }
-
   .services .accordion-button {
     gap: var(--space-3);
     padding: var(--space-4);

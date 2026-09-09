@@ -89,6 +89,10 @@ body {
 main {
 }
 
+section {
+  padding-block: var(--space-24);
+}
+
 /* ── Headings ─────────────────────────────────────────────── */
 h1,
 .h1 {

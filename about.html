@@ -113,13 +113,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 column">
-                        <div class="more-us__content">
-                            <div class="section-intro">
-                                <p class="section-overline">درباره هورآسا</p>
-                                <h1 class="section-title">
-                                    جایی که <strong>ایده‌ها</strong> به تجربه تبدیل می‌شوند
-                                </h1>
-                            </div>
+                        <div class="section-intro">
+                            <p class="section-overline">درباره هورآسا</p>
+                            <h1 class="section-title">
+                                جایی که <strong>ایده‌ها</strong> به تجربه تبدیل می‌شوند
+                            </h1>
                         </div>
                     </div>
 
@@ -147,6 +145,7 @@
         <section id="about" class="container-fluid about" aria-label="ما که هستیم">
             <div class="container">
                 <div class="row">
+                    <!-- Intro (visual right in RTL) -->
                     <div class="col-12 col-lg-4 column">
                         <div class="section-intro">
                             <p class="section-overline">ما که هستیم</p>
@@ -158,8 +157,8 @@
                                 دقت اجرایی و تعهد به نتیجه، تجربه‌ای متفاوت از همکاری می‌سازیم.
                             </p>
                             <div class="about__cta">
-                                <a href="contact.html" class="btn-primary">
-                                    <span class="btn-label">تماس با ما</span>
+                                <a href="/" class="btn-primary">
+                                    <span class="btn-label">بیشتر درباره ما</span>
                                     <span class="btn-icon" aria-hidden="true">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke="currentColor" stroke-width="2.25">
@@ -171,13 +170,16 @@
                         </div>
                     </div>
 
+                    <!-- Center image -->
                     <div class="col-12 col-lg-4 column">
                         <figure class="about__media">
+                            <!-- Add your image at assets/images/about.jpg -->
                             <img src="assets/images/logo-white.png" alt="تیم هورآسا" width="400" height="560"
                                 loading="lazy" />
                         </figure>
                     </div>
 
+                    <!-- Features / advantages (visual left in RTL) -->
                     <div class="col-12 col-lg-4 column">
                         <div class="about__features">
                             <div class="about__feature">
@@ -254,22 +256,13 @@
                         <div class="section-intro section-sticky">
                             <p class="section-overline">مسیر ما</p>
                             <h2 class="section-title">
-                                تاریخچه <strong>فعالیت</strong> هورآسا
+                                تاریخچه
+                                <strong>فعالیت</strong>
+                                هورآسا
                             </h2>
                             <p class="section-desc">
                                 از آغاز تا امروز، هر گام ما بر پایه خلاقیت، کیفیت و اعتماد مشتریان شکل گرفته است.
                             </p>
-                            <!-- <div class="history__cta">
-                                <a href="contact.html" class="btn-primary">
-                                    <span class="btn-label">همکاری با ما</span>
-                                    <span class="btn-icon" aria-hidden="true">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor" stroke-width="2.25">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div> -->
                         </div>
                     </div>
 
@@ -355,7 +348,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 column">
-                        <div class="section-intro stats__intro">
+                        <div class="section-intro">
                             <p class="section-overline">دستاوردها</p>
                             <h2 class="section-title">
                                 اعدادی که <strong>داستان ما</strong> را می‌گویند
@@ -389,52 +382,59 @@
         </section>
         <!-- Stats End -->
 
-        <!-- Awards / Clients Start -->
-        <section id="clients" class="container-fluid clients" aria-label="جوایز و افتخارات هورآسا">
+        <!-- Clients Start -->
+        <section id="clients" class="container-fluid clients" aria-label="مشتریان هورآسا">
             <div class="container">
                 <div class="row">
                     <div class="col-12 column">
-                        <div class="section-intro align-items-center">
-                            <p class="section-overline">افتخارات</p>
-                            <h2 class="section-title">جوایز و <strong>افتخارات</strong></h2>
+                        <div class="section-header">
+                            <div class="section-intro">
+                                <p class="section-overline">افتخارات</p>
+                                <h2 class="section-title"><strong>جوایز</strong> و افتخارات</h2>
+                                <p class="section-desc">
+                                    سال‌ها تجربه، پروژه‌های موفق و مشتریان راضی — نتیجه تعهد ما به کیفیت و خلاقیت است.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="clients__marquee" data-clients-marquee>
                             <div class="clients__track">
+                                <!-- Sequence A -->
                                 <div class="clients__group" aria-hidden="false">
-                                    <div class="clients__item" title="جایزه ۱">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۱" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۱">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۱" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۲">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۲" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۲">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۲" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۳">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۳" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۳">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۳" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۴">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۴" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۴">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۴" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۵">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۵" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۵">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۵" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۶">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۶" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۶">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۶" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۷">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۷" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۷">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۷" width="160" height="64"
                                             loading="lazy" />
                                     </div>
-                                    <div class="clients__item" title="جایزه ۸">
-                                        <img src="assets/images/logo-white.png" alt="جایزه ۸" width="160" height="64"
+                                    <div class="clients__item" title="مشتری ۸">
+                                        <img src="assets/images/logo-white.png" alt="مشتری ۸" width="160" height="64"
                                             loading="lazy" />
                                     </div>
                                 </div>
+                                <!-- Sequence B (duplicate for seamless loop) -->
                                 <div class="clients__group" aria-hidden="true">
                                     <div class="clients__item" title="">
                                         <img src="assets/images/logo-white.png" alt="" width="160" height="64"
@@ -475,7 +475,7 @@
                 </div>
             </div>
         </section>
-        <!-- Awards / Clients End -->
+        <!-- Clients End -->
     </main>
 
     <!-- Footer Start -->
