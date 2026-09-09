@@ -1,151 +1,94 @@
-/* ═══════════════════════════════════════════════════
-   Why Us – چرا هورآسا (k1159)
-   Bento grid: 6 cards, mixed heights, illustration + title + desc
-═══════════════════════════════════════════════════ */
-
+/* Why Us – k1159 exact */
 #why-us {
   position: relative;
   padding-block: var(--space-24) var(--space-28);
-  background-color: var(--color-background);
+  background-color: #f0f0f0;
   overflow: hidden;
 }
-
-.why-us .container {
-  position: relative;
-  z-index: 1;
-}
-
+.why-us .container { position: relative; z-index: 1; }
 .why-us__header {
   text-align: center;
   max-width: 42rem;
   margin-inline: auto;
-  margin-bottom: var(--space-14, var(--space-12));
+  margin-bottom: var(--space-12);
 }
-
-.why-us__header .section-intro {
-  align-items: center;
-  text-align: center;
-}
-
+.why-us__header .section-intro { align-items: center; text-align: center; }
+.why-us__header .section-overline,
+.why-us__header .section-title { color: #1b1d1b; }
 .why-us__header .section-desc {
   width: 100%;
   max-width: 36rem;
   margin-inline: auto;
+  color: #777777;
 }
-
 .why-us__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
-  gap: var(--space-6);
-  align-items: stretch;
+  gap: 1.25rem;
+  align-items: start;
 }
-
 .why-us__card {
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
-  padding: var(--space-6);
-  border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--color-border);
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  transition:
-    border-color var(--transition-fast),
-    background var(--transition-fast),
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
-
 .why-us__card:hover {
-  border-color: rgba(218, 42, 42, 0.3);
-  background: rgba(255, 255, 255, 0.06);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
-
-.why-us__card--tall {
-  grid-row: span 2;
-}
-
+.why-us__card--tall .why-us__visual { min-height: 11rem; }
+.why-us__card--mid .why-us__visual { min-height: 9rem; }
 .why-us__visual {
   width: 100%;
-  flex: 1;
-  min-height: 7.5rem;
+  min-height: 6.5rem;
   display: grid;
   place-items: center;
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--color-text);
-  overflow: hidden;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: #1b1d1b;
 }
-
-.why-us__card--tall .why-us__visual {
-  min-height: 14rem;
-}
-
 .why-us__visual svg {
-  width: 4rem;
-  height: 4rem;
-  opacity: 0.9;
+  width: 4.25rem;
+  height: 4.25rem;
+  stroke: #1b1d1b;
 }
-
 .why-us__visual img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 9rem;
   object-fit: contain;
   display: block;
-  padding: var(--space-4);
 }
-
 .why-us__body {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-  margin-top: auto;
+  gap: 0.5rem;
 }
-
 .why-us__title {
   margin: 0;
-  font-size: var(--fs-h4);
-  font-weight: var(--fw-bold);
-  color: var(--color-text);
-  line-height: var(--lh-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b1d1b;
+  line-height: 1.3;
 }
-
 .why-us__desc {
   margin: 0;
-  font-size: var(--fs-caption);
-  font-weight: var(--fw-regular);
-  line-height: var(--lh-body);
-  color: var(--color-desc);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #8a8a8a;
 }
-
 @media (max-width: 991.98px) {
-  #why-us {
-    padding-block: var(--space-16) var(--space-20);
-  }
-
-  .why-us__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-us__card--tall {
-    grid-row: auto;
-  }
-
-  .why-us__card--tall .why-us__visual {
-    min-height: 10rem;
-  }
+  #why-us { padding-block: var(--space-16) var(--space-20); }
+  .why-us__grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 575.98px) {
-  .why-us__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-us__card {
-    padding: var(--space-5);
-  }
+  .why-us__grid { grid-template-columns: 1fr; }
 }
