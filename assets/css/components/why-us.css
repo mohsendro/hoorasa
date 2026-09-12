@@ -1,130 +1,137 @@
+/* ═══════════════════════════════════════════════════════
+   Why Us – k1159 exact
+   Light elevated cards, bento layout, illustration + title + desc
+═══════════════════════════════════════════════════════ */
+
 #why-us {
-}
-
-.why-us {
-}
-
-.why-us.container-fluid {
+  position: relative;
+  padding-block: var(--space-24) var(--space-28);
+  background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 .why-us .container {
+  position: relative;
+  z-index: 1;
 }
 
-.why-us .row {
+.why-us__header {
+  text-align: center;
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
 }
 
-.why-us .column {
+.why-us__header .section-intro {
+  align-items: center;
+  text-align: center;
 }
 
-/* ── Media Query ───────────────────────────────────────── */
-/* Responsive Min-width */
-@media (min-width: 576px) {
+.why-us__header .section-overline,
+.why-us__header .section-title {
+  color: #1b1d1b;
 }
 
-@media (min-width: 768px) {
+.why-us__header .section-desc {
+  width: 100%;
+  max-width: 36rem;
+  margin-inline: auto;
+  color: #777777;
 }
 
-@media (min-width: 992px) {
+/* Bento grid matching demo: middle col has tall card on top */
+.why-us__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.25rem;
+  align-items: start;
 }
 
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1400px) {
-}
-
-/* Responsive Max-width */
-@media (max-width: 1399.98px) {
-}
-
-@media (max-width: 1199.98px) {
-}
-
-@media (max-width: 991.98px) {
-}
-
-@media (max-width: 767.98px) {
-}
-
-@media (max-width: 575.98px) {
-}
-
-/* Responsive Single breakpoint */
-@media (max-width: 575.98px) {
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-}
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-}
-
-@media (min-width: 1400px) {
-}
-
-.services-grid {
-  display: flex;
-  gap: 18px;
-}
-
-.services-col {
+.why-us__card {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  flex: 1;
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
-.service-card {
-  background: #fff;
-  border-radius: 18px;
-  padding: 34px;
+.why-us__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
-.service-card h3 {
-  font-size: 21px;
-  margin: 20px 0 10px;
+/* Tall cards – larger illustration area */
+.why-us__card--tall .why-us__visual {
+  min-height: 11rem;
 }
 
-.service-card p {
-  color: #9a9a9a;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0;
+.why-us__card--mid .why-us__visual {
+  min-height: 9rem;
 }
 
-.icon-jack,
-.icon-spike {
+.why-us__visual {
+  width: 100%;
+  min-height: 6.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: #1b1d1b;
+}
+
+.why-us__visual svg {
+  width: 4.25rem;
+  height: 4.25rem;
+  stroke: #1b1d1b;
+}
+
+.why-us__visual img {
+  max-width: 100%;
+  max-height: 9rem;
+  object-fit: contain;
   display: block;
 }
 
-.icon-sphere {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: repeating-linear-gradient(
-    100deg,
-    #5c5c5c 0 3px,
-    #b9b9b9 3px 6px,
-    #6b6b6b 6px 9px
-  );
-  box-shadow:
-    inset -12px -12px 24px rgba(0, 0, 0, 0.45),
-    inset 10px 10px 18px rgba(255, 255, 255, 0.35);
+.why-us__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.illus {
-  width: 100%;
-  height: 190px;
-  margin-bottom: 6px;
+.why-us__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b1d1b;
+  line-height: 1.3;
 }
 
-.illus svg {
-  width: 100%;
-  height: 100%;
+.why-us__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #8a8a8a;
+}
+
+@media (max-width: 991.98px) {
+  #why-us {
+    padding-block: var(--space-16) var(--space-20);
+  }
+
+  .why-us__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .why-us__grid {
+    grid-template-columns: 1fr;
+  }
 }
