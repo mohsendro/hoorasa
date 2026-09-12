@@ -1,137 +1,110 @@
-/* ═══════════════════════════════════════════════════════
-   Why Us – k1159 exact
-   Light elevated cards, bento layout, illustration + title + desc
-═══════════════════════════════════════════════════════ */
-
 #why-us {
   position: relative;
-  padding-block: var(--space-24) var(--space-28);
-  background-color: #f0f0f0;
   overflow: hidden;
+}
+
+.why-us {
+}
+
+.why-us.container-fluid {
 }
 
 .why-us .container {
-  position: relative;
-  z-index: 1;
 }
 
-.why-us__header {
-  text-align: center;
-  max-width: 42rem;
-  margin-inline: auto;
-  margin-bottom: var(--space-12);
+.why-us .row {
 }
 
-.why-us__header .section-intro {
-  align-items: center;
-  text-align: center;
-}
-
-.why-us__header .section-overline,
-.why-us__header .section-title {
-  color: #1b1d1b;
-}
-
-.why-us__header .section-desc {
-  width: 100%;
-  max-width: 36rem;
-  margin-inline: auto;
-  color: #777777;
-}
-
-/* Bento grid matching demo: middle col has tall card on top */
-.why-us__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.why-us__card {
+.why-us .column {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 1.75rem 1.5rem 1.5rem;
-  border-radius: 1.25rem;
-  background: #ffffff;
-  border: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  gap: var(--space-16);
 }
 
-.why-us__card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-/* Tall cards – larger illustration area */
-.why-us__card--tall .why-us__visual {
-  min-height: 11rem;
-}
-
-.why-us__card--mid .why-us__visual {
-  min-height: 9rem;
-}
-
-.why-us__visual {
+.services-grid {
   width: 100%;
-  min-height: 6.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 0.75rem;
-  background: transparent;
-  color: #1b1d1b;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: var(--space-5);
 }
 
-.why-us__visual svg {
-  width: 4.25rem;
-  height: 4.25rem;
-  stroke: #1b1d1b;
-}
-
-.why-us__visual img {
-  max-width: 100%;
-  max-height: 9rem;
-  object-fit: contain;
-  display: block;
-}
-
-.why-us__body {
+.services-col {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  flex: 1;
+  gap: var(--space-5);
 }
 
-.why-us__title {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #1b1d1b;
-  line-height: 1.3;
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: var(--morphism-background);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  color: inherit;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
-.why-us__desc {
+.service-card:hover {
+  background: rgba(218, 42, 42, 0.06);
+  border-color: rgba(218, 42, 42, 0.18);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
   margin: 0;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #8a8a8a;
+}
+
+.service-card p {
+  font-size: var(--fs-body);
+  color: var(--color-desc);
+  margin: 0;
+}
+
+.service-card img {
+  display: inline-block;
+  width: fit-content;
+  height: auto;
+  text-align: right;
+  margin-bottom: var(--space-3);
+}
+
+.service-card img.auto {
+  height: 150px;
+}
+
+.service-card img.full {
+  height: 250px;
 }
 
 @media (max-width: 991.98px) {
-  #why-us {
-    padding-block: var(--space-16) var(--space-20);
+  .services-grid {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  .why-us__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .service-card {
+    align-items: center;
   }
-}
 
-@media (max-width: 575.98px) {
-  .why-us__grid {
-    grid-template-columns: 1fr;
+  .service-card img.auto,
+  .service-card img.full {
+    height: 150px;
   }
 }
