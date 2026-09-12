@@ -1,162 +1,110 @@
-/* ═══════════════════════════════════════════════════
-   Project Card – کارت پروژه‌ها (k2375)
-   Square media + bottom-end notch + floating action
-   Title + subtitle below
-═══════════════════════════════════════════════════ */
-
-#projects {
-  position: relative;
-  padding-block: var(--space-24) var(--space-28);
-  background-color: var(--color-background);
-  overflow: hidden;
+#card-project {
 }
 
-.projects .container {
-  position: relative;
-  z-index: 1;
+.card-project {
 }
 
-.projects__header {
-  text-align: center;
-  max-width: 40rem;
-  margin-inline: auto;
-  margin-bottom: var(--space-12);
+.card-project.container-fluid {
 }
 
-.projects__header .section-intro {
-  align-items: center;
-  text-align: center;
+.card-project .container {
 }
 
-.projects__header .section-desc {
-  width: 100%;
-  max-width: 32rem;
-  margin-inline: auto;
+.card-project .row {
 }
 
-.projects__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-8) var(--space-6);
+.card-project .column {
 }
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-  text-decoration: none;
-  color: inherit;
-  transition: transform var(--transition-fast);
+/* ── Media Query ───────────────────────────────────────── */
+/* Responsive Min-width */
+@media (min-width: 576px) {
 }
 
-.project-card:hover {
-  transform: translateY(-3px);
+@media (min-width: 768px) {
 }
 
-.project-card__media {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  margin: 0;
-  border-radius: var(--radius-xl);
-  overflow: visible;
-  background: #5a5a5a;
+@media (min-width: 992px) {
 }
 
-.project-card__media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-xl);
-  transition: transform 0.5s ease;
+@media (min-width: 1200px) {
 }
 
-.project-card:hover .project-card__media img {
-  transform: scale(1.04);
+@media (min-width: 1400px) {
 }
 
-.project-card__media::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  inset-inline-end: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--color-background);
-  border-radius: 1.25rem 0 var(--radius-xl) 0;
-  z-index: 1;
-  pointer-events: none;
+/* Responsive Max-width */
+@media (max-width: 1399.98px) {
 }
 
-.project-card__action {
-  position: absolute;
-  bottom: 0.35rem;
-  inset-inline-end: 0.35rem;
-  z-index: 2;
-  width: 2.75rem;
-  height: 2.75rem;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-md);
-  background: var(--color-orange);
-  color: var(--color-black);
-  box-shadow: 0 4px 14px rgba(218, 107, 42, 0.4);
-  transition: transform var(--transition-fast);
-}
-
-.project-card:hover .project-card__action {
-  transform: scale(1.08);
-}
-
-.project-card__action svg {
-  width: 18px;
-  height: 14px;
-  display: block;
-}
-
-.project-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  padding-inline: var(--space-1);
-}
-
-.project-card__title {
-  margin: 0;
-  font-size: var(--fs-h5);
-  font-weight: var(--fw-bold);
-  line-height: 1.35;
-  color: var(--color-text);
-}
-
-.project-card__subtitle {
-  margin: 0;
-  font-size: var(--fs-caption);
-  font-weight: var(--fw-regular);
-  color: var(--color-desc);
-  line-height: 1.4;
+@media (max-width: 1199.98px) {
 }
 
 @media (max-width: 991.98px) {
-  .projects__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+}
+
+@media (max-width: 767.98px) {
 }
 
 @media (max-width: 575.98px) {
-  #projects {
-    padding-block: var(--space-16) var(--space-20);
-  }
-
-  .projects__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .project-card:hover .project-card__media img {
-    transform: none;
-  }
+/* Responsive Single breakpoint */
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+.team-grid {
+  display: flex;
+  gap: 26px;
+}
+
+.team-card {
+  flex: 1;
+}
+
+.team-photo {
+  position: relative;
+  background: #8c8c8c;
+  border-radius: 22px;
+  aspect-ratio: 1 / 1.05;
+}
+
+.team-badge {
+  position: absolute;
+  bottom: -16px;
+  right: 26px;
+  width: 54px;
+  height: 54px;
+  background: #f0a955;
+  border-radius: 14px;
+  border: 5px solid #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card h3 {
+  margin: 30px 0 4px;
+  font-size: 21px;
+}
+
+.team-card p {
+  margin: 0;
+  color: #9a9a9a;
+  font-size: 15px;
 }
