@@ -1,0 +1,144 @@
+.card-project {
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  border-radius: var(--radius-lg);
+}
+
+.card-project__photo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* aspect-ratio: 1 / 1.05; */
+  position: relative;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.card-project__photo::before,
+.card-project__photo::after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 70px;
+  bottom: -1px;
+  background-color: var(--morphism-background-full);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+.card-project__photo::before {
+  left: 15px;
+  -webkit-mask: url("/assets/images/icons/clip-left.svg") center / 100% 100%
+    no-repeat;
+  mask: url("/assets/images/icons/clip-left.svg") center / 100% 100% no-repeat;
+}
+
+.card-project__photo::after {
+  left: 77px;
+  -webkit-mask: url("/assets/images/icons/clip-right.svg") center / 100% 100%
+    no-repeat;
+  mask: url("/assets/images/icons/clip-right.svg") center / 100% 100% no-repeat;
+}
+
+.card-project__photo img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top center;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+
+.card-project .content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--space-3);
+  position: relative;
+  background-color: var(--morphism-background-full);
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.card-project__badge {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -60px;
+  left: 43px;
+  color: var(--color-text);
+  opacity: 0.7;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  background: var(--color-background);
+  border: 5px solid var(--morphism-background);
+  border-radius: var(--radius-lg);
+  z-index: 2;
+}
+
+.card-project__badge svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  transform: rotate(225deg);
+}
+
+.card-project:hover .card-project__badge svg {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.card-project h4,
+.card-project h4 a {
+  width: 100%;
+  height: 33px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  margin: 0;
+  z-index: 1;
+}
+
+.card-project a {
+  color: var(--color-text);
+}
+
+.card-project span {
+  width: 100%;
+  height: 27px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  align-content: flex-end;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+  margin: 0;
+  z-index: 1;
+}
