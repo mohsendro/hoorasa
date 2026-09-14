@@ -120,6 +120,10 @@
   transform: rotate(225deg);
 }
 
+.card-post__footer:hover svg {
+  color: var(--color-text-muted);
+}
+
 .card-post:hover .card-post__footer svg {
   opacity: 1;
   transform: rotate(180deg);

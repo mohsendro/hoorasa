@@ -118,3 +118,36 @@ new Navalone("#mm", {
   btn.addEventListener("mousemove", onMove, { passive: true });
   btn.addEventListener("mouseleave", onLeave);
 })();
+
+// Swiper Configs
+(function () {
+  var projectSwiper = new Swiper(".projectSwiper", {
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    speed: 8000,
+    loop: true,
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    pagination: {
+      el: ".projectpagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.4,
+      },
+      992: {
+        slidesPerView: 2.8,
+      },
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    mousewheel: {
+      invert: true,
+    },
+  });
+})();

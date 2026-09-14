@@ -127,6 +127,7 @@
   font-size: var(--fs-h4);
   font-weight: var(--fw-medium);
   line-height: var(--lh-body);
+  text-align: right;
   margin: 0;
   z-index: 1;
 }
@@ -147,6 +148,7 @@
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   line-height: var(--lh-body);
+  text-align: right;
   color: var(--color-text-muted);
   margin: 0;
   z-index: 1;

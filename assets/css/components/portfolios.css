@@ -1,0 +1,35 @@
+#portfolios {
+  position: relative;
+}
+
+.portfolios {
+  position: relative;
+}
+
+.portfolios.container-fluid {
+}
+
+.portfolios .container {
+}
+
+.portfolios .row {
+}
+
+.portfolios .column {
+}
+
+.projectSwiper {
+  padding: var(--space-3) 0 var(--space-8);
+}
+
+.projectpagination {
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bottom: -4px;
+}
+
+/* ── Media Query ───────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .portfolios .row {
+    gap: var(--space-16);
+  }
+}

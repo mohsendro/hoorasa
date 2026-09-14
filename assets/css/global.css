@@ -738,6 +738,29 @@ button,
   transition: all var(--transition-slow);
 }
 
+/* ── Swiper ───────────────────────────────── */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-white);
+}
+
+.swiper-pagination-bullet-active {
+  width: 15px;
+  border-radius: var(--space-3);
+  background: var(--color-primary-deep);
+}
+
 /* ── Media Query ───────────────────────────────────────── */
 /* Responsive Min-width */
 @media (min-width: 576px) {
