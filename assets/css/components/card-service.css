@@ -15,6 +15,16 @@
   background-color: var(--color-black);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
+  overflow: hidden;
+  transition: all var(--transition-slow);
+}
+
+.card-service:hover {
+  -moz-transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card-service::after {
@@ -31,33 +41,84 @@
   z-index: 0;
 }
 
-.card-service__badge {
+.card-service::before {
+  content: "";
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 44px;
-  height: 44px;
-  background: #f0a955;
-  border-radius: 50%;
+  width: 100px;
+  height: 110px;
+  top: -10px;
+  left: -1px;
+  background-color: var(--color-background);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-mask: url("/assets/images/icons/clip-curve.svg") center / 100% 100%
+    no-repeat;
+  mask: url("/assets/images/icons/clip-curve.svg") center / 100% 100% no-repeat;
+  transform: rotate(180deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card-service__badge {
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: -0;
+  left: 0;
+  color: var(--color-text);
+  /* opacity: 0.7; */
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  background: var(--color-background);
+  border: 5px solid var(--morphism-background);
+  border-radius: var(--radius-full);
+  z-index: 2;
 }
 
-.card-service h3 {
-  color: #fff;
-  font-size: 23px;
-  margin: 0 0 12px;
+.card-service__badge svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  transform: rotate(225deg);
+}
+
+.card-service:hover .card-service__badge svg {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.card-service h4,
+.card-service h4 a {
+  width: 100%;
+  height: 33px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  margin: 0;
+  z-index: 1;
 }
 
 .card-service__pill {
-  display: inline-block;
-  background: #fff;
-  color: #16181a;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  width: fit-content;
+  align-self: flex-start;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-light);
+  line-height: var(--line-caption);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-4);
+  z-index: 1;
 }

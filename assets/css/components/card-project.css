@@ -3,6 +3,15 @@
   position: relative;
   background-color: transparent;
   border-radius: var(--radius-lg);
+  transition: all var(--transition-slow);
+}
+
+.card-project:hover {
+  -moz-transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card-project__photo {
@@ -123,7 +132,7 @@
 }
 
 .card-project a {
-  color: var(--color-text);
+  /* color: var(--color-text); */
 }
 
 .card-project span {
