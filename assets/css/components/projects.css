@@ -1,24 +1,27 @@
-#portfolios {
+#projects {
 }
 
-.portfolios {
+.projects {
 }
 
-.portfolios.container-fluid {
+.projects.container-fluid {
 }
 
-.portfolios .container {
+.projects .container {
 }
 
-.portfolios .row {
+.projects .row {
 }
 
-.portfolios .column {
+.projects .column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
 }
 
 /* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
-  .portfolios .row {
+  .projects .row {
     gap: var(--space-16);
   }
 }

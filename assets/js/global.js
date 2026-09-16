@@ -121,33 +121,62 @@ new Navalone("#mm", {
 
 // Swiper Configs
 (function () {
-  var projectSwiper = new Swiper(".projectSwiper", {
+  var portfolioSwiper = new Swiper(".portfolioSwiper", {
     autoplay: {
-      delay: 1000,
+      delay: 2000,
       disableOnInteraction: false,
     },
-    speed: 8000,
+    speed: 500,
     loop: true,
-    slidesPerView: 1.2,
+    slidesPerView: 1.1,
     spaceBetween: 20,
     pagination: {
-      el: ".projectpagination",
+      el: ".portfolioPagination",
       clickable: true,
     },
     breakpoints: {
       768: {
-        slidesPerView: 2.4,
+        slidesPerView: 2.2,
       },
       992: {
-        slidesPerView: 2.8,
+        slidesPerView: 2.4,
       },
     },
     keyboard: {
       enabled: true,
       onlyInViewport: false,
     },
-    mousewheel: {
-      invert: true,
+  });
+})();
+
+(function () {
+  var projectSwiper = new Swiper(".projectSwiper", {
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    speed: 500,
+    loop: true,
+    slidesPerView: 1.1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".projectPagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2,
+      },
+      992: {
+        slidesPerView: 2.4,
+      },
+      1200: {
+        slidesPerView: 3.4,
+      },
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
   });
 })();
