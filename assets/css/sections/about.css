@@ -1,30 +1,20 @@
 #about {
-  position: relative;
   background-color: var(--color-black);
 }
 
 .about {
-  position: relative;
 }
 
 .about .container {
-  position: relative;
-  z-index: 2;
 }
 
 .about .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-10) 0;
 }
 
 .about .column {
-  display: flex;
-  flex-direction: column;
 }
 
-/* ── Center media ────────────────────────────────────── */
+/* Center media */
 .about__media {
   position: relative;
   width: 100%;
@@ -64,7 +54,7 @@
   z-index: 1;
 }
 
-/* ── Features / advantages list ──────────────────────── */
+/* Features / advantages list */
 .about__features {
   display: flex;
   flex-direction: column;
@@ -154,7 +144,7 @@
   margin: 0;
 }
 
-/* ── Desktop: 3 equal-ish columns ─────────────────────── */
+/* ── Media Query ───────────────────────────────────────── */
 @media (min-width: 992px) {
   .about .row {
     flex-wrap: nowrap;
@@ -162,12 +152,6 @@
     align-items: center;
   }
 
-  .about .row > .col-lg-4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-
-  /* Keep intro readable */
   .about .section-intro {
     max-width: 100%;
     padding-inline-end: var(--space-6);
@@ -189,17 +173,9 @@
   }
 }
 
-/* ── Tablet & mobile ─────────────────────────────────── */
 @media (max-width: 991.98px) {
   .about .row {
     gap: var(--space-16);
-  }
-
-  .about .section-intro {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-    margin-inline: auto;
   }
 
   .about__media {

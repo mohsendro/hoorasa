@@ -1,15 +1,15 @@
 #footer {
-  margin-top: var(--space-24);
 }
 
 .footer {
+  margin-top: var(--space-24);
 }
 
 .footer .container-fluid {
 }
 
 .footer .container {
-  padding: var(--space-5) 0;
+  padding: 0 0 var(--space-5) 0;
 }
 
 .footer .row {
@@ -187,26 +187,6 @@
 }
 
 /* ── Media Query ───────────────────────────────────────── */
-/* Responsive Min-width */
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1400px) {
-}
-
-/* Responsive Max-width */
-@media (max-width: 1399.98px) {
-}
-
 @media (max-width: 1199.98px) {
   .footer .slogan {
     font-size: 12rem;
@@ -259,6 +239,10 @@
 }
 
 @media (max-width: 575.98px) {
+  .footer .container {
+    padding: 0;
+  }
+
   .footer .column {
     padding: 0;
   }
@@ -271,6 +255,7 @@
 
   .footer .main-container {
     padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
 
   .footer .child-left {
@@ -280,26 +265,4 @@
   .footer .child-left > div {
     width: 100%;
   }
-}
-
-/* Responsive Single breakpoint */
-@media (max-width: 575.98px) {
-  .footer .container {
-    padding: var(--space-5) 0 0;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-}
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-}
-
-@media (min-width: 1400px) {
 }

@@ -1,15 +1,11 @@
 #clients {
-  position: relative;
   overflow: hidden;
 }
 
 .clients {
-  position: relative;
 }
 
 .clients .container {
-  position: relative;
-  z-index: 2;
 }
 
 .clients .column {

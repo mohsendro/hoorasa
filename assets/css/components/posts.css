@@ -1,26 +1,29 @@
-@import "../utilities/accordion-service.css";
+@import "../utilities/card-post.css";
 
-#services {
+#posts {
 }
 
-.services {
+.posts {
 }
 
-.services.container-fluid {
+.posts.container-fluid {
 }
 
-.services .container {
+.posts .container {
 }
 
-.services .row {
+.posts .row {
 }
 
-.services .column {
+.posts .column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
 }
 
 /* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
-  .services .row {
+  .posts .row {
     gap: var(--space-16);
   }
 }

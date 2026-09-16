@@ -180,3 +180,35 @@ new Navalone("#mm", {
     },
   });
 })();
+
+(function () {
+  var postSwiper = new Swiper(".postSwiper", {
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    speed: 500,
+    loop: true,
+    slidesPerView: 1.1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".postPagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2,
+      },
+      992: {
+        slidesPerView: 2.4,
+      },
+      1200: {
+        slidesPerView: 3.4,
+      },
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+  });
+})();
