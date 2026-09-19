@@ -1,4 +1,4 @@
-#stats {
+.stats.container-fluid {\n}\n#stats {
   position: relative;
   color: var(--color-white);
   overflow: hidden;
