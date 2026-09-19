@@ -1,6 +1,5 @@
-#two-column {
-}
-#two-column {
+#two-column,
+#two-column-left {
 }
 
 .two-column {
@@ -72,7 +71,7 @@
   gap: var(--space-4);
 }
 
-.two-column__paragraph {
+.two-column .two-column__paragraph {
   color: var(--color-desc);
   margin-bottom: 0;
 }
