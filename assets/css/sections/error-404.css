@@ -1,5 +1,9 @@
-.error-404.container-fluid {\n}\n
-.error-404 .row {\n}\n#error-404 {
+.error-404.container-fluid {
+}
+
+.error-404 .row {
+}
+#error-404 {
   position: relative;
   min-height: calc(100vh - var(--nv-bar-height, 72px));
   display: flex;
