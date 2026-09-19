@@ -1,5 +1,9 @@
-.more-us.container-fluid {\n}\n
-.more-us .column {\n}\n#more-us {
+.more-us.container-fluid {
+}
+
+.more-us .column {
+}
+#more-us {
   position: relative;
   padding-block: var(--space-32) var(--space-24);
   overflow: hidden;
