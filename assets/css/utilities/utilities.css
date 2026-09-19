@@ -337,3 +337,101 @@
     width: 100%;
   }
 }
+
+/* ── Utilities moved from globals.css ───────────────── */
+/* ── Utility Classes (Additive) ───────────────────────── */
+.bg-background {
+  background-color: var(--color-background) !important;
+}
+
+.bg-surface {
+  background-color: var(--color-surface) !important;
+}
+
+.bg-surface-elevated {
+  background-color: var(--color-surface-elevated) !important;
+}
+
+.text-main {
+  color: var(--color-text) !important;
+}
+
+.text-muted-custom {
+  color: var(--color-text-muted) !important;
+}
+
+.text-inverse {
+  color: var(--color-text-inverse) !important;
+}
+
+.border-custom {
+  border-color: var(--color-border) !important;
+}
+
+.glow-primary {
+  box-shadow: var(--glow-primary);
+}
+
+.radius-sm {
+  border-radius: var(--radius-sm) !important;
+}
+
+.radius-md {
+  border-radius: var(--radius-md) !important;
+}
+
+.radius-lg {
+  border-radius: var(--radius-lg) !important;
+}
+
+.radius-xl {
+  border-radius: var(--radius-xl) !important;
+}
+
+.radius-full {
+  border-radius: var(--radius-full) !important;
+}
+
+/* ── Transition Helpers ───────────────────────────────── */
+.transition-fast {
+  transition: all var(--transition-fast);
+}
+
+.transition-normal {
+  transition: all var(--transition-normal);
+}
+
+.transition-slow {
+  transition: all var(--transition-slow);
+}
+
+/* ── Swiper ───────────────────────────────── */
+.swiper__grid {
+  width: 100%;
+  position: relative;
+}
+
+.swiper {
+  padding-top: var(--space-1);
+  padding-bottom: var(--space-8);
+}
+
+.swiper-slide {
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-white);
+}
+
+.swiper-pagination-bullet-active {
+  width: 15px;
+  border-radius: var(--space-3);
+  background: var(--color-primary-deep);
+}
