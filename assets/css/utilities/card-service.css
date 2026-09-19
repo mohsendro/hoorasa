@@ -79,7 +79,7 @@
   z-index: 2;
 }
 
-.card-service__badge svg {
+.card-service__badge-icon {
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
@@ -90,13 +90,13 @@
   transform: rotate(225deg);
 }
 
-.card-service:hover .card-service__badge svg {
+.card-service:hover .card-service__badge-icon {
   opacity: 1;
   transform: rotate(180deg);
 }
 
 .card-service__title,
-.card-service__title a {
+.card-service__title-link {
   width: 100%;
   height: 33px;
   display: -webkit-box;
