@@ -1,4 +1,6 @@
-.about.container-fluid {\n}\n#about {
+.about.container-fluid {
+}
+#about {
   background-color: var(--color-black);
 }
 
