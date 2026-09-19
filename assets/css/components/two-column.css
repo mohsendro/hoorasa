@@ -1,30 +1,30 @@
 #dou-column {
 }
 
-.dou-column {
+.two-column {
 }
 
-.dou-column.container-fluid {
+.two-column.container-fluid {
 }
 
-.dou-column .container {
+.two-column .container {
 }
 
-.dou-column .row {
+.two-column .row {
 }
 
-.dou-column .row.right {
+.two-column .row.right {
   flex-direction: row;
 }
 
-.dou-column .row.left {
+.two-column .row.left {
   flex-direction: row-reverse;
 }
 
-.dou-column .column {
+.two-column .column {
 }
 
-.dou-column .column-content {
+.two-column .two-column__content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -34,33 +34,33 @@
   gap: var(--space-5);
 }
 
-.dou-column .column-image {
+.two-column .two-column__media {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-.dou-column .row.right .column-image {
+.two-column .row.right .two-column__media {
   align-content: flex-end;
   align-items: flex-end;
 }
 
-.dou-column .row.left .column-image {
+.two-column .row.left .two-column__media {
   align-content: flex-start;
   align-items: flex-start;
 }
 
-.dou-column .title {
+.two-column .two-column__title {
   display: inline-block;
 }
 
-.dou-column .title strong {
+.two-column .two-column__title strong {
   color: var(--color-primary);
   font-weight: inherit;
 }
 
-.dou-column .paragraphs {
+.two-column .two-column__paragraphs {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -70,12 +70,12 @@
   gap: var(--space-4);
 }
 
-.dou-column p {
+.two-column p {
   color: var(--color-desc);
   margin-bottom: 0;
 }
 
-.dou-column img {
+.two-column img {
   display: inline-block;
   width: auto;
   max-width: 100%;
@@ -84,13 +84,13 @@
 }
 
 @media (max-width: 991.98px) {
-  .dou-column .row {
+  .two-column .row {
     gap: var(--space-8);
   }
 
-  .dou-column .column-image,
-  .dou-column .row.right .column-image,
-  .dou-column .row.left .column-image {
+  .two-column .two-column__media,
+  .two-column .row.right .two-column__media,
+  .two-column .row.left .two-column__media {
     align-content: center;
     align-items: center;
   }
