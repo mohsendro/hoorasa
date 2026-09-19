@@ -1,4 +1,9 @@
-#sample-section {
+#section {\n}\n
+.section {\n}\n
+.section.container-fluid {\n}\n
+.section .container {\n}\n
+.section .row {\n}\n
+.section .column {\n}\n#sample-section {
 }
 
 .sample-section {
