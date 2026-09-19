@@ -76,7 +76,7 @@
   margin-bottom: 0;
 }
 
-.two-column__image {
+.two-column .two-column__image {
   display: inline-block;
   width: auto;
   max-width: 100%;
