@@ -70,13 +70,13 @@
   gap: var(--space-4);
 }
 
-.footer__child--right .logo {
+.footer__logo {
   width: 100%;
   max-width: 100px;
   height: auto;
 }
 
-.footer__child--right .desc {
+.footer__desc {
   text-align: justify;
   margin: 0;
 }
@@ -103,7 +103,7 @@
   gap: var(--space-1);
 }
 
-.footer__child--left .head {
+.footer__heading {
   width: 100%;
   text-align: right;
   font-size: var(--fs-h5);
@@ -113,18 +113,18 @@
   margin-bottom: var(--space-1);
 }
 
-.footer__child--left a {
+.footer__link {
   font-size: var(--fs-body);
   font-weight: var(--fw-light);
   line-height: var(--lh-body);
   color: var(--color-text);
 }
 
-.footer__child--left a:hover {
+.footer__link:hover {
   color: var(--color-text-muted);
 }
 
-.footer__child--left p {
+.footer__address {
   font-size: var(--fs-body);
   font-weight: var(--fw-light);
   line-height: var(--lh-body);
@@ -160,11 +160,11 @@
   margin: 0;
 }
 
-.footer__links li {
+.footer__link-item {
   margin: 0;
 }
 
-.footer__links a {
+.footer__link {
   font-size: var(--fs-body);
   font-weight: var(--fw-thin);
   line-height: var(--lh-body);
@@ -172,7 +172,7 @@
   text-decoration: none;
 }
 
-.footer__links a:hover {
+.footer__link:hover {
   color: var(--color-text-muted);
 }
 
@@ -185,7 +185,7 @@
   margin: 0;
 }
 
-.footer__copyright-text span {
+.footer__year {
 }
 
 /* ── Media Query ───────────────────────────────────────── */
