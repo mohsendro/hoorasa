@@ -340,68 +340,68 @@
 
 /* ── Utilities moved from globals.css ───────────────── */
 /* ── Utility Classes (Additive) ───────────────────────── */
-.bg-background {
+.u-bg-background {
   background-color: var(--color-background) !important;
 }
 
-.bg-surface {
+.u-bg-surface {
   background-color: var(--color-surface) !important;
 }
 
-.bg-surface-elevated {
+.u-bg-surface-elevated {
   background-color: var(--color-surface-elevated) !important;
 }
 
-.text-main {
+.u-text-main {
   color: var(--color-text) !important;
 }
 
-.text-muted-custom {
+.u-text-muted {
   color: var(--color-text-muted) !important;
 }
 
-.text-inverse {
+.u-text-inverse {
   color: var(--color-text-inverse) !important;
 }
 
-.border-custom {
+.u-border-custom {
   border-color: var(--color-border) !important;
 }
 
-.glow-primary {
+.u-glow-primary {
   box-shadow: var(--glow-primary);
 }
 
-.radius-sm {
+.u-radius-sm {
   border-radius: var(--radius-sm) !important;
 }
 
-.radius-md {
+.u-radius-md {
   border-radius: var(--radius-md) !important;
 }
 
-.radius-lg {
+.u-radius-lg {
   border-radius: var(--radius-lg) !important;
 }
 
-.radius-xl {
+.u-radius-xl {
   border-radius: var(--radius-xl) !important;
 }
 
-.radius-full {
+.u-radius-full {
   border-radius: var(--radius-full) !important;
 }
 
 /* ── Transition Helpers ───────────────────────────────── */
-.transition-fast {
+.u-transition-fast {
   transition: all var(--transition-fast);
 }
 
-.transition-normal {
+.u-transition-normal {
   transition: all var(--transition-normal);
 }
 
-.transition-slow {
+.u-transition-slow {
   transition: all var(--transition-slow);
 }
 
