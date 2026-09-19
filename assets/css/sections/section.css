@@ -1,9 +1,21 @@
-#section {\n}\n
-.section {\n}\n
-.section.container-fluid {\n}\n
-.section .container {\n}\n
-.section .row {\n}\n
-.section .column {\n}\n#sample-section {
+#section {
+}
+
+.section {
+}
+
+.section.container-fluid {
+}
+
+.section .container {
+}
+
+.section .row {
+}
+
+.section .column {
+}
+#sample-section {
 }
 
 .sample-section {
