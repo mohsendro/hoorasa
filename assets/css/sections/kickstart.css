@@ -1,4 +1,4 @@
-#kickstart {
+.kickstart.container-fluid {\n}\n#kickstart {
   position: relative;
   padding-block: var(--space-32) var(--space-24);
   overflow: hidden;
