@@ -1,10 +1,4 @@
-.contact-form.container-fluid {
-}
-
-.contact-form .row {
-}
 #contact-form {
-  position: relative;
   background: linear-gradient(
     180deg,
     var(--color-black) 0%,
@@ -15,12 +9,15 @@
 }
 
 .contact-form {
-  position: relative;
+}
+
+.contact-form.container-fluid {
 }
 
 .contact-form .container {
-  position: relative;
-  z-index: 2;
+}
+
+.contact-form .row {
 }
 
 .contact-form .column {

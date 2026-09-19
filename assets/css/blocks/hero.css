@@ -100,6 +100,7 @@
 }
 
 .hero__title strong {
+  font-weight: inherit;
   color: var(--color-primary);
 }
 

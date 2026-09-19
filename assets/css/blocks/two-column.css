@@ -1,5 +1,4 @@
-#two-column,
-#two-column-left {
+#two-column {
 }
 
 .two-column {
@@ -25,7 +24,7 @@
 .two-column .column {
 }
 
-.two-column .two-column__content {
+.two-column__content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -35,33 +34,33 @@
   gap: var(--space-5);
 }
 
-.two-column .two-column__media {
+.two-column__media {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-.two-column .row.row--right .two-column__media {
+.row.row--right .two-column__media {
   align-content: flex-end;
   align-items: flex-end;
 }
 
-.two-column .row.row--left .two-column__media {
+.row.row--left .two-column__media {
   align-content: flex-start;
   align-items: flex-start;
 }
 
-.two-column .two-column__title {
+.two-column__title {
   display: inline-block;
 }
 
-.two-column .two-column__title strong {
-  color: var(--color-primary);
+.two-column__title strong {
   font-weight: inherit;
+  color: var(--color-primary);
 }
 
-.two-column .two-column__paragraphs {
+.two-column__paragraphs {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -71,12 +70,12 @@
   gap: var(--space-4);
 }
 
-.two-column .two-column__paragraph {
+.two-column__paragraph {
   color: var(--color-desc);
   margin-bottom: 0;
 }
 
-.two-column .two-column__image {
+.two-column__image {
   display: inline-block;
   width: auto;
   max-width: 100%;
@@ -84,6 +83,7 @@
   max-height: 350px;
 }
 
+/* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
   .two-column .row {
     gap: var(--space-8);

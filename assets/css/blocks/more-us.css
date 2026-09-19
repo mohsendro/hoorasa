@@ -1,25 +1,21 @@
-.more-us.container-fluid {
-}
-
-.more-us .column {
-}
 #more-us {
-  position: relative;
   padding-block: var(--space-32) var(--space-24);
-  overflow: hidden;
 }
 
 .more-us {
-  position: relative;
+}
+
+.more-us.container-fluid {
 }
 
 .more-us .container {
-  position: relative;
-  z-index: 1;
 }
 
 .more-us .row {
   align-items: center;
+}
+
+.more-us .column {
 }
 
 .more-us .section-title {
@@ -149,6 +145,7 @@
   opacity: 0.8;
 }
 
+/* ── Media Query ───────────────────────────────────────── */
 @media (min-width: 992px) {
   .more-us .row {
     flex-wrap: nowrap;

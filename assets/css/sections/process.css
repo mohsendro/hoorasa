@@ -1,15 +1,13 @@
-.process.container-fluid {
-}
 #process {
-  overflow: hidden;
 }
 
 .process {
 }
 
+.process.container-fluid {
+}
+
 .process .container {
-  position: relative;
-  z-index: 1;
 }
 
 .process .row {

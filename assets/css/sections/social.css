@@ -1,19 +1,16 @@
-.social.container-fluid {
-}
-
-.social .row {
-}
 #social {
-  position: relative;
 }
 
 .social {
-  position: relative;
+}
+
+.social.container-fluid {
 }
 
 .social .container {
-  position: relative;
-  z-index: 2;
+}
+
+.social .row {
 }
 
 .social .column {

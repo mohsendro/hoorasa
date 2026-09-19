@@ -1,16 +1,13 @@
-.contact-map.container-fluid {
-}
 #contact-map {
-  position: relative;
 }
 
 .contact-map {
-  position: relative;
+}
+
+.contact-map.container-fluid {
 }
 
 .contact-map .container {
-  position: relative;
-  z-index: 2;
 }
 
 .contact-map .row {
@@ -138,6 +135,7 @@
   color: var(--color-primary);
 }
 
+/* ── Media Query ───────────────────────────────────────── */
 @media (min-width: 992px) {
   .contact-map .row {
     flex-wrap: nowrap;

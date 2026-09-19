@@ -1,23 +1,21 @@
+@import "../components/card-post.css";
+@import "../components/card-project.css";
+@import "../components/card-service.css";
+
 #cards {
-  position: relative;
 }
 
 .cards {
-  position: relative;
 }
 
 .cards.container-fluid {
 }
 
 .cards .container {
-  position: relative;
-  z-index: 1;
 }
 
 .cards .row {
 }
 
 .cards .column {
-  display: flex;
-  flex-direction: column;
 }

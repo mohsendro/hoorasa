@@ -1,10 +1,4 @@
-.error-404.container-fluid {
-}
-
-.error-404 .row {
-}
 #error-404 {
-  position: relative;
   min-height: calc(100vh - var(--nv-bar-height, 72px));
   display: flex;
   align-items: center;
@@ -12,13 +6,16 @@
 }
 
 .error-404 {
-  position: relative;
   width: 100%;
 }
 
+.error-404.container-fluid {
+}
+
 .error-404 .container {
-  position: relative;
-  z-index: 2;
+}
+
+.error-404 .row {
 }
 
 .error-404 .column {

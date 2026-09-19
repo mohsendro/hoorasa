@@ -1,20 +1,17 @@
-.contact-info.container-fluid {
-}
-
-.contact-info .row {
-}
 #contact-info {
-  position: relative;
   padding-block: var(--space-32) var(--space-24);
 }
 
 .contact-info {
-  position: relative;
+}
+
+.contact-info.container-fluid {
 }
 
 .contact-info .container {
-  position: relative;
-  z-index: 2;
+}
+
+.contact-info .row {
 }
 
 .contact-info .column {

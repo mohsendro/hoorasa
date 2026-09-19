@@ -1,18 +1,14 @@
-.kickstart.container-fluid {
-}
 #kickstart {
-  position: relative;
   padding-block: var(--space-32) var(--space-24);
-  overflow: hidden;
 }
 
 .kickstart {
-  position: relative;
+}
+
+.kickstart.container-fluid {
 }
 
 .kickstart .container {
-  position: relative;
-  z-index: 2;
 }
 
 .kickstart .row {
@@ -214,7 +210,7 @@
   opacity: 0.55;
 }
 
-/* ── Responsive ───────────────────────────────────────── */
+/* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
   .kickstart .row {
     min-height: 0;

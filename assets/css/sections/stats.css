@@ -1,18 +1,14 @@
-.stats.container-fluid {
-}
 #stats {
-  position: relative;
   color: var(--color-white);
-  overflow: hidden;
 }
 
 .stats {
-  position: relative;
+}
+
+.stats.container-fluid {
 }
 
 .stats .container {
-  position: relative;
-  z-index: 2;
 }
 
 .stats .row {

@@ -1,16 +1,13 @@
-.history.container-fluid {
-}
 #history {
-  position: relative;
 }
 
 .history {
-  position: relative;
+}
+
+.history.container-fluid {
 }
 
 .history .container {
-  position: relative;
-  z-index: 2;
 }
 
 .history .row {

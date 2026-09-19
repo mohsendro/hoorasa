@@ -1,16 +1,16 @@
-.clients.container-fluid {
-}
-
-.clients .row {
-}
 #clients {
-  overflow: hidden;
 }
 
 .clients {
 }
 
+.clients.container-fluid {
+}
+
 .clients .container {
+}
+
+.clients .row {
 }
 
 .clients .column {

@@ -1,17 +1,15 @@
+@import "../components/category.css";
+
 #categories {
-  position: relative;
 }
 
 .categories {
-  position: relative;
 }
 
 .categories.container-fluid {
 }
 
 .categories .container {
-  position: relative;
-  z-index: 1;
 }
 
 .categories .row {

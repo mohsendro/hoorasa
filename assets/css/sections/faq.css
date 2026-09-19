@@ -1,16 +1,13 @@
-.faq.container-fluid {
-}
 #faq {
-  position: relative;
 }
 
 .faq {
-  position: relative;
+}
+
+.faq.container-fluid {
 }
 
 .faq .container {
-  position: relative;
-  z-index: 2;
 }
 
 .faq .row {

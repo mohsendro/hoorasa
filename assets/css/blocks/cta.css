@@ -1,17 +1,13 @@
 #cta {
-  position: relative;
 }
 
 .cta {
-  position: relative;
 }
 
 .cta.container-fluid {
 }
 
 .cta .container {
-  position: relative;
-  z-index: 2;
 }
 
 .cta .row {
@@ -136,6 +132,7 @@
 }
 
 .cta__title strong {
+  font-weight: inherit;
   color: var(--color-text-muted);
 }
 

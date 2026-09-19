@@ -1,10 +1,11 @@
-.about.container-fluid {
-}
 #about {
   background-color: var(--color-black);
 }
 
 .about {
+}
+
+.about.container-fluid {
 }
 
 .about .container {

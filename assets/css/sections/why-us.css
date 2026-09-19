@@ -1,6 +1,4 @@
 #why-us {
-  position: relative;
-  overflow: hidden;
 }
 
 .why-us {
@@ -90,6 +88,7 @@
   height: 250px;
 }
 
+/* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
   .why-us__grid {
     flex-direction: column;
