@@ -61,11 +61,21 @@
 
 /* ── Base ─────────────────────────────────────────────── */
 * {
-  -webkit-transition: all var(--transition-normal) linear;
-  -moz-transition: all var(--transition-normal) linear;
-  -ms-transition: all var(--transition-normal) linear;
-  -o-transition: all var(--transition-normal) linear;
-  transition: all var(--transition-normal) linear;
+  -webkit-transition-property: color, background-color, border-color, opacity, transform;
+  -webkit-transition-duration: var(--transition-normal);
+  -webkit-transition-timing-function: linear;
+  -moz-transition-property: color, background-color, border-color, opacity, transform;
+  -moz-transition-duration: var(--transition-normal);
+  -moz-transition-timing-function: linear;
+  -ms-transition-property: color, background-color, border-color, opacity, transform;
+  -ms-transition-duration: var(--transition-normal);
+  -ms-transition-timing-function: linear;
+  -o-transition-property: color, background-color, border-color, opacity, transform;
+  -o-transition-duration: var(--transition-normal);
+  -o-transition-timing-function: linear;
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: var(--transition-normal);
+  transition-timing-function: linear;
 }
 
 html {
