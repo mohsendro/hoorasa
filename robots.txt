@@ -1,0 +1,4 @@
+# Hoorasa robots policy
+# Keep public production pages crawlable. Demo/documentation pages use noindex in HTML.
+User-agent: *
+Allow: /
