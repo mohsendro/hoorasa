@@ -53,11 +53,11 @@ new Navalone("#mm", {
   }
 
   function onEnter() {
-    borderEl.classList.add("is-hovering");
+    borderEl.classList.add("hoorasa-cursor-border--hovering");
   }
 
   function onLeave() {
-    borderEl.classList.remove("is-hovering");
+    borderEl.classList.remove("hoorasa-cursor-border--hovering");
   }
 
   window.addEventListener("mousemove", onMouseMove, { passive: true });
