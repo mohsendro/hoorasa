@@ -1,5 +1,9 @@
-.contact-form.container-fluid {\n}\n
-.contact-form .row {\n}\n#contact-form {
+.contact-form.container-fluid {
+}
+
+.contact-form .row {
+}
+#contact-form {
   position: relative;
   background: linear-gradient(
     180deg,
