@@ -15,7 +15,7 @@
 .header {
 }
 
-.header .mm {
+.header__nav {
   width: 100%;
   max-width: var(--page-max-width);
   background: var(--morphism-background);
@@ -114,19 +114,19 @@
     top: 20px;
   }
 
-  .header .mm {
+  .header__nav {
     max-width: var(--container-lg);
   }
 }
 
 @media (min-width: 1200px) {
-  .header .mm {
+  .header__nav {
     max-width: var(--container-xl);
   }
 }
 
 @media (min-width: 1400px) {
-  .header .mm {
+  .header__nav {
     max-width: var(--page-max-width);
   }
 }
