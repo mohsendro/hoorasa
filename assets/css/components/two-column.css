@@ -70,12 +70,12 @@
   gap: var(--space-4);
 }
 
-.two-column p {
+.two-column__paragraph {
   color: var(--color-desc);
   margin-bottom: 0;
 }
 
-.two-column img {
+.two-column__image {
   display: inline-block;
   width: auto;
   max-width: 100%;
