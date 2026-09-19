@@ -1,4 +1,4 @@
-.services__accordion-wrap {
+.accordion-service {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   border-radius: 0;
 }
 
-.services__accordion-wrap .accordion {
+.accordion-service .accordion {
   position: relative;
   z-index: 1;
   display: flex;
@@ -28,7 +28,7 @@
   border: 0;
 }
 
-.services__accordion-wrap .accordion-item {
+.accordion-service .accordion-item {
   background-color: var(--color-background);
   border-bottom: var(--border-width) var(--border-style) var(--color-border);
   /* border-radius: var(--radius-md); */
@@ -36,11 +36,11 @@
   margin: 0;
 }
 
-.services__accordion-wrap .accordion-header {
+.accordion-service .accordion-header {
   margin: 0;
 }
 
-.services__accordion-wrap .accordion-button {
+.accordion-service .accordion-button {
   display: flex;
   align-items: center;
   gap: var(--space-4);
@@ -58,29 +58,29 @@
   border-radius: var(--radius-md);
 }
 
-.services__accordion-wrap .accordion-button:not(.collapsed) {
+.accordion-service .accordion-button:not(.collapsed) {
   color: var(--color-text);
   background-color: var(--color-background);
   box-shadow: none;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
-.services__accordion-wrap .accordion-button:focus {
+.accordion-service .accordion-button:focus {
   box-shadow: none;
   outline: none;
 }
 
-.services__accordion-wrap .accordion-button:focus-visible {
+.accordion-service .accordion-button:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: -2px;
 }
 
-.services__accordion-wrap .accordion-button::after {
+.accordion-service .accordion-button::after {
   display: none;
 }
 
 /* Service icon */
-.services__accordion-wrap .services__item-icon {
+.accordion-service .accordion-service__icon {
   flex-shrink: 0;
   width: 44px;
   height: 44px;
@@ -96,25 +96,25 @@
   /* opacity: 0.3; */
 }
 
-.services__accordion-wrap
+.accordion-service
   .accordion-button:not(.collapsed)
-  .services__item-icon {
+  .accordion-service__icon {
   background: var(--color-primary);
   color: var(--color-white);
 }
 
-.services__accordion-wrap .services__item-icon svg {
+.accordion-service .accordion-service__icon svg {
   width: 22px;
   height: 22px;
 }
 
-.services__accordion-wrap .services__item-title {
+.accordion-service .accordion-service__title {
   flex: 1 1 auto;
   min-width: 0;
 }
 
 /* Custom arrow */
-.services__accordion-wrap .services__item-arrow {
+.accordion-service .accordion-service__arrow {
   flex-shrink: 0;
   width: 28px;
   height: 28px;
@@ -130,28 +130,28 @@
     background var(--transition-fast);
 }
 
-.services__accordion-wrap
+.accordion-service
   .accordion-button:not(.collapsed)
-  .services__item-arrow {
+  .accordion-service__arrow {
   transform: rotate(180deg);
   border-color: var(--color-primary);
   background: rgba(218, 42, 42, 0.2);
   color: var(--color-primary);
 }
 
-.services__accordion-wrap .services__item-arrow svg {
+.accordion-service .accordion-service__arrow svg {
   width: 14px;
   height: 14px;
 }
 
 /* Body */
-.services__accordion-wrap .accordion-body {
+.accordion-service .accordion-body {
   padding: 0 var(--space-6) var(--space-6);
   padding-inline-start: calc(var(--space-6) + 44px + var(--space-4));
   background-color: var(--color-background);
 }
 
-.services__accordion-wrap .services__item-text {
+.accordion-service .accordion-service__text {
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   line-height: var(--lh-body);
@@ -159,7 +159,7 @@
   margin: 0 0 var(--space-4);
 }
 
-.services__accordion-wrap .services__item-link {
+.accordion-service .accordion-service__link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -172,13 +172,13 @@
     gap var(--transition-fast);
 }
 
-.services__accordion-wrap .services__item-link:hover,
-.services__accordion-wrap .services__item-link:focus {
+.accordion-service .accordion-service__link:hover,
+.accordion-service .accordion-service__link:focus {
   color: var(--color-text);
   gap: var(--space-3);
 }
 
-.services__accordion-wrap .services__item-link svg {
+.accordion-service .accordion-service__link svg {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
@@ -186,39 +186,39 @@
 
 /* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
-  .services__accordion-wrap .accordion-button {
+  .accordion-service .accordion-button {
     padding: var(--space-4) var(--space-5);
   }
 
-  .services__accordion-wrap .accordion-body {
+  .accordion-service .accordion-body {
     padding: 0 var(--space-5) var(--space-5);
     padding-inline-start: calc(var(--space-5) + 40px + var(--space-3));
   }
 
-  .services__accordion-wrap .services__item-icon {
+  .accordion-service .accordion-service__icon {
     width: 40px;
     height: 40px;
   }
 
-  .services__accordion-wrap .services__item-icon svg {
+  .accordion-service .accordion-service__icon svg {
     width: 20px;
     height: 20px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .services__accordion-wrap .accordion-button {
+  .accordion-service .accordion-button {
     gap: var(--space-3);
     padding: var(--space-4);
     font-size: var(--fs-body);
   }
 
-  .services__accordion-wrap .accordion-body {
+  .accordion-service .accordion-body {
     padding: 0 var(--space-4) var(--space-4);
     padding-inline-start: var(--space-4);
   }
 
-  .services__accordion-wrap .services__item-icon {
+  .accordion-service .accordion-service__icon {
     width: 36px;
     height: 36px;
   }
