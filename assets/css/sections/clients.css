@@ -1,5 +1,9 @@
-.clients.container-fluid {\n}\n
-.clients .row {\n}\n#clients {
+.clients.container-fluid {
+}
+
+.clients .row {
+}
+#clients {
   overflow: hidden;
 }
 
