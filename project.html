@@ -330,31 +330,32 @@
             </div>
 
             <div class="project-gallery__masonry">
-              <div class="project-gallery__item" style="--width: 3; --height: 4;">
+              <div class="project-gallery__sizer"></div>
+              <div class="project-gallery__item project-gallery__item--tall">
                 <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
                   alt="نمای کلی غرفه" loading="lazy" decoding="async" width="600" height="800">
               </div>
-              <div class="project-gallery__item" style="--width: 4; --height: 3;">
+              <div class="project-gallery__item project-gallery__item--wide">
                 <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
                   alt="جزئیات گرافیک محیطی" loading="lazy" decoding="async" width="600" height="400">
               </div>
-              <div class="project-gallery__item" style="--width: 1; --height: 1;">
+              <div class="project-gallery__item project-gallery__item--square">
                 <video src="assets/videos/hero.mp4" muted loop playsinline autoplay preload="metadata"
                   aria-label="ویدیو تور کوتاه غرفه"></video>
               </div>
-              <div class="project-gallery__item" style="--width: 4; --height: 3;">
+              <div class="project-gallery__item project-gallery__item--wide">
                 <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
                   alt="فضای تعامل با مخاطب" loading="lazy" decoding="async" width="600" height="400">
               </div>
-              <div class="project-gallery__item" style="--width: 3; --height: 4;">
+              <div class="project-gallery__item project-gallery__item--tall">
                 <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
                   alt="نمای شب و نورپردازی" loading="lazy" decoding="async" width="600" height="800">
               </div>
-              <div class="project-gallery__item" style="--width: 6; --height: 5;">
+              <div class="project-gallery__item">
                 <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
                   alt="جزئیات متریال و ساخت" loading="lazy" decoding="async" width="600" height="500">
               </div>
-              <div class="project-gallery__item" style="--width: 16; --height: 9;">
+              <div class="project-gallery__item project-gallery__item--wide">
                 <video src="assets/videos/hero.mp4" muted loop playsinline autoplay preload="metadata"
                   aria-label="ویدیو تور کوتاه غرفه"></video>
               </div>
@@ -450,15 +451,64 @@
   <!-- Vendors Js -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/navalone/navalone.global.js"></script>
+  <!-- Masonry (desandro) — classic script, no module -->
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 
   <!-- Globals Js -->
   <script src="assets/js/global.js"></script>
 
-  <!-- Project Gallery: @masonry-grid/vanilla (ESM-only library — single page init, no build/bundler) -->
-  <script type="module">
-    import { BalancedMasonryGrid } from "https://cdn.jsdelivr.net/npm/@masonry-grid/vanilla@1.1.0/+esm";
-    const el = document.querySelector(".project-gallery__masonry");
-    if (el) new BalancedMasonryGrid(el);
+  <!-- Project Gallery Masonry init -->
+  <script>
+    (function () {
+      var grid = document.querySelector(".project-gallery__masonry");
+      if (!grid || typeof Masonry === "undefined") return;
+
+      var msnry = new Masonry(grid, {
+        itemSelector: ".project-gallery__item",
+        columnWidth: ".project-gallery__sizer",
+        percentPosition: true,
+        gutter: 0,
+        transitionDuration: "0.25s",
+        originLeft: false
+      });
+
+      function layout() {
+        msnry.layout();
+      }
+
+      // re-layout when images/videos are ready
+      var media = grid.querySelectorAll("img, video");
+      var pending = media.length;
+      if (pending === 0) {
+        layout();
+        return;
+      }
+      function done() {
+        pending -= 1;
+        if (pending <= 0) layout();
+      }
+      media.forEach(function (el) {
+        if (el.tagName === "IMG") {
+          if (el.complete) done();
+          else {
+            el.addEventListener("load", done);
+            el.addEventListener("error", done);
+          }
+        } else {
+          // video
+          if (el.readyState >= 1) done();
+          else {
+            el.addEventListener("loadedmetadata", done);
+            el.addEventListener("error", done);
+          }
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        clearTimeout(window.__pgMasonryResize);
+        window.__pgMasonryResize = setTimeout(layout, 100);
+      });
+    })();
   </script>
 </body>
 
