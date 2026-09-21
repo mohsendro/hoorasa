@@ -40,7 +40,11 @@ new Navalone("#mm", {
   const dot = { x: 0, y: 0 };
   const border = { x: 0, y: 0 };
 
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || window.matchMedia("(pointer: coarse)").matches) return;
+  if (
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+    window.matchMedia("(pointer: coarse)").matches
+  )
+    return;
 
   const dotEl = document.getElementById(DOT_ID);
   const borderEl = document.getElementById(BORDER_ID);
@@ -125,7 +129,11 @@ new Navalone("#mm", {
 
 // Swiper Configs
 (function () {
-  if (typeof Swiper === "undefined" || !document.querySelector(".portfolioSwiper")) return;
+  if (
+    typeof Swiper === "undefined" ||
+    !document.querySelector(".portfolioSwiper")
+  )
+    return;
 
   var portfolioSwiper = new Swiper(".portfolioSwiper", {
     autoplay: {
@@ -156,7 +164,11 @@ new Navalone("#mm", {
 })();
 
 (function () {
-  if (typeof Swiper === "undefined" || !document.querySelector(".projectSwiper")) return;
+  if (
+    typeof Swiper === "undefined" ||
+    !document.querySelector(".projectSwiper")
+  )
+    return;
 
   var projectSwiper = new Swiper(".projectSwiper", {
     autoplay: {
@@ -190,7 +202,8 @@ new Navalone("#mm", {
 })();
 
 (function () {
-  if (typeof Swiper === "undefined" || !document.querySelector(".postSwiper")) return;
+  if (typeof Swiper === "undefined" || !document.querySelector(".postSwiper"))
+    return;
 
   var postSwiper = new Swiper(".postSwiper", {
     autoplay: {
@@ -222,3 +235,5 @@ new Navalone("#mm", {
     },
   });
 })();
+
+new BalancedMasonryGrid(document.querySelector(".masonry"));

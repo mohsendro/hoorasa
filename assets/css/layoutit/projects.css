@@ -1,15 +1,14 @@
-@import "../sections/archive-intro.css";
 @import "../components/card-project.css";
 
 #archive-projects {
 }
 
 .archive-projects {
-  padding-block: var(--space-8);
+  padding-block: var(--space-8) var(--space-24);
 }
 
 .archive-projects .row {
-  row-gap: var(--space-10);
+  row-gap: var(--space-8);
 }
 
 .archive-projects .column {
