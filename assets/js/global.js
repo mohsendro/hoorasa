@@ -235,5 +235,3 @@ new Navalone("#mm", {
     },
   });
 })();
-
-new BalancedMasonryGrid(document.querySelector(".masonry"));
