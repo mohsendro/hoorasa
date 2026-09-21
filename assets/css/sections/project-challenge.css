@@ -1,0 +1,89 @@
+/* ═══════════════════════════════════════════════════════
+  Project Challenge – challenge / business goal / solution
+═══════════════════════════════════════════════════════ */
+
+#project-challenge {
+  padding-block: var(--space-16);
+}
+
+.project-challenge {
+}
+
+.project-challenge .section-intro {
+  margin-bottom: var(--space-10);
+}
+
+.project-challenge__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.project-challenge__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: var(--morphism-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  height: 100%;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-slow);
+}
+
+.project-challenge__card:hover {
+  border-color: rgba(218, 42, 42, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.project-challenge__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: rgba(218, 42, 42, 0.1);
+  border-radius: var(--radius-md);
+}
+
+.project-challenge__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.project-challenge__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.project-challenge__text {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-desc);
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .project-challenge__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .project-challenge .section-intro {
+    margin-bottom: var(--space-8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-challenge__card:hover {
+    transform: none;
+  }
+}
