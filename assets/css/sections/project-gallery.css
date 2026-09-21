@@ -1,6 +1,6 @@
-/* Project Gallery — powered by Masonry (desandro)
+/* Project Gallery — Masonry (desandro)
    Docs: https://masonry.desandro.com/
-   CDN: masonry-layout@4 pkgd (classic script, no ESM)
+   Sizing is 100% CSS; images keep natural height (width:100%; height:auto).
 */
 
 #project-gallery {
@@ -24,24 +24,38 @@
   gap: var(--space-16);
 }
 
-/* Masonry grid container */
+/* Container — Masonry will set position/height */
 .project-gallery__masonry {
   width: 100%;
 }
 
 /*
-  3 columns on desktop:
-  width = (100% - 2*gutter) / 3
-  horizontal gap via margin-inline-end on items (RTL-aware)
+  Fluid columns (official pattern):
+  columnWidth → .project-gallery__sizer
+  gutter     → .project-gallery__gutter
+  percentPosition: true
 */
 .project-gallery__sizer,
 .project-gallery__item {
-  width: calc((100% - 2 * var(--space-4)) / 3);
+  width: 31.5%;
+}
+
+.project-gallery__gutter {
+  width: 2.75%;
+}
+
+.project-gallery__sizer,
+.project-gallery__gutter {
+  pointer-events: none;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .project-gallery__item {
   margin-bottom: var(--space-4);
-  margin-inline-end: var(--space-4);
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--morphism-background);
@@ -49,53 +63,41 @@
   box-sizing: border-box;
 }
 
-/* last column in a visual row — Masonry positions absolutely so
-   margin-inline-end on every item is fine; sizer has no margin */
-.project-gallery__sizer {
-  margin: 0;
-  pointer-events: none;
-  visibility: hidden;
-  height: 0;
+/* Link wrapper for Fancybox — fill item, no extra height */
+.project-gallery__item > a {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  text-decoration: none;
+  color: inherit;
+  cursor: zoom-in;
 }
 
-/* Height variants so masonry has different item heights */
-.project-gallery__item--tall img,
-.project-gallery__item--tall video {
-  aspect-ratio: 3 / 4;
-  min-height: 280px;
-}
-
-.project-gallery__item--wide img,
-.project-gallery__item--wide video {
-  aspect-ratio: 4 / 3;
-  min-height: 180px;
-}
-
-.project-gallery__item--square img,
-.project-gallery__item--square video {
-  aspect-ratio: 1 / 1;
-  min-height: 200px;
-}
-
+/*
+  Critical for correct Masonry height measurement:
+  image/video size the item; no forced aspect-ratio / min-height.
+*/
 .project-gallery__item img,
 .project-gallery__item video {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .project-gallery__item video {
   background: #000;
-  min-height: 200px;
 }
 
 /* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
   .project-gallery__sizer,
   .project-gallery__item {
-    width: calc((100% - var(--space-4)) / 2);
+    width: 48.5%;
+  }
+
+  .project-gallery__gutter {
+    width: 3%;
   }
 
   .project-gallery .section-intro {
@@ -109,7 +111,7 @@
     width: 100%;
   }
 
-  .project-gallery__item {
-    margin-inline-end: 0;
+  .project-gallery__gutter {
+    width: 0;
   }
 }
