@@ -1,0 +1,68 @@
+/* ═══════════════════════════════════════════════════════
+  Project Gallery – masonry mix of images and video
+═══════════════════════════════════════════════════════ */
+
+#project-gallery {
+  padding-block: var(--space-16);
+}
+
+.project-gallery {
+}
+
+.project-gallery .section-intro {
+  margin-bottom: var(--space-10);
+}
+
+.project-gallery__masonry {
+  column-count: 3;
+  column-gap: var(--space-4);
+}
+
+.project-gallery__item {
+  break-inside: avoid;
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--morphism-background);
+  border: 1px solid var(--color-border);
+}
+
+.project-gallery__item img,
+.project-gallery__item video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.project-gallery__item--tall img {
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.project-gallery__item--wide img {
+  min-height: 200px;
+  object-fit: cover;
+}
+
+.project-gallery__item video {
+  min-height: 220px;
+  background: #000;
+}
+
+@media (max-width: 991.98px) {
+  .project-gallery__masonry {
+    column-count: 2;
+  }
+
+  .project-gallery .section-intro {
+    margin-bottom: var(--space-8);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .project-gallery__masonry {
+    column-count: 1;
+  }
+}
