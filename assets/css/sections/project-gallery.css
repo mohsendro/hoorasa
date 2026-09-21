@@ -1,6 +1,6 @@
-/* Project Gallery — powered by @masonry-grid/vanilla
-   Docs: https://masonry-grid.js.org/
-   Items need --width / --height CSS variables for aspect-ratio.
+/* Project Gallery — powered by Masonry (desandro)
+   Docs: https://masonry.desandro.com/
+   CDN: masonry-layout@4 pkgd (no ESM / no module)
 */
 
 #project-gallery {
@@ -24,41 +24,63 @@
   gap: var(--space-16);
 }
 
-/* Required by the library */
+/* Masonry grid container */
 .project-gallery__masonry {
-  display: grid;
-  overflow: hidden;
-  gap: var(--space-4);
-  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+/* Sizer = one column width (used by Masonry columnWidth) */
+.project-gallery__sizer,
+.project-gallery__item {
+  width: calc((100% - 2 * var(--space-4)) / 3);
 }
 
 .project-gallery__item {
-  /* Required: aspect-ratio from --width / --height */
-  aspect-ratio: var(--width, 1) / var(--height, 1);
+  margin-bottom: var(--space-4);
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--morphism-background);
   border: 1px solid var(--color-border);
-  min-width: 0;
+}
+
+/* Height variants via fixed aspect or min-height so masonry has different heights */
+.project-gallery__item--tall img,
+.project-gallery__item--tall video {
+  aspect-ratio: 3 / 4;
+  min-height: 280px;
+}
+
+.project-gallery__item--wide img,
+.project-gallery__item--wide video {
+  aspect-ratio: 4 / 3;
+  min-height: 180px;
+}
+
+.project-gallery__item--square img,
+.project-gallery__item--square video {
+  aspect-ratio: 1 / 1;
+  min-height: 200px;
 }
 
 .project-gallery__item img,
 .project-gallery__item video {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   vertical-align: middle;
 }
 
 .project-gallery__item video {
   background: #000;
+  min-height: 200px;
 }
 
 /* ── Media Query ───────────────────────────────────────── */
 @media (max-width: 991.98px) {
-  .project-gallery__masonry {
-    grid-template-columns: repeat(2, 1fr);
+  .project-gallery__sizer,
+  .project-gallery__item {
+    width: calc((100% - var(--space-4)) / 2);
   }
 
   .project-gallery .section-intro {
@@ -67,7 +89,8 @@
 }
 
 @media (max-width: 575.98px) {
-  .project-gallery__masonry {
-    grid-template-columns: 1fr;
+  .project-gallery__sizer,
+  .project-gallery__item {
+    width: 100%;
   }
 }
