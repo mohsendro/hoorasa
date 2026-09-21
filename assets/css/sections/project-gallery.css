@@ -1,6 +1,6 @@
 /* Project Gallery — powered by Masonry (desandro)
    Docs: https://masonry.desandro.com/
-   CDN: masonry-layout@4 pkgd (no ESM / no module)
+   CDN: masonry-layout@4 pkgd (classic script, no ESM)
 */
 
 #project-gallery {
@@ -29,7 +29,11 @@
   width: 100%;
 }
 
-/* Sizer = one column width (used by Masonry columnWidth) */
+/*
+  3 columns on desktop:
+  width = (100% - 2*gutter) / 3
+  horizontal gap via margin-inline-end on items (RTL-aware)
+*/
 .project-gallery__sizer,
 .project-gallery__item {
   width: calc((100% - 2 * var(--space-4)) / 3);
@@ -37,13 +41,24 @@
 
 .project-gallery__item {
   margin-bottom: var(--space-4);
+  margin-inline-end: var(--space-4);
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--morphism-background);
   border: 1px solid var(--color-border);
+  box-sizing: border-box;
 }
 
-/* Height variants via fixed aspect or min-height so masonry has different heights */
+/* last column in a visual row — Masonry positions absolutely so
+   margin-inline-end on every item is fine; sizer has no margin */
+.project-gallery__sizer {
+  margin: 0;
+  pointer-events: none;
+  visibility: hidden;
+  height: 0;
+}
+
+/* Height variants so masonry has different item heights */
 .project-gallery__item--tall img,
 .project-gallery__item--tall video {
   aspect-ratio: 3 / 4;
@@ -92,5 +107,9 @@
   .project-gallery__sizer,
   .project-gallery__item {
     width: 100%;
+  }
+
+  .project-gallery__item {
+    margin-inline-end: 0;
   }
 }
