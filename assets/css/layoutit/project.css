@@ -1,0 +1,10 @@
+/* Project detail page – aggregates section styles */
+
+@import "../sections/project-hero.css";
+@import "../sections/project-meta.css";
+@import "../sections/project-info.css";
+@import "../sections/project-challenge.css";
+@import "../sections/project-gallery.css";
+@import "../sections/portfolios.css";
+@import "../blocks/two-column.css";
+@import "../blocks/cta.css";
