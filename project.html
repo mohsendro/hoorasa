@@ -38,6 +38,9 @@
 
   <!-- Page Css -->
   <link rel="stylesheet" href="assets/css/layoutit/project.css" />
+
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" />
 </head>
 
 <body class="body">
@@ -331,33 +334,46 @@
 
             <div class="project-gallery__masonry">
               <div class="project-gallery__sizer"></div>
-              <div class="project-gallery__item project-gallery__item--tall">
-                <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
-                  alt="نمای کلی غرفه" loading="lazy" decoding="async" width="600" height="800">
-              </div>
-              <div class="project-gallery__item project-gallery__item--wide">
-                <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
-                  alt="جزئیات گرافیک محیطی" loading="lazy" decoding="async" width="600" height="400">
-              </div>
-              <div class="project-gallery__item project-gallery__item--square">
-                <video src="assets/videos/hero.mp4" muted loop playsinline autoplay preload="metadata"
-                  aria-label="ویدیو تور کوتاه غرفه"></video>
-              </div>
-              <div class="project-gallery__item project-gallery__item--wide">
-                <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
-                  alt="فضای تعامل با مخاطب" loading="lazy" decoding="async" width="600" height="400">
-              </div>
-              <div class="project-gallery__item project-gallery__item--tall">
-                <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
-                  alt="نمای شب و نورپردازی" loading="lazy" decoding="async" width="600" height="800">
+              <div class="project-gallery__gutter"></div>
+
+              <div class="project-gallery__item">
+                <a href="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" data-fancybox="project-gallery" data-caption="نمای کلی غرفه">
+                  <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" alt="نمای کلی غرفه" loading="lazy" decoding="async" width="800" height="600">
+                </a>
               </div>
               <div class="project-gallery__item">
-                <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp"
-                  alt="جزئیات متریال و ساخت" loading="lazy" decoding="async" width="600" height="500">
+                <a href="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" data-fancybox="project-gallery" data-caption="جزئیات گرافیک محیطی">
+                  <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" alt="جزئیات گرافیک محیطی" loading="lazy" decoding="async" width="800" height="600">
+                </a>
               </div>
-              <div class="project-gallery__item project-gallery__item--wide">
-                <video src="assets/videos/hero.mp4" muted loop playsinline autoplay preload="metadata"
-                  aria-label="ویدیو تور کوتاه غرفه"></video>
+              <div class="project-gallery__item">
+                <a href="assets/videos/hero.mp4" data-fancybox="project-gallery" data-type="html5video" data-caption="ویدیو تور کوتاه غرفه"
+                  data-width="1280" data-height="720">
+                  <video src="assets/videos/hero.mp4" muted loop playsinline autoplay preload="metadata"
+                    aria-label="ویدیو تور کوتاه غرفه"></video>
+                </a>
+              </div>
+              <div class="project-gallery__item">
+                <a href="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" data-fancybox="project-gallery" data-caption="فضای تعامل با مخاطب">
+                  <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" alt="فضای تعامل با مخاطب" loading="lazy" decoding="async" width="800" height="600">
+                </a>
+              </div>
+              <div class="project-gallery__item">
+                <a href="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" data-fancybox="project-gallery" data-caption="نمای شب و نورپردازی">
+                  <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" alt="نمای شب و نورپردازی" loading="lazy" decoding="async" width="800" height="600">
+                </a>
+              </div>
+              <div class="project-gallery__item">
+                <a href="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" data-fancybox="project-gallery" data-caption="جزئیات متریال و ساخت">
+                  <img src="https://irannovin.net/storage/v1/object/public/site/images/blog/4e0d305b72a8.webp" alt="جزئیات متریال و ساخت" loading="lazy" decoding="async" width="800" height="600">
+                </a>
+              </div>
+              <div class="project-gallery__item">
+                <a href="assets/videos/hero.mp4" data-fancybox="project-gallery" data-type="html5video" data-caption="ویدیو تور کوتاه غرفه"
+                  data-width="1280" data-height="720">
+                  <video src="assets/videos/hero.mp4" muted loop playsinline autoplay preload="metadata"
+                    aria-label="ویدیو تور کوتاه غرفه"></video>
+                </a>
               </div>
             </div>
           </div>
@@ -453,22 +469,25 @@
   <script src="assets/vendor/navalone/navalone.global.js"></script>
   <!-- Masonry (desandro) — classic script, no module -->
   <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+  <!-- Fancybox UMD -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
 
   <!-- Globals Js -->
   <script src="assets/js/global.js"></script>
 
-  <!-- Project Gallery Masonry init -->
+  <!-- Project Gallery: Masonry + Fancybox -->
   <script>
     (function () {
       var grid = document.querySelector(".project-gallery__masonry");
       if (!grid || typeof Masonry === "undefined") return;
 
+      // Official options: https://masonry.desandro.com/options
       var msnry = new Masonry(grid, {
         itemSelector: ".project-gallery__item",
         columnWidth: ".project-gallery__sizer",
+        gutter: ".project-gallery__gutter",
         percentPosition: true,
-        gutter: 0,
-        transitionDuration: "0.25s",
+        transitionDuration: "0.2s",
         originLeft: false
       });
 
@@ -476,38 +495,60 @@
         msnry.layout();
       }
 
-      // re-layout when images/videos are ready
+      // Re-layout after each image/video has dimensions (avoids empty gaps)
       var media = grid.querySelectorAll("img, video");
       var pending = media.length;
-      if (pending === 0) {
-        layout();
-        return;
-      }
+
       function done() {
         pending -= 1;
         if (pending <= 0) layout();
       }
-      media.forEach(function (el) {
-        if (el.tagName === "IMG") {
-          if (el.complete) done();
-          else {
-            el.addEventListener("load", done);
-            el.addEventListener("error", done);
+
+      if (pending === 0) {
+        layout();
+      } else {
+        media.forEach(function (el) {
+          if (el.tagName === "IMG") {
+            if (el.complete && el.naturalHeight) done();
+            else {
+              el.addEventListener("load", done, { once: true });
+              el.addEventListener("error", done, { once: true });
+            }
+          } else {
+            if (el.readyState >= 1) done();
+            else {
+              el.addEventListener("loadedmetadata", done, { once: true });
+              el.addEventListener("error", done, { once: true });
+            }
           }
-        } else {
-          // video
-          if (el.readyState >= 1) done();
-          else {
-            el.addEventListener("loadedmetadata", done);
-            el.addEventListener("error", done);
-          }
-        }
-      });
+        });
+      }
 
       window.addEventListener("resize", function () {
         clearTimeout(window.__pgMasonryResize);
-        window.__pgMasonryResize = setTimeout(layout, 100);
+        window.__pgMasonryResize = setTimeout(layout, 120);
       });
+
+      // Fancybox gallery (same group name → one lightbox)
+      if (typeof Fancybox !== "undefined") {
+        Fancybox.bind('[data-fancybox="project-gallery"]', {
+          Carousel: {
+            transition: "slide"
+          },
+          Images: {
+            Panzoom: {
+              maxScale: 2
+            }
+          },
+          Toolbar: {
+            display: {
+              left: ["infobar"],
+              middle: [],
+              right: ["slideshow", "download", "thumbs", "close"]
+            }
+          }
+        });
+      }
     })();
   </script>
 </body>
