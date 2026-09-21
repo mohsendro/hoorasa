@@ -96,9 +96,7 @@
   /* opacity: 0.3; */
 }
 
-.accordion-service
-  .accordion-button:not(.collapsed)
-  .accordion-service__icon {
+.accordion-service .accordion-button:not(.collapsed) .accordion-service__icon {
   background: var(--color-primary);
   color: var(--color-white);
 }
@@ -130,9 +128,7 @@
     background var(--transition-fast);
 }
 
-.accordion-service
-  .accordion-button:not(.collapsed)
-  .accordion-service__arrow {
+.accordion-service .accordion-button:not(.collapsed) .accordion-service__arrow {
   transform: rotate(180deg);
   border-color: var(--color-primary);
   background: rgba(218, 42, 42, 0.2);

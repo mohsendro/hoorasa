@@ -1,0 +1,30 @@
+@import "../sections/archive-intro.css";
+@import "../components/card-project.css";
+
+#archive-projects {
+}
+
+.archive-projects {
+  padding-block: var(--space-8);
+}
+
+.archive-projects .row {
+  row-gap: var(--space-10);
+}
+
+.archive-projects .column {
+  display: flex;
+}
+
+/* ── Media Query ───────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .archive-projects .row {
+    row-gap: var(--space-8);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .archive-projects .row {
+    row-gap: var(--space-6);
+  }
+}
