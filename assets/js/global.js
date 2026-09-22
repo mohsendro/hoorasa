@@ -235,3 +235,78 @@ new Navalone("#mm", {
     },
   });
 })();
+
+// Project Gallery: Masonry + Fancybox
+(function () {
+  var grid = document.querySelector(".project-gallery__masonry");
+  if (!grid || typeof Masonry === "undefined") return;
+
+  // Official options: https://masonry.desandro.com/options
+  var msnry = new Masonry(grid, {
+    itemSelector: ".project-gallery__item",
+    columnWidth: ".project-gallery__sizer",
+    gutter: ".project-gallery__gutter",
+    percentPosition: true,
+    transitionDuration: "0.2s",
+    originLeft: false,
+  });
+
+  function layout() {
+    msnry.layout();
+  }
+
+  // Re-layout after each image/video has dimensions (avoids empty gaps)
+  var media = grid.querySelectorAll("img, video");
+  var pending = media.length;
+
+  function done() {
+    pending -= 1;
+    if (pending <= 0) layout();
+  }
+
+  if (pending === 0) {
+    layout();
+  } else {
+    media.forEach(function (el) {
+      if (el.tagName === "IMG") {
+        if (el.complete && el.naturalHeight) done();
+        else {
+          el.addEventListener("load", done, { once: true });
+          el.addEventListener("error", done, { once: true });
+        }
+      } else {
+        if (el.readyState >= 1) done();
+        else {
+          el.addEventListener("loadedmetadata", done, { once: true });
+          el.addEventListener("error", done, { once: true });
+        }
+      }
+    });
+  }
+
+  window.addEventListener("resize", function () {
+    clearTimeout(window.__pgMasonryResize);
+    window.__pgMasonryResize = setTimeout(layout, 120);
+  });
+
+  // Fancybox gallery (same group name → one lightbox)
+  if (typeof Fancybox !== "undefined") {
+    Fancybox.bind('[data-fancybox="project-gallery"]', {
+      Carousel: {
+        transition: "slide",
+      },
+      Images: {
+        Panzoom: {
+          maxScale: 2,
+        },
+      },
+      Toolbar: {
+        display: {
+          left: ["infobar"],
+          middle: [],
+          right: ["slideshow", "download", "thumbs", "close"],
+        },
+      },
+    });
+  }
+})();
