@@ -77,6 +77,10 @@
   margin: 0;
 }
 
+.section-header .section-desc {
+  text-align: center;
+}
+
 .section-cta {
   margin-top: var(--space-6);
 }

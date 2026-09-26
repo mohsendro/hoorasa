@@ -310,3 +310,29 @@ new Navalone("#mm", {
     });
   }
 })();
+
+// Post Table of Content
+(function () {
+  var links = document.querySelectorAll(".post-toc__link[href^='#']");
+  if (!links.length) return;
+  var map = [];
+  links.forEach(function (link) {
+    var id = link.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map.push({ id: id, el: el, link: link });
+  });
+  if (!map.length) return;
+  function setActive() {
+    var offset = 104;
+    var current = map[0].id;
+    for (var i = 0; i < map.length; i++) {
+      if (map[i].el.getBoundingClientRect().top - offset <= 0)
+        current = map[i].id;
+    }
+    links.forEach(function (l) {
+      l.classList.toggle("is-active", l.getAttribute("href") === "#" + current);
+    });
+  }
+  window.addEventListener("scroll", setActive, { passive: true });
+  setActive();
+})();
